@@ -89,21 +89,39 @@ export default function Hero() {
 
                 {/* Buttons */}
                 <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', mb: 12, animation: 'fadeInUp 1s ease-out 0.6s backwards' }}>
-                    <Button className="btn-primary" sx={{
-                        fontSize: '1rem',
-                        px: 4,
-                        py: 1.8,
-                        color: 'black !important', // Force black text
-                        textTransform: 'none'
-                    }}>
-                        Empezar Proyecto
+                    <Button
+                        component="a"
+                        href="#contacto"
+                        className="btn-primary"
+                        sx={{
+                            fontSize: '1rem',
+                            px: 4,
+                            py: 1.8,
+                            color: 'black !important', // Force black text
+                            textTransform: 'none'
+                        }}
+                    >
+                        Agendar Llamada
                     </Button>
-                    <Button variant="text" sx={{
-                        color: '#a1a1aa',
-                        fontSize: '1rem',
-                        textTransform: 'none',
-                        '&:hover': { color: 'white' }
-                    }}>
+                    <Button
+                        variant="outlined"
+                        component="a"
+                        href="#servicios"
+                        sx={{
+                            color: '#a1a1aa',
+                            borderColor: 'rgba(255,255,255,0.1)',
+                            fontSize: '1rem',
+                            textTransform: 'none',
+                            px: 4,
+                            py: 1.8,
+                            borderRadius: '9999px',
+                            '&:hover': {
+                                color: 'white',
+                                borderColor: 'white',
+                                background: 'rgba(255,255,255,0.05)'
+                            }
+                        }}
+                    >
                         Explorar Servicios &rarr;
                     </Button>
                 </Box>
@@ -134,13 +152,20 @@ export default function Hero() {
                         {/* Content Area */}
 
                         <Box sx={{ position: 'relative', height: { xs: '300px', md: '500px' } }}>
-                            <Image
-                                src="/hero-illustration.png"
-                                alt="Dashboard Interface"
-                                fill
-                                sizes="(max-width: 1200px) 100vw, 1000px"
-                                style={{ objectFit: 'cover', opacity: 0.9 }}
-                            />
+                            <video
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: 'cover',
+                                    opacity: 0.9
+                                }}
+                            >
+                                <source src="/Animación_de_Imagen_con_Rayos_Digitales.mp4" type="video/mp4" />
+                            </video>
                             {/* Gradient Overlay */}
                             <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,10,11,1) 0%, transparent 50%)' }} />
                         </Box>
@@ -159,17 +184,6 @@ export default function Hero() {
                 </Box>
 
             </Container>
-
-            <style jsx global>{`
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes textShine {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 200% 50%; }
-        }
-      `}</style>
         </Box>
     );
 }

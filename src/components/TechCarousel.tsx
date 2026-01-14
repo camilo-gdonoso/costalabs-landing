@@ -5,29 +5,21 @@ import Image from 'next/image';
 
 // Map specific technologies to their Simple Icons slugs or similar
 const technologies = [
-    { name: 'AWS', icon: 'https://cdn.simpleicons.org/amazonaws/white' },
-    { name: 'Azure', icon: 'https://cdn.simpleicons.org/microsoftazure/white' },
-    { name: 'Google Cloud', icon: 'https://cdn.simpleicons.org/googlecloud/white' },
-    { name: 'Terraform', icon: 'https://cdn.simpleicons.org/terraform/white' },
-    { name: 'Ansible', icon: 'https://cdn.simpleicons.org/ansible/white' },
-    { name: 'Kubernetes', icon: 'https://cdn.simpleicons.org/kubernetes/white' },
-    { name: 'Docker', icon: 'https://cdn.simpleicons.org/docker/white' },
-    { name: 'Jenkins', icon: 'https://cdn.simpleicons.org/jenkins/white' },
-    { name: 'GitLab', icon: 'https://cdn.simpleicons.org/gitlab/white' },
-    { name: 'Datadog', icon: 'https://cdn.simpleicons.org/datadog/white' },
-    { name: 'Prometheus', icon: 'https://cdn.simpleicons.org/prometheus/white' },
     { name: 'React', icon: 'https://cdn.simpleicons.org/react/white' },
-    { name: 'Angular', icon: 'https://cdn.simpleicons.org/angular/white' },
-    { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/white' },
     { name: 'Python', icon: 'https://cdn.simpleicons.org/python/white' },
-    { name: 'Spring Boot', icon: 'https://cdn.simpleicons.org/springboot/white' },
+    { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/white' },
+    { name: 'Docker', icon: 'https://cdn.simpleicons.org/docker/white' },
+    { name: 'Google Cloud', icon: 'https://cdn.simpleicons.org/googlecloud/white' },
     { name: 'PostgreSQL', icon: 'https://cdn.simpleicons.org/postgresql/white' },
-    { name: 'MySQL', icon: 'https://cdn.simpleicons.org/mysql/white' },
+    { name: 'Datadog', icon: 'https://cdn.simpleicons.org/datadog/white' },
+    { name: 'Ansible', icon: 'https://cdn.simpleicons.org/ansible/white' },
+    { name: 'GitLab', icon: 'https://cdn.simpleicons.org/gitlab/white' },
+    { name: 'Jenkins', icon: 'https://cdn.simpleicons.org/jenkins/white' },
 ];
 
 export default function TechCarousel() {
     return (
-        <Box sx={{
+        <Box id="stack" sx={{
             py: 8,
             overflow: 'hidden',
             position: 'relative',
@@ -103,12 +95,7 @@ export default function TechCarousel() {
                 pointerEvents: 'none'
             }} />
 
-            <style jsx global>{`
-        @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-      `}</style>
+
         </Box>
     );
 }

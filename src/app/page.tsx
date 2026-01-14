@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ServicesBento from '@/components/ServicesBento';
 import TechCarousel from '@/components/TechCarousel';
+import { DNASection, SectorsSection, ContactSection } from '@/components/DossierSections';
 
 export default function Home() {
   return (
@@ -9,7 +10,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <TechCarousel />
+      <DNASection />
       <ServicesBento />
+      <SectorsSection />
+      <ContactSection />
     </main>
   );
 }

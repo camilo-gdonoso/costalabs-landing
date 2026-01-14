@@ -5,35 +5,28 @@ import { Box, Typography, Container, Paper } from '@mui/material';
 const services = [
     {
         title: 'Desarrollo Web & Apps',
-        desc: 'Arquitecturas escalables con Next.js y React Native.',
+        desc: 'Creación de plataformas digitales innovadoras y aplicaciones móviles nativas.',
         colSpan: 2,
         rowSpan: 2,
         color: 'linear-gradient(135deg, #00d4ff 0%, #0056D2 100%)',
     },
     {
-        title: 'Diseño UX/UI',
-        desc: 'Interfaces que enamoran y convierten.',
+        title: 'Consultoría IA',
+        desc: 'Estrategias y soluciones de inteligencia artificial para impulsar su negocio.',
         colSpan: 1,
         rowSpan: 1,
         color: 'rgba(255,255,255,0.03)',
     },
     {
         title: 'Cloud & DevOps',
-        desc: 'Infraestructura AWS/Azure optimizada.',
+        desc: 'Infraestructura en la nube optimizada y flujos de trabajo de desarrollo continuo.',
         colSpan: 1,
         rowSpan: 1,
         color: 'rgba(255,255,255,0.03)',
     },
     {
-        title: 'Consultoría IA',
-        desc: 'Integración de modelos LLM en tu negocio.',
-        colSpan: 1,
-        rowSpan: 1,
-        color: 'rgba(255,255,255,0.03)',
-    },
-    {
-        title: 'E-commerce',
-        desc: 'Tiendas de alto rendimiento.',
+        title: 'Diseño UX/UI',
+        desc: 'Experiencias de usuario intuitivas y atractivas que definen su marca.',
         colSpan: 1,
         rowSpan: 1,
         color: 'rgba(255,255,255,0.03)',
@@ -42,7 +35,7 @@ const services = [
 
 export default function ServicesBento() {
     return (
-        <Box sx={{ py: 20, position: 'relative' }}>
+        <Box id="servicios" sx={{ py: 20, position: 'relative' }}>
             <Container maxWidth="lg">
                 <Box sx={{ mb: 10, textAlign: 'center' }}>
                     <Typography variant="h2" sx={{
