@@ -1,6 +1,6 @@
 'use client';
 import { Box, Container, Typography, Paper, Button } from '@mui/material';
-import { Download, Email, MapsHomeWork, Language } from '@mui/icons-material';
+import { Download, Email, MapsHomeWork, Language, WhatsApp } from '@mui/icons-material';
 
 export function DNASection() {
     return (
@@ -14,6 +14,15 @@ export function DNASection() {
                 }}>
                     Nuestro <span className="text-gradient">ADN</span>
                 </Typography>
+
+                <Box sx={{ maxWidth: '800px', mx: 'auto', mb: 8, textAlign: 'center' }}>
+                    <Typography sx={{ color: '#ccc', fontSize: '1.2rem', lineHeight: 1.8, mb: 2 }}>
+                        La historia de CostaLabs es la historia de dos amigos de la infancia que decidieron unir sus mundos.
+                    </Typography>
+                    <Typography sx={{ color: '#94a3b8', fontSize: '1.1rem', lineHeight: 1.8 }}>
+                        Mientras uno recorrió el camino comercial aprendiendo a entender las necesidades de los negocios, el otro se sumergió en las profundidades de la ingeniería y el código. Hoy, unimos esa visión estratégica con la excelencia técnica para ofrecer algo único: tecnología de vanguardia, pero con un trato cercano y humano.
+                    </Typography>
+                </Box>
 
                 <Box sx={{
                     display: 'grid',
@@ -127,6 +136,30 @@ export function ContactSection() {
                     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, alignItems: 'center', mb: 8 }}>
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, color: '#e2e8f0', fontSize: '1.1rem' }}>
                             <Email sx={{ color: '#00d4ff', fontSize: 28 }} /> contacto@costalabs.cl
+                        </Box>
+                        <Box
+                            component="a"
+                            href="https://wa.me/56993424453?text=¡Hola!%20Me%20gustaría%20obtener%20más%20información%20sobre%20los%20servicios%20de%20CostaLabs%20SPA.%20¿Podrían%20ayudarme?"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: 2,
+                                color: '#e2e8f0',
+                                fontSize: '1.1rem',
+                                textDecoration: 'none',
+                                transition: 'all 0.3s ease',
+                                '&:hover': {
+                                    color: '#25D366',
+                                    transform: 'scale(1.05)',
+                                    '& .MuiSvgIcon-root': {
+                                        color: '#25D366',
+                                    }
+                                }
+                            }}
+                        >
+                            <WhatsApp sx={{ color: '#00d4ff', fontSize: 28, transition: 'color 0.3s ease' }} /> +569 9342 4453
                         </Box>
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, color: '#e2e8f0', fontSize: '1.1rem' }}>
                             <Language sx={{ color: '#00d4ff', fontSize: 28 }} /> https://costalabs.cl/

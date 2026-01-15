@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ServicesBento from '@/components/ServicesBento';
 import TechCarousel from '@/components/TechCarousel';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import { DNASection, SectorsSection, ContactSection } from '@/components/DossierSections';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <ServicesBento />
       <SectorsSection />
       <ContactSection />
+      <WhatsAppButton />
     </main>
   );
 }

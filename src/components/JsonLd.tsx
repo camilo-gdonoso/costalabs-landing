@@ -2,18 +2,18 @@ export default function JsonLd() {
     const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        '@id': 'https://www.costalabs.com',
+        '@id': 'https://costalabs.cl',
         name: 'CostaLabs',
         description: 'Empresa de desarrollo de software en el norte de Chile. Servicios de IA, DevOps, FinOps, e-commerce y marketing digital en Arica, Iquique y Antofagasta.',
-        url: 'https://www.costalabs.com',
-        logo: 'https://www.costalabs.com/logo.svg',
-        image: 'https://www.costalabs.com/hero-dashboard-v2.png',
+        url: 'https://costalabs.cl',
+        logo: 'https://costalabs.cl/logo.svg',
+        image: 'https://costalabs.cl/hero-dashboard-v2.png',
         priceRange: '$$',
-        telephone: '+56-9-XXXX-XXXX', // Reemplazar con teléfono real
-        email: 'contacto@costalabs.com', // Reemplazar con email real
+        telephone: '+569 9342 4453',
+        email: 'contacto@costalabs.cl',
         address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Oficina Principal', // Reemplazar con dirección real
+            streetAddress: 'Arturo Fernandez #2032',
             addressLocality: 'Iquique',
             addressRegion: 'Tarapacá',
             postalCode: '1100000',
