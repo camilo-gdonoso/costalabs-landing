@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.costalabs.com/sitemap.xml
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Optimización para imágenes
+User-agent: Googlebot-Image
+Allow: /
+
+# Bloquear directorios innecesarios
+Disallow: /api/
+Disallow: /_next/static/
+Disallow: /node_modules/
