@@ -131,6 +131,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
+      <head>
+        <meta name="google-site-verification" content="lsOxxn9Ilo9ieizN320EFVcIZOZoFVRQA7aYDR4n2EY" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
         <Providers>
           <JsonLd />
