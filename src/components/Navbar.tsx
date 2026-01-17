@@ -77,8 +77,7 @@ export default function Navbar() {
                     </Box>
                     <Button
                         variant="contained"
-                        component="a"
-                        href="#contacto"
+                        href="/agendar"
                         className="btn-primary"
                         sx={{
                             ml: 3,
