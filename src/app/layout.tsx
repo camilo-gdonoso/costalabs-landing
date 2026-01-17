@@ -124,6 +124,10 @@ export const metadata: Metadata = {
   },
 };
 
+import Footer from "@/components/Footer";
+
+// ... (existing imports)
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -138,6 +142,7 @@ export default function RootLayout({
         <Providers>
           <JsonLd />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

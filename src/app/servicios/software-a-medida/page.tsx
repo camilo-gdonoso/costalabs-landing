@@ -278,7 +278,7 @@ export default function SoftwareAMedidaPage() {
                                     <Button
                                         variant="contained"
                                         size="large"
-                                        href="https://calendly.com/meet-bakslash/30min"
+                                        href="https://calendly.com/contacto-costalabs/30min"
                                         target="_blank"
                                         sx={{
                                             background: '#8b0000', // Rojo oscuro similar a la referencia
