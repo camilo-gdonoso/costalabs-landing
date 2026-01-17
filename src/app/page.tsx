@@ -8,6 +8,9 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import { DNASection, SectorsSection } from '@/components/DossierSections';
 import { Box, Container, Typography, Button } from '@mui/material'; // Import para el CTA inline
 
+import FeatureSection from '@/components/FeatureSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
+
 export default function Home() {
   return (
     <main className="bg-stars" style={{ minHeight: '100vh', background: 'var(--background)' }}>
@@ -16,6 +19,13 @@ export default function Home() {
       <TechCarousel />
       <DNASection />
       <ServicesDetail />
+
+      {/* Sección Full Width Destacada */}
+      <FeatureSection />
+
+      {/* Testimonios */}
+      <TestimonialsSection />
+
       {/* ProcessSection movido a /agendar */}
       <SectorsSection />
 

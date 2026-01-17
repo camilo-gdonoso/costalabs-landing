@@ -62,7 +62,7 @@ export default function Navbar() {
                             <Button
                                 key={item.name}
                                 component="a"
-                                href={`#${item.id}`}
+                                href={`/#${item.id}`}
                                 sx={{
                                     color: '#a1a1aa',
                                     fontSize: '0.9rem',
