@@ -74,8 +74,9 @@ export default function ServicesDetail() {
         <Box
             id="servicios-detalle"
             sx={{
-                py: { xs: 10, md: 15 },
-                background: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, transparent 50%, rgba(0,0,0,0.3) 100%)',
+                py: { xs: 10, md: 20 },
+                position: 'relative'
+                // background removido para continuidad
             }}
         >
             <Container maxWidth="lg">

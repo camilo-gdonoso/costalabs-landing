@@ -20,7 +20,7 @@ export default function Home() {
       <SectorsSection />
 
       {/* --- SECCIÓN UNIFICADA DE RESPALDO (Certificaciones + Partners) --- */}
-      <Box sx={{ py: 15, background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(20,20,20,0.5) 100%)', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+      <Box sx={{ py: 10 }}>
         <Container maxWidth="xl">
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr' }, gap: { xs: 10, lg: 15 }, alignItems: 'start' }}>
 
@@ -53,7 +53,7 @@ export default function Home() {
       </Box>
 
       {/* CTA Final para reemplazar Contacto */}
-      <Box sx={{ py: 15, textAlign: 'center', background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0, 212, 255, 0.05) 100%)' }}>
+      <Box sx={{ py: 20, textAlign: 'center', background: 'radial-gradient(circle at center, rgba(0, 212, 255, 0.08) 0%, transparent 70%)' }}>
         <Container maxWidth="md">
           <Typography variant="h2" sx={{ color: 'white', fontWeight: 800, mb: 4 }}>
             ¿Listo para construir el futuro?
