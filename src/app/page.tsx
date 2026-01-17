@@ -4,6 +4,7 @@ import ServicesDetail from '@/components/ServicesDetail';
 import ProcessSection from '@/components/ProcessSection';
 import TechCarousel from '@/components/TechCarousel';
 import CertificationsSection from '@/components/CertificationsSection';
+import PartnersSection from '@/components/PartnersSection';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { DNASection, SectorsSection, ContactSection } from '@/components/DossierSections';
 
@@ -18,6 +19,7 @@ export default function Home() {
       <ProcessSection />
       <SectorsSection />
       <CertificationsSection />
+      <PartnersSection />
       <ContactSection />
       <WhatsAppButton />
     </main>
