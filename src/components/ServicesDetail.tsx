@@ -224,42 +224,6 @@ export default function ServicesDetail() {
                     ))}
                 </Box>
 
-                {/* Bottom CTA */}
-                <Box sx={{ textAlign: 'center', mt: { xs: 8, md: 12 } }}>
-                    <Typography
-                        sx={{
-                            color: '#64748b',
-                            mb: 3,
-                            fontSize: '1.1rem'
-                        }}
-                    >
-                        ¿Listo para transformar tu negocio con tecnología?
-                    </Typography>
-                    <Button
-                        href="#contacto"
-                        variant="contained"
-                        size="large"
-                        sx={{
-                            background: 'linear-gradient(135deg, #00d4ff 0%, #0056D2 100%)',
-                            color: 'white',
-                            fontWeight: 600,
-                            px: 5,
-                            py: 1.8,
-                            borderRadius: '50px',
-                            textTransform: 'none',
-                            fontSize: '1rem',
-                            boxShadow: '0 10px 30px -10px rgba(0, 212, 255, 0.5)',
-                            '&:hover': {
-                                background: 'linear-gradient(135deg, #00b8e6 0%, #0047b3 100%)',
-                                transform: 'translateY(-2px)',
-                                boxShadow: '0 15px 40px -10px rgba(0, 212, 255, 0.6)',
-                            },
-                            transition: 'all 0.3s ease',
-                        }}
-                    >
-                        Solicitar Consultoría Gratuita
-                    </Button>
-                </Box>
             </Container>
         </Box>
     );
