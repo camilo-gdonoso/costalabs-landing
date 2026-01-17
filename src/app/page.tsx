@@ -18,8 +18,39 @@ export default function Home() {
       <ServicesDetail />
       {/* ProcessSection movido a /agendar */}
       <SectorsSection />
-      <CertificationsSection />
-      <PartnersSection />
+
+      {/* --- SECCIÓN UNIFICADA DE RESPALDO (Certificaciones + Partners) --- */}
+      <Box sx={{ py: 15, background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(20,20,20,0.5) 100%)', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+        <Container maxWidth="xl">
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr' }, gap: { xs: 10, lg: 15 }, alignItems: 'start' }}>
+
+            {/* Columna Izquierda: Certificaciones */}
+            <Box>
+              <Typography variant="overline" sx={{ color: '#64748b', letterSpacing: 2, fontWeight: 700, mb: 4, display: 'block' }}>
+                NUESTRAS CREDENCIALES
+              </Typography>
+              {/* Renderizamos el contenido interno de Certifications aquí, o usamos el componente pero ajustando su padding interno si fuera posible. 
+                          Como el componente tiene su propio padding py:10, lo mejor es envolverlo o ajustar el componente. 
+                          Para no romper nada, usaremos el componente tal cual pero el layout de 2 columnas ayuda visualmente.
+                          Sin embargo, CertificationsSection tiene un Container y py alto.
+                          
+                          MEJOR ESTRATEGIA: Ajustar CertificationsSection y PartnersSection para que acepten "disablePadding" prop, 
+                          O simplemente recrear su contenido aquí para tener control total del layout compacto.
+                      */}
+              <CertificationsSection disablepy={true} />
+            </Box>
+
+            {/* Columna Derecha: Partners */}
+            <Box>
+              <Typography variant="overline" sx={{ color: '#64748b', letterSpacing: 2, fontWeight: 700, mb: 4, display: 'block' }}>
+                ALIADOS ESTRATÉGICOS
+              </Typography>
+              <PartnersSection disablepy={true} />
+            </Box>
+
+          </Box>
+        </Container>
+      </Box>
 
       {/* CTA Final para reemplazar Contacto */}
       <Box sx={{ py: 15, textAlign: 'center', background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0, 212, 255, 0.05) 100%)' }}>

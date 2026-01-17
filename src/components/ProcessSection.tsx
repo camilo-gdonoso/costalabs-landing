@@ -69,13 +69,13 @@ export default function ProcessSection() {
                                     href="https://calendly.com/contacto-costalabs/30min"
                                     target="_blank"
                                     sx={{
-                                        background: '#8b0000', // Rojo oscuro similar a la referencia
-                                        color: 'white',
+                                        background: '#00d4ff', // Cyan vibrante de la marca
+                                        color: 'black',
                                         fontWeight: 700,
                                         py: 1.5,
                                         px: 4,
                                         textTransform: 'none',
-                                        '&:hover': { background: '#a50000' }
+                                        '&:hover': { background: '#40e0ff', boxShadow: '0 0 20px rgba(0, 212, 255, 0.4)' }
                                     }}
                                 >
                                     Programa una llamada

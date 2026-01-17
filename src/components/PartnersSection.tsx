@@ -1,69 +1,72 @@
 'use client';
 import { Box, Container, Typography } from '@mui/material';
 
-export default function PartnersSection() {
+export default function PartnersSection({ disablepy }: { disablepy?: boolean }) {
     const partners = [
-        { name: 'Tierra Producciones', url: 'https://tierraproducciones.cl', domain: 'tierraproducciones.cl' },
-        { name: 'Cavancha Exclusivo', url: 'https://cavanchaexclusivo.cl', domain: 'cavanchaexclusivo.cl' },
-        { name: 'Colabora 360', url: 'https://colabora360.com', domain: 'colabora360.com' },
-        { name: 'Raptor Systems', url: 'https://raptorsystems.cl', domain: 'raptorsystems.cl' },
+        { name: 'Tierra Producciones', url: 'https://tierraproducciones.cl' },
+        { name: 'Cavancha Exclusivo', url: 'https://cavanchaexclusivo.cl' },
+        { name: 'Colabora 360', url: 'https://colabora360.com' },
+        { name: 'Raptor Systems', url: 'https://raptorsystems.cl' },
     ];
+
+    const Content = () => (
+        <Box sx={{
+            display: 'grid',
+            gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' },
+            gap: 4,
+            width: '100%'
+        }}>
+            {partners.map((partner) => (
+                <Box
+                    key={partner.name}
+                    component="a"
+                    href={partner.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        p: 3,
+                        borderRadius: 2,
+                        bgcolor: 'rgba(255,255,255,0.03)',
+                        border: '1px solid rgba(255,255,255,0.05)',
+                        textDecoration: 'none',
+                        transition: 'all 0.3s ease',
+                        '&:hover': {
+                            bgcolor: 'rgba(255,255,255,0.06)',
+                            borderColor: 'rgba(255,255,255,0.2)',
+                            transform: 'translateY(-2px)'
+                        }
+                    }}
+                >
+                    <Typography
+                        variant="h6"
+                        sx={{
+                            color: '#e2e8f0',
+                            fontWeight: 700,
+                            fontSize: '1rem',
+                            textAlign: 'center'
+                        }}
+                    >
+                        {partner.name}
+                    </Typography>
+                </Box>
+            ))}
+        </Box>
+    );
+
+    if (disablepy) {
+        return <Content />; // Sin título, sin container, sin padding
+    }
 
     return (
         <Box sx={{ py: 10, borderTop: '1px solid rgba(255,255,255,0.05)' }}>
             <Container maxWidth="lg">
-                <Typography
-                    variant="overline"
-                    sx={{
-                        display: 'block',
-                        textAlign: 'center',
-                        color: '#64748b',
-                        mb: 6,
-                        letterSpacing: 3,
-                        fontWeight: 600
-                    }}
-                >
+                <Typography variant="overline" sx={{ display: 'block', textAlign: 'center', color: '#64748b', mb: 6, letterSpacing: 3, fontWeight: 600 }}>
                     PARTNERS Y ALIANZAS
                 </Typography>
-
-                <Box sx={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    gap: { xs: 4, md: 8, lg: 12 }
-                }}>
-                    {partners.map((partner) => (
-                        <Box
-                            key={partner.name}
-                            component="a"
-                            href={partner.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            sx={{
-                                textDecoration: 'none',
-                                opacity: 0.5,
-                                transition: 'all 0.3s ease',
-                                '&:hover': {
-                                    opacity: 1,
-                                    transform: 'scale(1.05)'
-                                }
-                            }}
-                        >
-                            <Typography
-                                variant="h5"
-                                sx={{
-                                    color: 'white',
-                                    fontWeight: 700,
-                                    fontSize: { xs: '1.2rem', md: '1.5rem' },
-                                    fontFamily: 'var(--font-geist-sans)', // Usar la fuente del sitio
-                                }}
-                            >
-                                {partner.name}
-                            </Typography>
-                        </Box>
-                    ))}
-                </Box>
+                <Content />
             </Container>
         </Box>
     );
