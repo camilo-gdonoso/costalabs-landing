@@ -4,7 +4,7 @@
 # ============================================
 # Ejecutar como root en tu Droplet Ubuntu
 # Uso: bash deploy.sh TU_DOMINIO GITHUB_REPO_URL
-# Ejemplo: bash deploy.sh costalabs.com https://github.com/usuario/costalabs-landing.git
+# Ejemplo: bash deploy.sh costalabs.cl https://github.com/usuario/costalabs-landing.git
 # ============================================
 
 set -e
@@ -14,7 +14,7 @@ REPO_URL=$2
 
 if [ -z "$DOMAIN" ] || [ -z "$REPO_URL" ]; then
     echo "❌ Uso: bash deploy.sh TU_DOMINIO GITHUB_REPO_URL"
-    echo "   Ejemplo: bash deploy.sh costalabs.com https://github.com/user/repo.git"
+    echo "   Ejemplo: bash deploy.sh costalabs.cl https://github.com/user/repo.git"
     exit 1
 fi
 

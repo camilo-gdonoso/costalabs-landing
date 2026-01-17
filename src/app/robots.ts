@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://www.costalabs.com/sitemap.xml',
+    sitemap: 'https://www.costalabs.cl/sitemap.xml',
   };
 }

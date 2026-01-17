@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | CostaLabs"
   },
   description: "Empresa de desarrollo de software en Chile. Servicios de IA, DevOps, FinOps, e-commerce y marketing digital. Presencia en Arica, Iquique, Antofagasta, Calama, La Serena y Santiago. Transformación digital para empresas chilenas.",
-  metadataBase: new URL('https://www.costalabs.com'),
+  metadataBase: new URL('https://www.costalabs.cl'),
   keywords: [
     // Keywords regionales del norte de Chile
     "empresa software norte de chile",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CostaLabs | Software, IA, DevOps & E-commerce en el Norte de Chile",
     description: "Desarrollo de software, IA, DevOps, FinOps y marketing digital en Chile. Presencia en Arica, Iquique, Antofagasta, Calama, La Serena y Santiago. Transformación digital para empresas chilenas.",
-    url: 'https://www.costalabs.com',
+    url: 'https://www.costalabs.cl',
     siteName: 'CostaLabs',
     images: [
       {

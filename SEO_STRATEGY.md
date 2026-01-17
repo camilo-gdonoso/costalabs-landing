@@ -83,8 +83,8 @@ Categorías Secundarias:
 
 Dirección: [Tu dirección real en Iquique]
 Teléfono: +56 57 XXX XXXX
-Sitio web: https://www.costalabs.com
-Email: contacto@costalabs.com
+Sitio web: https://www.costalabs.cl
+Email: contacto@costalabs.cl
 
 Descripción (optimizada):
 "CostaLabs es una empresa líder de desarrollo de software en el norte de 
