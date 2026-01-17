@@ -73,7 +73,54 @@ export default function ContactForm() {
                         '&.Mui-focused fieldset': { borderColor: '#00d4ff' },
                     }
                 }}>
-                    {/* ... (campos) ... */}
+                    <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 3 }}>
+                        <TextField
+                            required label="Nombre" name="nombre"
+                            variant="outlined" fullWidth
+                            value={formData.nombre} onChange={handleChange}
+                        />
+                        <TextField
+                            required label="Apellido" name="apellido"
+                            variant="outlined" fullWidth
+                            value={formData.apellido} onChange={handleChange}
+                        />
+                    </Box>
+
+                    <TextField
+                        required label="Teléfono" name="telefono"
+                        variant="outlined" fullWidth
+                        value={formData.telefono} onChange={handleChange}
+                    />
+                    <TextField
+                        required label="Email" name="email" type="email"
+                        variant="outlined" fullWidth
+                        value={formData.email} onChange={handleChange}
+                    />
+                    <TextField
+                        label="Empresa" name="empresa"
+                        variant="outlined" fullWidth
+                        value={formData.empresa} onChange={handleChange}
+                    />
+
+                    <TextField
+                        required
+                        label="Descripción del Proyecto" name="descripcion"
+                        multiline
+                        rows={4}
+                        variant="outlined"
+                        fullWidth
+                        value={formData.descripcion} onChange={handleChange}
+                    />
+
+                    {status === 'error' && (
+                        <Alert severity="error" sx={{ mb: 3 }}>{errorMessage}</Alert>
+                    )}
+
+                    {status === 'success' && (
+                        <Alert severity="success" sx={{ mb: 3 }}>
+                            ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo a la brevedad.
+                        </Alert>
+                    )}
                     <Box sx={{ mt: 4 }}>
                         <Button
                             type="submit"
