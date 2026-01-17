@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import ServicesDetail from '@/components/ServicesDetail';
 import ProcessSection from '@/components/ProcessSection';
 import TechCarousel from '@/components/TechCarousel';
+import CertificationsSection from '@/components/CertificationsSection';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { DNASection, SectorsSection, ContactSection } from '@/components/DossierSections';
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <TechCarousel />
+      <CertificationsSection />
       <DNASection />
       <ServicesDetail />
       <ProcessSection />
