@@ -1,7 +1,8 @@
 'use client';
-import { Box, Container, Typography, Button, Paper, TextField } from '@mui/material';
+import { Box, Container, Typography, Button, Paper } from '@mui/material';
 import Navbar from '@/components/Navbar';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import ContactForm from '@/components/ContactForm';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import CodeIcon from '@mui/icons-material/Code';
@@ -298,67 +299,8 @@ export default function SoftwareAMedidaPage() {
                 </Container>
             </Box>
 
-            {/* --- CONTACT FORM SECTION (Replicating the reference) --- */}
-            <Box id="contacto" sx={{ py: 15, background: 'linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(20,20,20,1) 100%)' }}>
-                <Container maxWidth="md">
-                    <Box sx={{ textAlign: 'center', mb: 8 }}>
-                        <Typography variant="h4" sx={{ color: '#ef4444', fontWeight: 700, mb: 2 }}>
-                            ¿Buscas soluciones de Tecnología a Medida?
-                        </Typography>
-                        <Typography variant="h3" sx={{ color: 'white', fontWeight: 800, fontSize: { xs: '2rem', md: '3rem' } }}>
-                            Estamos aquí para ayudarte. <br /> Contáctanos
-                        </Typography>
-                    </Box>
-
-                    <Box component="form" noValidate autoComplete="off" sx={{
-                        '& .MuiTextField-root': { mb: 3 },
-                        '& .MuiInputLabel-root': { color: '#9ca3af' },
-                        '& .MuiInputBase-input': { color: 'white' },
-                        '& .MuiOutlinedInput-root': {
-                            '& fieldset': { borderColor: 'rgba(255,255,255,0.2)' },
-                            '&:hover fieldset': { borderColor: 'white' },
-                            '&.Mui-focused fieldset': { borderColor: '#ef4444' },
-                        }
-                    }}>
-                        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 3 }}>
-                            <TextField required label="Nombre" variant="outlined" fullWidth />
-                            <TextField required label="Apellido" variant="outlined" fullWidth />
-                        </Box>
-
-                        <TextField required label="Teléfono" variant="outlined" fullWidth />
-                        <TextField required label="Email" type="email" variant="outlined" fullWidth />
-                        <TextField label="Empresa" variant="outlined" fullWidth />
-
-                        <TextField
-                            required
-                            label="Descripción del Proyecto"
-                            multiline
-                            rows={4}
-                            variant="outlined"
-                            fullWidth
-                        />
-
-                        <Box sx={{ mt: 4 }}>
-                            <Button
-                                variant="contained"
-                                fullWidth
-                                size="large"
-                                sx={{
-                                    bgcolor: '#2563eb', // Blue similar to reference
-                                    color: 'white',
-                                    fontWeight: 700,
-                                    py: 2,
-                                    fontSize: '1.1rem',
-                                    textTransform: 'none',
-                                    '&:hover': { bgcolor: '#1d4ed8' }
-                                }}
-                            >
-                                Enviar Mensaje
-                            </Button>
-                        </Box>
-                    </Box>
-                </Container>
-            </Box>
+            {/* --- CONTACT FORM SECTION (Reused Component) --- */}
+            <ContactForm />
 
             <WhatsAppButton />
         </main>

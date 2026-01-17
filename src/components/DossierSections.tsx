@@ -1,6 +1,7 @@
 'use client';
 import { Box, Container, Typography, Paper, Button } from '@mui/material';
-import { Download, Email, MapsHomeWork, Language, WhatsApp } from '@mui/icons-material';
+import { Download } from '@mui/icons-material';
+import ContactForm from '@/components/ContactForm';
 
 export function DNASection() {
     return (
@@ -102,92 +103,22 @@ export function SectorsSection() {
 
 export function ContactSection() {
     return (
-        <Box id="contacto" sx={{ py: 15, borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-            <Container maxWidth="md">
-                <Paper className="glass-card" sx={{
-                    p: { xs: 4, md: 8 },
-                    textAlign: 'center',
-                    background: 'linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(10,10,11,0.5) 100%)',
-                    border: '1px solid rgba(255,255,255,0.08)',
-                    boxShadow: '0 0 40px rgba(0,0,0,0.4)',
-                    position: 'relative',
-                    overflow: 'hidden'
-                }}>
-                    {/* Subtle Top Shine */}
-                    <Box sx={{
-                        position: 'absolute',
-                        top: 0, left: 0, right: 0,
-                        height: '1px',
-                        background: 'linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.5), transparent)'
-                    }} />
+        <Box sx={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+            <ContactForm />
 
-                    <Typography variant="h2" sx={{
-                        fontWeight: 800,
-                        mb: 2,
-                        color: 'white',
-                        fontSize: { xs: '2rem', md: '3rem' }
-                    }}>
-                        Solicitar Consultoría
-                    </Typography>
-                    <Typography sx={{ color: '#94a3b8', mb: 8, fontSize: '1.1rem', maxWidth: '600px', mx: 'auto' }}>
-                        Transformación digital de alto nivel. Cupos limitados para nuevos partners estratégicos.
-                    </Typography>
-
-                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, alignItems: 'center', mb: 8 }}>
-                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, color: '#e2e8f0', fontSize: '1.1rem' }}>
-                            <Email sx={{ color: '#00d4ff', fontSize: 28 }} /> contacto@costalabs.cl
-                        </Box>
-                        <Box
-                            component="a"
-                            href="https://wa.me/56993424453?text=¡Hola!%20Me%20gustaría%20obtener%20más%20información%20sobre%20los%20servicios%20de%20CostaLabs%20SPA.%20¿Podrían%20ayudarme?"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: 2,
-                                color: '#e2e8f0',
-                                fontSize: '1.1rem',
-                                textDecoration: 'none',
-                                transition: 'all 0.3s ease',
-                                '&:hover': {
-                                    color: '#25D366',
-                                    transform: 'scale(1.05)',
-                                    '& .MuiSvgIcon-root': {
-                                        color: '#25D366',
-                                    }
-                                }
-                            }}
-                        >
-                            <WhatsApp sx={{ color: '#00d4ff', fontSize: 28, transition: 'color 0.3s ease' }} /> +569 9342 4453
-                        </Box>
-                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, color: '#e2e8f0', fontSize: '1.1rem' }}>
-                            <Language sx={{ color: '#00d4ff', fontSize: 28 }} /> https://costalabs.cl/
-                        </Box>
-                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, color: '#e2e8f0', fontSize: '1.1rem' }}>
-                            <MapsHomeWork sx={{ color: '#00d4ff', fontSize: 28 }} /> Iquique, Chile
-                        </Box>
-                    </Box>
-
+            {/* Dossier Link Small Below Form */}
+            <Box sx={{ textAlign: 'center', pb: 10, background: 'rgba(10, 10, 11, 0.5)' }}>
+                <Container>
                     <Button
-                        variant="outlined"
-                        size="large"
                         startIcon={<Download />}
                         href="/CostaLabs_Dossier_2026.pdf"
                         target="_blank"
-                        sx={{
-                            color: '#00d4ff',
-                            borderColor: '#00d4ff',
-                            px: 4, py: 1.5,
-                            borderRadius: '50px',
-                            fontWeight: 600,
-                            '&:hover': { background: 'rgba(0, 212, 255, 0.1)', borderColor: '#00d4ff' }
-                        }}
+                        sx={{ color: '#64748b', textTransform: 'none' }}
                     >
                         Descargar Dossier Corporativo
                     </Button>
-                </Paper>
-            </Container>
+                </Container>
+            </Box>
         </Box>
     );
 }

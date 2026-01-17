@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import ServicesBento from '@/components/ServicesBento';
 import ServicesDetail from '@/components/ServicesDetail';
 import TechCarousel from '@/components/TechCarousel';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -13,7 +12,6 @@ export default function Home() {
       <Hero />
       <TechCarousel />
       <DNASection />
-      <ServicesBento />
       <ServicesDetail />
       <SectorsSection />
       <ContactSection />

@@ -81,30 +81,38 @@ export default function ServicesDetail() {
             <Container maxWidth="lg">
                 {/* Header Section */}
                 {/* Header Section */}
-                <Box sx={{ textAlign: 'left', mb: { xs: 6, md: 10 }, maxWidth: '800px' }}>
+                <Box sx={{ textAlign: 'center', mb: { xs: 8, md: 12 }, maxWidth: '900px', mx: 'auto' }}>
                     <Typography
                         variant="h2"
                         sx={{
-                            fontWeight: 800,
+                            fontWeight: 900,
                             color: 'white',
-                            fontSize: { xs: '2rem', md: '3rem' },
+                            fontSize: { xs: '2.5rem', md: '3.5rem' },
                             mb: 3,
                             letterSpacing: '-0.02em',
-                            lineHeight: 1.2
+                            lineHeight: 1.1
                         }}
                     >
-                        Desarrollo de software a medida para<br />
-                        <span className="text-gradient">impulsar tu negocio</span>
+                        Todo lo que necesitas para<br />
+                        <span style={{
+                            background: 'linear-gradient(90deg, #fff 0%, #94a3b8 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent'
+                        }}>
+                            escalar tu negocio.
+                        </span>
                     </Typography>
                     <Typography
                         sx={{
-                            color: '#94a3b8',
+                            color: '#e0dfdf',
                             fontSize: { xs: '1.1rem', md: '1.25rem' },
-                            lineHeight: 1.8
+                            lineHeight: 1.6,
+                            maxWidth: '700px',
+                            mx: 'auto',
+                            opacity: 0.9
                         }}
                     >
-                        Transformamos desafíos tecnológicos en oportunidades de crecimiento mediante desarrollo de software a la medida.
-                        Nuestras soluciones de software personalizadas y estrategias digitales impulsan la innovación y eficiencia en tu empresa.
+                        Stack tecnológico de última generación para productos de clase mundial.
                     </Typography>
                 </Box>
 
