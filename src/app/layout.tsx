@@ -119,6 +119,9 @@ export const metadata: Metadata = {
   verification: {
     google: "lsOxxn9Ilo9ieizN320EFVcIZOZoFVRQA7aYDR4n2EY",
   },
+  other: {
+    'google-site-verification': 'lsOxxn9Ilo9ieizN320EFVcIZOZoFVRQA7aYDR4n2EY',
+  },
 };
 
 export default function RootLayout({
