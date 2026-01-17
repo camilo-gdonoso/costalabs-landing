@@ -1,8 +1,10 @@
 'use client';
 import { Box, Container, Typography, Button, Paper } from '@mui/material';
 import Navbar from '@/components/Navbar';
+import CaseStudyCustomTrip from '@/components/CaseStudyCustomTrip';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import ContactForm from '@/components/ContactForm';
+import CodeWindow from '@/components/CodeWindow';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import CodeIcon from '@mui/icons-material/Code';
@@ -62,44 +64,7 @@ export default function SoftwareAMedidaPage() {
 
                         {/* --- CODE MOCKUP --- */}
                         <Box>
-                            <Paper sx={{
-                                background: '#1e1e1e',
-                                border: '1px solid rgba(255,255,255,0.1)',
-                                borderRadius: '12px',
-                                overflow: 'hidden',
-                                boxShadow: '0 20px 50px rgba(0,0,0,0.5)'
-                            }}>
-                                {/* Window Graphic Header */}
-                                <Box sx={{ display: 'flex', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', px: 2, py: 1.5, background: 'rgba(255,255,255,0.02)' }}>
-                                    <Box sx={{ display: 'flex', gap: 1, mr: 2 }}>
-                                        <Box sx={{ width: 10, height: 10, borderRadius: '50%', bgcolor: '#ff5f56' }} />
-                                        <Box sx={{ width: 10, height: 10, borderRadius: '50%', bgcolor: '#ffbd2e' }} />
-                                        <Box sx={{ width: 10, height: 10, borderRadius: '50%', bgcolor: '#27c93f' }} />
-                                    </Box>
-                                    <Box sx={{ display: 'flex', fontSize: '0.8rem', color: '#6b7280', gap: 2 }}>
-                                        <Box sx={{ color: 'white', borderBottom: '1px solid #00d4ff', pb: 0.5 }}>Layout.tsx</Box>
-                                        <Box>App.tsx</Box>
-                                    </Box>
-                                </Box>
-                                {/* Code Content */}
-                                <Box sx={{ p: 3, fontFamily: 'monospace', fontSize: '0.85rem', color: '#a1a1aa', lineHeight: 1.6, overflowX: 'auto' }}>
-                                    <div style={{ color: '#c792ea' }}>export default function <span style={{ color: '#82aaff' }}>RootLayout</span>({'{'}</div>
-                                    <div style={{ paddingLeft: 20 }}>children,</div>
-                                    <div>{'}: Readonly<{'}</div>
-                                    <div style={{ paddingLeft: 20 }}>children: React.ReactNode;</div>
-                                    <div>{'>) {'}</div>
-                                    <div style={{ paddingLeft: 20, color: '#c792ea' }}>return (</div>
-                                    <div style={{ paddingLeft: 40, color: '#89ddff' }}>&lt;html lang="es"&gt;</div>
-                                    <div style={{ paddingLeft: 60, color: '#89ddff' }}>&lt;body&gt;</div>
-                                    <div style={{ paddingLeft: 80, color: '#89ddff' }}>&lt;HeaderMenu /&gt;</div>
-                                    <div style={{ paddingLeft: 80, color: '#7fdbca' }}>{'{children}'}</div>
-                                    <div style={{ paddingLeft: 80, color: '#89ddff' }}>&lt;Footer /&gt;</div>
-                                    <div style={{ paddingLeft: 60, color: '#89ddff' }}>&lt;/body&gt;</div>
-                                    <div style={{ paddingLeft: 40, color: '#89ddff' }}>&lt;/html&gt;</div>
-                                    <div style={{ paddingLeft: 20, color: '#c792ea' }}>);</div>
-                                    <div>{'}'}</div>
-                                </Box>
-                            </Paper>
+                            <CodeWindow />
                         </Box>
                     </Box>
                 </Container>
@@ -213,6 +178,9 @@ export default function SoftwareAMedidaPage() {
                     </Box>
                 </Container>
             </Box>
+
+            {/* --- CASO DE ÉXITO --- */}
+            <CaseStudyCustomTrip />
 
             {/* --- PROCESO --- */}
             <Box sx={{ py: 10 }}>
