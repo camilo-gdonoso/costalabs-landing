@@ -84,47 +84,9 @@ export default function Hero() {
                     mb: 8,
                     animation: 'fadeInUp 1s ease-out 0.4s backwards'
                 }}>
-                    Transformamos ideas en experiencias web de alto impacto con un stack tecnológico diseñado para la velocidad.
+                    Expertos en desarrollo de software a medida y estrategias digitales impulsadas por IA. Transformamos tus desafíos en ventajas competitivas con soluciones seguras, rápidas y eficientes, diseñadas para empresas que buscan salir de lo tradicional y liderar el futuro.
                 </Typography>
 
-                {/* Buttons */}
-                <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', mb: 12, animation: 'fadeInUp 1s ease-out 0.6s backwards' }}>
-                    <Button
-                        component="a"
-                        href="#contacto"
-                        className="btn-primary"
-                        sx={{
-                            fontSize: '1rem',
-                            px: 4,
-                            py: 1.8,
-                            color: 'black !important', // Force black text
-                            textTransform: 'none'
-                        }}
-                    >
-                        Agendar Llamada
-                    </Button>
-                    <Button
-                        variant="outlined"
-                        component="a"
-                        href="#servicios"
-                        sx={{
-                            color: '#a1a1aa',
-                            borderColor: 'rgba(255,255,255,0.1)',
-                            fontSize: '1rem',
-                            textTransform: 'none',
-                            px: 4,
-                            py: 1.8,
-                            borderRadius: '9999px',
-                            '&:hover': {
-                                color: 'white',
-                                borderColor: 'white',
-                                background: 'rgba(255,255,255,0.05)'
-                            }
-                        }}
-                    >
-                        Explorar Servicios &rarr;
-                    </Button>
-                </Box>
 
                 {/* Warp-like Terminal/Interface Visual */}
                 <Box sx={{

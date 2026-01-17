@@ -25,6 +25,9 @@ export default function Footer() {
                         <Typography variant="body2" sx={{ color: '#71717a' }}>
                             © 2026 CostaLabs. Todos los derechos reservados.
                         </Typography>
+                        <Typography variant="body2" sx={{ color: '#71717a', mt: 1, fontSize: '0.85rem' }}>
+                            Arturo Fernández 2032 depto 801, Iquique, Chile
+                        </Typography>
                     </Box>
 
                     {/* Centro/Derecha: Contacto y Legales */}
