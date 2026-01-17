@@ -13,11 +13,11 @@ export default function Home() {
       <Navbar />
       <Hero />
       <TechCarousel />
-      <CertificationsSection />
       <DNASection />
       <ServicesDetail />
       <ProcessSection />
       <SectorsSection />
+      <CertificationsSection />
       <ContactSection />
       <WhatsAppButton />
     </main>
