@@ -15,6 +15,7 @@ const detailedServices = [
         title: 'Desarrollo de Software a Medida',
         description: 'Creamos soluciones de software a medida que se adaptan perfectamente a las necesidades únicas de tu empresa. Nuestro equipo experto desarrolla software personalizado, desde aplicaciones web hasta sistemas complejos.',
         cta: 'Explora nuestro desarrollo de software a medida',
+        link: '/servicios/software-a-medida',
         color: '#00d4ff',
     },
     {
@@ -195,7 +196,7 @@ export default function ServicesDetail() {
 
                             {/* CTA Link */}
                             <Button
-                                href="#contacto"
+                                href={service.link || "#contacto"}
                                 sx={{
                                     color: service.color,
                                     textTransform: 'none',
