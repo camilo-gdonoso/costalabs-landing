@@ -27,10 +27,13 @@ export default function FeatureSection() {
             {/* Mitad Derecha: Contenido */}
             <Box sx={{
                 flex: 1,
-                bgcolor: '#0f172a', // Fondo oscuro azulado (Slate 900)
+                bgcolor: 'rgba(10, 10, 11, 0.4)', // Fondo semitransparente para integrar con el fondo estrellado
+                backdropFilter: 'blur(10px)', // Efecto glass moderno
                 display: 'flex',
                 alignItems: 'center',
-                p: { xs: 4, md: 10, lg: 15 }
+                p: { xs: 4, md: 10, lg: 15 },
+                borderTop: { xs: '1px solid rgba(255,255,255,0.05)', md: 'none' },
+                borderLeft: { xs: 'none', md: '1px solid rgba(255,255,255,0.05)' } // Sutil separación visual
             }}>
                 <Box sx={{ maxWidth: '600px' }}>
                     <Typography variant="overline" sx={{ color: '#00d4ff', fontWeight: 700, letterSpacing: 2, mb: 2, display: 'block' }}>
@@ -60,15 +63,19 @@ export default function FeatureSection() {
                         size="large"
                         href="/agendar"
                         sx={{
-                            bgcolor: '#ef4444', // Rojo vibrante como en la referencia (o cyan según prefieras)
-                            color: 'white',
+                            bgcolor: '#00d4ff', // Cyan de la marca
+                            color: 'black',
                             fontWeight: 700,
                             py: 1.5,
                             px: 5,
                             fontSize: '1rem',
-                            borderRadius: '8px', // Borde un poco menos redondo para este estilo bloque
+                            borderRadius: '50px', // Redondeado consistente con otros botones
                             textTransform: 'none',
-                            '&:hover': { bgcolor: '#dc2626' }
+                            boxShadow: '0 0 20px rgba(0, 212, 255, 0.3)', // Glow sutil
+                            '&:hover': {
+                                bgcolor: '#40e0ff',
+                                boxShadow: '0 0 30px rgba(0, 212, 255, 0.5)'
+                            }
                         }}
                     >
                         Hablemos
