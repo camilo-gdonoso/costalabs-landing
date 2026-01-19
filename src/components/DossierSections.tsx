@@ -65,7 +65,7 @@ export function SectorsSection() {
     ];
 
     return (
-        <Box id="sectores" sx={{ py: 15, background: 'rgba(255,255,255,0.02)' }}>
+        <Box id="sectores" sx={{ py: 15 }}>
             <Container maxWidth="lg">
                 <Typography variant="h2" sx={{
                     textAlign: 'center',

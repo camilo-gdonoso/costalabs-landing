@@ -8,24 +8,17 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 const testimonials = [
     {
         id: 1,
-        text: "CostaLabs transformó nuestra idea en un MVP funcional en solo 8 semanas. Su enfoque ágil nos permitió validar rápidamente nuestro concepto y asegurar financiación. Son más que desarrolladores; son socios estratégicos en innovación.",
-        author: "Carlos Méndez",
-        role: "CEO, StartUp Latam",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+        text: "Trabajar con CostaLabs ha sido una experiencia transformadora para Tierra Producciones. Su capacidad para entender nuestra visión y plasmarla en soluciones tecnológicas robustas nos ha permitido escalar nuestro negocio de manera eficiente.",
+        author: "Marcela Donoso",
+        role: "CEO & Founder at Tierraproducciones",
+        image: "/testimonials/marce.jpeg"
     },
     {
         id: 2,
-        text: "La capacidad técnica del equipo es impresionante. Lograron migrar nuestra infraestructura a la nube sin tiempo de inactividad, optimizando nuestros costos en un 40%.",
-        author: "Ana Vitale",
-        role: "CTO, FinTech Solutions",
-        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
-    },
-    {
-        id: 3,
-        text: "Entienden perfectamente la intersección entre negocio y tecnología. Su consultoría en IA nos permitió automatizar procesos clave que antes nos tomaban días.",
-        author: "Felipe Ríos",
-        role: "Gerente de Operaciones, RetailCorp",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+        text: "La experiencia de CostaLabs en arquitectura cloud y automatización es sobresaliente. Han sido un socio clave en el desarrollo de nuestra infraestructura tecnológica, permitiéndonos enfocarnos en la innovación de nuestro producto principal con total confianza.",
+        author: "Sebastian Aranguiz",
+        role: "CTO & CoFounder at Raptorsystems.cl",
+        image: "/testimonials/sebaperfil.jpeg"
     }
 ];
 

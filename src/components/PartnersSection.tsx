@@ -3,7 +3,7 @@ import { Box, Container, Typography } from '@mui/material';
 
 export default function PartnersSection({ disablepy }: { disablepy?: boolean }) {
     const partners = [
-        { name: 'Tierra Producciones', url: 'https://tierraproducciones.cl' },
+        { name: 'Davortech', url: 'https://davortech.com/' },
         { name: 'Cavancha Exclusivo', url: 'https://cavanchaexclusivo.cl' },
         { name: 'Colabora 360', url: 'https://colabora360.com' },
         { name: 'Raptor Systems', url: 'https://raptorsystems.cl' },

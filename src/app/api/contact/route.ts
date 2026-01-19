@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
+
+// Inicializar Resend con la API Key de las variables de entorno
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
@@ -13,51 +16,36 @@ export async function POST(request: Request) {
       );
     }
 
-    // Configurar el transportador de correo (SMTP)
-    // Tienes que configurar estas variables en tu archivo .env
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.gmail.com', // Por defecto Gmail, pero cámbialo si usas otro
-      port: parseInt(process.env.SMTP_PORT || '465'),
-      secure: true, // true para 465, false para otros puertos
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASSWORD,
-      },
+    // Enviar correo vía Resend
+    const { data, error } = await resend.emails.send({
+      from: 'CostaLabs <web@costalabs.cl>', // Usando el dominio verificado
+      to: ['contacto@costalabs.cl'],
+      subject: `Nueva consulta de: ${nombre} ${apellido}`,
+      replyTo: email,
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px; margin: auto; border: 1px solid #eee; padding: 20px; border-radius: 10px;">
+          <h2 style="color: #00d4ff;">Nueva consulta desde el sitio Web</h2>
+          <p><strong>De:</strong> ${nombre} ${apellido}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Teléfono:</strong> ${telefono}</p>
+          <p><strong>Empresa:</strong> ${empresa || 'No especificada'}</p>
+          <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;" />
+          <p><strong>Mensaje:</strong></p>
+          <p style="white-space: pre-wrap;">${descripcion}</p>
+        </div>
+      `,
     });
 
-    const mailOptions = {
-      from: `"Web CostaLabs" <${process.env.SMTP_USER}>`, // Remitente
-      to: 'contacto@costalabs.cl', // Destinatario FINAL
-      subject: `Nueva consulta de: ${nombre} ${apellido}`,
-      text: `
-        Nombre: ${nombre} ${apellido}
-        Email: ${email}
-        Teléfono: ${telefono}
-        Empresa: ${empresa || 'No especificada'}
-        
-        Mensaje:
-        ${descripcion}
-      `,
-      html: `
-        <h3>Tienes un nuevo mensaje desde costalabs.cl</h3>
-        <p><strong>De:</strong> ${nombre} ${apellido}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Teléfono:</strong> ${telefono}</p>
-        <p><strong>Empresa:</strong> ${empresa || 'No especificada'}</p>
-        <br/>
-        <p><strong>Mensaje:</strong></p>
-        <p>${descripcion.replace(/\n/g, '<br>')}</p>
-      `,
-    };
+    if (error) {
+      console.error('Error de Resend:', error);
+      return NextResponse.json({ error: 'Error al enviar el correo vía Resend' }, { status: 500 });
+    }
 
-    // Enviar el correo
-    await transporter.sendMail(mailOptions);
-
-    return NextResponse.json({ success: true }, { status: 200 });
+    return NextResponse.json({ success: true, id: data?.id }, { status: 200 });
   } catch (error) {
-    console.error('Error enviando correo:', error);
+    console.error('Error interno:', error);
     return NextResponse.json(
-      { error: 'Error interno al enviar el correo' },
+      { error: 'Error interno en el servidor' },
       { status: 500 }
     );
   }
