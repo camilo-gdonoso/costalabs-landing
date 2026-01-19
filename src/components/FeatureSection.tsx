@@ -7,11 +7,11 @@ export default function FeatureSection() {
 
             {/* Mitad Izquierda: Imagen */}
             <Box sx={{
-                flex: 1.2,
+                flex: 1.5,
                 minHeight: { xs: '400px', md: 'auto' },
                 backgroundImage: 'url(/team_dev.png)',
                 backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                backgroundPosition: 'left center',
                 position: 'relative',
                 '&::after': {
                     content: '""',
@@ -31,11 +31,11 @@ export default function FeatureSection() {
                 backdropFilter: 'blur(10px)', // Efecto glass moderno
                 display: 'flex',
                 alignItems: 'center',
-                p: { xs: 4, md: 10, lg: 15 },
+                p: { xs: 4, md: 8, lg: 12 },
                 borderTop: { xs: '1px solid rgba(255,255,255,0.05)', md: 'none' },
                 borderLeft: { xs: 'none', md: '1px solid rgba(255,255,255,0.05)' } // Sutil separación visual
             }}>
-                <Box sx={{ maxWidth: '600px' }}>
+                <Box sx={{ maxWidth: '700px' }}>
                     <Typography variant="overline" sx={{ color: '#00d4ff', fontWeight: 700, letterSpacing: 2, mb: 2, display: 'block' }}>
                         DESARROLLO DE SOFTWARE A MEDIDA
                     </Typography>
