@@ -8,16 +8,15 @@ export default function FeatureSection() {
             display: 'flex',
             flexDirection: { xs: 'column', md: 'row' },
             overflow: 'hidden',
-            minHeight: { md: '800px' }
         }}>
 
             {/* Mitad Izquierda: Imagen */}
             <Box sx={{
-                flex: 2.2,
+                flex: { xs: 1, md: 1.8 }, // Más ancho para que la imagen original se muestre completa
                 minHeight: { xs: '400px', md: 'auto' },
                 backgroundImage: 'url(/team_dev.png)',
                 backgroundSize: 'cover',
-                backgroundPosition: '5% 20%',
+                backgroundPosition: 'left center', // Anclamos a la izquierda para asegura que el logo (C) se vea
                 position: 'relative',
                 '&::after': {
                     content: '""',
@@ -26,7 +25,8 @@ export default function FeatureSection() {
                     left: 0,
                     right: 0,
                     bottom: 0,
-                    background: 'linear-gradient(90deg, rgba(10,10,11,0.4) 0%, rgba(10,10,11,0) 20%)'
+                    // Gradiente más sutil para no tapar la imagen
+                    background: 'linear-gradient(90deg, rgba(10,10,11,0.2) 0%, rgba(10,10,11,0) 50%)'
                 }
             }} />
 
@@ -35,29 +35,32 @@ export default function FeatureSection() {
                 flex: 1,
                 bgcolor: '#0a0a0b',
                 display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                p: { xs: 4, md: 8, lg: 10 },
+                alignItems: 'center',
+                p: { xs: 6, md: 8, lg: 12 },
                 borderLeft: { md: '1px solid rgba(255,255,255,0.05)' }
             }}>
-                <Box sx={{ maxWidth: '900px', transform: 'translateY(-40px)' }}>
-                    <Typography variant="overline" sx={{ color: '#00d4ff', fontWeight: 800, letterSpacing: 5, mb: 3, display: 'block', fontSize: '1.2rem' }}>
-                        TECNOLOGÍA A MEDIDA
+                <Box sx={{ maxWidth: '800px' }}>
+                    <Typography variant="overline" sx={{ color: '#00d4ff', fontWeight: 800, letterSpacing: 3, mb: 3, display: 'block', fontSize: '1rem' }}>
+                        DESARROLLO DE SOFTWARE A MEDIDA
                     </Typography>
 
-                    <Typography variant="h1" sx={{
+                    <Typography variant="h2" sx={{
                         color: 'white',
                         fontWeight: 900,
-                        fontSize: { xs: '2.5rem', md: '4rem', lg: '5rem' },
+                        fontSize: { xs: '2.5rem', md: '3rem', lg: '3.8rem' },
                         mb: 4,
-                        lineHeight: 1,
-                        letterSpacing: '-0.04em'
+                        lineHeight: 1.1,
+                        letterSpacing: '-0.02em'
                     }}>
-                        ¿Problemas para <br /> lanzar tu proyecto? <br /> <span className="text-gradient">Estamos aquí.</span>
+                        ¿Problemas para lanzar <br /> tu proyecto? Estamos <br /> acá para ayudarte.
                     </Typography>
 
-                    <Typography sx={{ color: '#cbd5e1', mb: 5, fontSize: '1.5rem', lineHeight: 1.5, maxWidth: '600px', fontWeight: 300 }}>
-                        Expertos en desarrollo de software que escalan tu visión al siguiente nivel.
+                    <Typography sx={{ color: '#cbd5e1', mb: 3, fontSize: '1.2rem', lineHeight: 1.7, fontWeight: 300 }}>
+                        El desarrollo de software personalizado y el apalancamiento a nuevas tecnologías es la clave para impulsar el crecimiento de tu negocio. Con soluciones adaptadas a tus necesidades específicas, desde e-commerce hasta aplicaciones móviles, transformamos tus ideas en realidad digital.
+                    </Typography>
+
+                    <Typography sx={{ color: '#94a3b8', mb: 6, fontSize: '1.1rem', lineHeight: 1.7 }}>
+                        No dejes que los desafíos técnicos frenen tu progreso. Contáctanos hoy y descubre cómo nuestro expertise en desarrollo de software puede potenciar tu proyecto y llevarlo al siguiente nivel.
                     </Typography>
 
                     <Button
@@ -67,22 +70,22 @@ export default function FeatureSection() {
                         sx={{
                             bgcolor: '#00d4ff',
                             color: 'black',
-                            fontWeight: 900,
-                            py: 3,
-                            px: 10,
-                            fontSize: '1.3rem',
+                            fontWeight: 800,
+                            py: 2,
+                            px: 6,
+                            fontSize: '1.1rem',
                             borderRadius: '100px',
                             textTransform: 'none',
-                            boxShadow: '0 20px 50px rgba(0, 212, 255, 0.3)',
+                            boxShadow: '0 10px 30px rgba(0, 212, 255, 0.2)',
                             '&:hover': {
                                 bgcolor: '#40e0ff',
-                                boxShadow: '0 30px 60px rgba(0, 212, 255, 0.5)',
-                                transform: 'scale(1.05) translateY(-5px)'
+                                boxShadow: '0 20px 40px rgba(0, 212, 255, 0.4)',
+                                transform: 'translateY(-2px)'
                             },
-                            transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+                            transition: 'all 0.3s ease'
                         }}
                     >
-                        Agendar Reunión
+                        Hablemos
                     </Button>
                 </Box>
             </Box>
