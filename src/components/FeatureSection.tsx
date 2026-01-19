@@ -7,9 +7,9 @@ export default function FeatureSection() {
 
             {/* Mitad Izquierda: Imagen */}
             <Box sx={{
-                flex: 1,
+                flex: 1.2,
                 minHeight: { xs: '400px', md: 'auto' },
-                backgroundImage: 'url(https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80)',
+                backgroundImage: 'url(/team_dev.png)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 position: 'relative',
