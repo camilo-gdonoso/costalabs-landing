@@ -126,7 +126,7 @@ export default function Hero() {
                                     opacity: 0.9
                                 }}
                             >
-                                <source src="/Animación_de_Imagen_con_Rayos_Digitales.mp4" type="video/mp4" />
+                                <source src="/Video_Elegante_para_Marca_Personal.mp4?v=2" type="video/mp4" />
                             </video>
                             {/* Gradient Overlay */}
                             <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,10,11,1) 0%, transparent 50%)' }} />
