@@ -23,6 +23,7 @@ const detailedServices = [
         title: 'DevOps y Automatización CI/CD',
         description: 'Potenciamos el ciclo de vida de tu software con pipelines automatizados. Utilizamos herramientas líderes como Ansible, GitLab y Jenkins para asegurar despliegues rápidos, seguros y escalables.',
         cta: 'Optimiza tu infraestructura hoy',
+        link: '/servicios/devops',
         color: '#f43f5e',
     },
     {
