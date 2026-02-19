@@ -1,5 +1,9 @@
 'use client';
-import { Box, Container, Typography, Link, Stack } from '@mui/material';
+import { Box, Container, Typography, Link, Stack, IconButton } from '@mui/material';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 export default function Footer() {
     return (
@@ -30,21 +34,67 @@ export default function Footer() {
                         </Typography>
                     </Box>
 
-                    {/* Centro/Derecha: Contacto y Legales */}
+                    {/* Centro/Derecha: Contacto, Redes y Legales */}
                     <Stack
-                        direction={{ xs: 'column', sm: 'row' }}
-                        spacing={{ xs: 2, sm: 4 }}
-                        alignItems="center"
+                        direction="column"
+                        alignItems={{ xs: 'center', md: 'flex-end' }}
+                        spacing={2}
                     >
-                        <Link href="mailto:contacto@costalabs.cl" sx={{ color: '#a1a1aa', textDecoration: 'none', '&:hover': { color: 'white' } }}>
-                            contacto@costalabs.cl
-                        </Link>
-                        <Link href="/privacidad" sx={{ color: '#71717a', textDecoration: 'none', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>
-                            Política de Privacidad
-                        </Link>
-                        <Link href="/terminos" sx={{ color: '#71717a', textDecoration: 'none', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>
-                            Términos de Servicio
-                        </Link>
+                        {/* Redes Sociales */}
+                        <Stack direction="row" spacing={1}>
+                            <IconButton 
+                                component="a" 
+                                href="https://www.linkedin.com/company/costalabs" 
+                                target="_blank" 
+                                aria-label="LinkedIn"
+                                sx={{ color: '#a1a1aa', '&:hover': { color: '#0077b5', transform: 'translateY(-2px)' }, transition: 'all 0.2s' }}
+                            >
+                                <LinkedInIcon />
+                            </IconButton>
+                            <IconButton 
+                                component="a" 
+                                href="https://twitter.com/costalabs" 
+                                target="_blank" 
+                                aria-label="Twitter"
+                                sx={{ color: '#a1a1aa', '&:hover': { color: '#1DA1F2', transform: 'translateY(-2px)' }, transition: 'all 0.2s' }}
+                            >
+                                <TwitterIcon />
+                            </IconButton>
+                            <IconButton 
+                                component="a" 
+                                href="https://www.instagram.com/costalabs" 
+                                target="_blank" 
+                                aria-label="Instagram"
+                                sx={{ color: '#a1a1aa', '&:hover': { color: '#E1306C', transform: 'translateY(-2px)' }, transition: 'all 0.2s' }}
+                            >
+                                <InstagramIcon />
+                            </IconButton>
+                            <IconButton 
+                                component="a" 
+                                href="https://wa.me/56993424453" 
+                                target="_blank" 
+                                aria-label="WhatsApp"
+                                sx={{ color: '#a1a1aa', '&:hover': { color: '#25D366', transform: 'translateY(-2px)' }, transition: 'all 0.2s' }}
+                            >
+                                <WhatsAppIcon />
+                            </IconButton>
+                        </Stack>
+
+                        <Stack
+                            direction={{ xs: 'column', sm: 'row' }}
+                            spacing={{ xs: 2, sm: 4 }}
+                            alignItems="center"
+                        >
+                            <Link href="mailto:contacto@costalabs.cl" sx={{ color: '#a1a1aa', textDecoration: 'none', '&:hover': { color: 'white' } }}>
+                                contacto@costalabs.cl
+                            </Link>
+                            <Link href="/privacidad" sx={{ color: '#71717a', textDecoration: 'none', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>
+                                Política de Privacidad
+                            </Link>
+                            <Link href="/terminos" sx={{ color: '#71717a', textDecoration: 'none', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>
+                                Términos de Servicio
+                            </Link>
+                        </Stack>
                     </Stack>
                 </Box>
             </Container>
