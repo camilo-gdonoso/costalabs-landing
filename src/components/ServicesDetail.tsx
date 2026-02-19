@@ -31,6 +31,7 @@ const detailedServices = [
         title: 'Estrategias Digitales y E-commerce',
         description: 'Potenciamos tu presencia online con estrategias digitales integrales y desarrollo de software para e-commerce. Implementamos soluciones de software a medida para maximizar tu alcance digital y aumentar conversiones.',
         cta: 'Descubre nuestras soluciones de e-commerce',
+        link: '/servicios/ecommerce',
         color: '#10b981',
     },
     {
@@ -38,6 +39,7 @@ const detailedServices = [
         title: 'Inteligencia de Negocios y Visualización de Datos',
         description: 'Transformamos datos en insights accionables con nuestros servicios de desarrollo de software para inteligencia de negocios. Creamos dashboards personalizados y soluciones de visualización de datos a medida.',
         cta: 'Conoce nuestros servicios de BI y dashboards',
+        link: '/servicios/bi',
         color: '#8b5cf6',
     },
     {
@@ -45,6 +47,7 @@ const detailedServices = [
         title: 'Desarrollo WooCommerce Personalizado',
         description: 'Maximiza tu tienda online con soluciones WooCommerce personalizadas. Desarrollamos plugins a medida, temas personalizados y optimizamos la experiencia de compra para aumentar tus ventas.',
         cta: 'Potencia tu tienda con WooCommerce',
+        link: '/servicios/woocommerce',
         color: '#f59e0b',
     },
     {
@@ -52,6 +55,7 @@ const detailedServices = [
         title: 'Soluciones WordPress Empresariales',
         description: 'Creamos sitios WordPress robustos y escalables para empresas. Ofrecemos desarrollo de temas personalizados, plugins a medida y optimización de rendimiento para maximizar tu presencia digital.',
         cta: 'Descubre nuestras soluciones WordPress',
+        link: '/servicios/wordpress',
         color: '#3b82f6',
     },
     {
@@ -67,6 +71,7 @@ const detailedServices = [
         title: 'Automatización con Agentes de IA',
         description: 'Optimizamos tus flujos de trabajo mediante la automatización con agentes de IA y n8n. Desarrollamos soluciones personalizadas que integran múltiples sistemas para mejorar la eficiencia operativa.',
         cta: 'Automatiza tus procesos',
+        link: '/servicios/agentes-ia',
         color: '#14b8a6',
     },
 ];
