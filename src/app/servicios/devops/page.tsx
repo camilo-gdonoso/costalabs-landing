@@ -140,6 +140,59 @@ export default function DevOpsPage() {
                 </Container>
             </Box>
 
+            {/* --- CASOS DE ÉXITO --- */}
+            <Box sx={{ py: 10, background: 'rgba(255,255,255,0.02)' }}>
+                <Container maxWidth="lg">
+                    <Box sx={{ textAlign: 'center', mb: 8 }}>
+                        <Typography variant="overline" sx={{ color: '#f43f5e', letterSpacing: 2 }}>NUESTRA EXPERIENCIA</Typography>
+                        <Typography variant="h2" sx={{ color: 'white', fontWeight: 800, mt: 1 }}>Casos de Éxito Real</Typography>
+                    </Box>
+                    <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 6 }}>
+                        {/* Caso 1 */}
+                        <Paper sx={{ p: 4, background: 'rgba(20, 20, 22, 0.6)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: 4 }}>
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
+                                <Box sx={{ p: 1.5, background: 'rgba(244, 63, 94, 0.1)', borderRadius: '12px', color: '#f43f5e' }}>
+                                    <AutorenewIcon fontSize="large" />
+                                </Box>
+                                <Typography variant="h5" sx={{ color: 'white', fontWeight: 700 }}>Automatización de Parches</Typography>
+                            </Box>
+                            <Typography sx={{ color: '#a1a1aa', mb: 3, lineHeight: 1.6 }}>
+                                <strong>Desafío:</strong> Gestión manual de actualizaciones en cientos de máquinas virtuales Windows, causando tiempos de inactividad no planificados.
+                            </Typography>
+                            <Typography sx={{ color: '#e2e8f0', mb: 2, fontWeight: 500 }}>
+                                Solución Implementada:
+                            </Typography>
+                            <ul style={{ color: '#94a3b8', paddingLeft: '20px', lineHeight: '1.8' }}>
+                                <li>Pipeline de <strong>GitLab CI/CD</strong> para orquestar el mantenimiento.</li>
+                                <li>Playbooks de <strong>Ansible</strong> para descarga, instalación y reinicio controlado de parches.</li>
+                                <li>Reducción del tiempo de mantenimiento en un <strong>85%</strong>.</li>
+                            </ul>
+                        </Paper>
+
+                        {/* Caso 2 */}
+                        <Paper sx={{ p: 4, background: 'rgba(20, 20, 22, 0.6)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: 4 }}>
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
+                                <Box sx={{ p: 1.5, background: 'rgba(244, 63, 94, 0.1)', borderRadius: '12px', color: '#f43f5e' }}>
+                                    <SecurityIcon fontSize="large" />
+                                </Box>
+                                <Typography variant="h5" sx={{ color: 'white', fontWeight: 700 }}>Gestión de Identidad & Cloud</Typography>
+                            </Box>
+                            <Typography sx={{ color: '#a1a1aa', mb: 3, lineHeight: 1.6 }}>
+                                <strong>Desafío:</strong> Procesos lentos y riesgosos en altas/bajas de usuarios y control de servicios en la nube.
+                            </Typography>
+                            <Typography sx={{ color: '#e2e8f0', mb: 2, fontWeight: 500 }}>
+                                Solución Implementada:
+                            </Typography>
+                            <ul style={{ color: '#94a3b8', paddingLeft: '20px', lineHeight: '1.8' }}>
+                                <li>Gestión automatizada de Active Directory y Azure con <strong>Ansible</strong>.</li>
+                                <li>Activación/Liberación automática de roaming para usuarios móviles.</li>
+                                <li>Monitoreo en tiempo real y dashboards ejecutivos con <strong>Datadog</strong>.</li>
+                            </ul>
+                        </Paper>
+                    </Box>
+                </Container>
+            </Box>
+
             {/* --- PROCESO --- */}
             <Box sx={{ py: 10, background: 'rgba(10, 10, 11, 0.8)' }}>
                 <Container maxWidth="lg">
