@@ -1,9 +1,7 @@
 'use client';
 import { Box, Container, Typography, Link, Stack, IconButton } from '@mui/material';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 export default function Footer() {
     return (
@@ -44,24 +42,6 @@ export default function Footer() {
                         <Stack direction="row" spacing={1}>
                             <IconButton
                                 component="a"
-                                href="https://www.linkedin.com/company/costalabs"
-                                target="_blank"
-                                aria-label="LinkedIn"
-                                sx={{ color: '#a1a1aa', '&:hover': { color: '#0077b5', transform: 'translateY(-2px)' }, transition: 'all 0.2s' }}
-                            >
-                                <LinkedInIcon />
-                            </IconButton>
-                            <IconButton
-                                component="a"
-                                href="https://twitter.com/costalabs"
-                                target="_blank"
-                                aria-label="Twitter"
-                                sx={{ color: '#a1a1aa', '&:hover': { color: '#1DA1F2', transform: 'translateY(-2px)' }, transition: 'all 0.2s' }}
-                            >
-                                <TwitterIcon />
-                            </IconButton>
-                            <IconButton
-                                component="a"
                                 href="https://instagram.com/costa.labs"
                                 target="_blank"
                                 aria-label="Instagram"
@@ -71,12 +51,12 @@ export default function Footer() {
                             </IconButton>
                             <IconButton
                                 component="a"
-                                href="https://wa.me/56993424453"
+                                href="https://facebook.com/costa.labs"
                                 target="_blank"
-                                aria-label="WhatsApp"
-                                sx={{ color: '#a1a1aa', '&:hover': { color: '#25D366', transform: 'translateY(-2px)' }, transition: 'all 0.2s' }}
+                                aria-label="Facebook"
+                                sx={{ color: '#a1a1aa', '&:hover': { color: '#1877F2', transform: 'translateY(-2px)' }, transition: 'all 0.2s' }}
                             >
-                                <WhatsAppIcon />
+                                <FacebookIcon />
                             </IconButton>
                         </Stack>
 

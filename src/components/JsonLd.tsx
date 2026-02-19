@@ -146,9 +146,8 @@ export default function JsonLd() {
             }
         ],
         sameAs: [
-            'https://www.linkedin.com/company/costalabs',
-            'https://twitter.com/costalabs',
-            'https://instagram.com/costa.labs'
+            'https://instagram.com/costa.labs',
+            'https://facebook.com/costa.labs'
         ],
         hasOfferCatalog: {
             '@type': 'OfferCatalog',
