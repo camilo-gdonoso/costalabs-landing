@@ -3,8 +3,9 @@ import { Box, Container, Typography, Button, Paper } from '@mui/material';
 import Navbar from '@/components/Navbar';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import ContactForm from '@/components/ContactForm';
-import CodeWindow from '@/components/CodeWindow';
+import DevOpsVisual from '@/components/DevOpsVisual'; // Updated import
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+// ... rest of imports
 import CloudSyncIcon from '@mui/icons-material/CloudSync';
 import SpeedIcon from '@mui/icons-material/Speed';
 import SecurityIcon from '@mui/icons-material/Security';
@@ -65,9 +66,8 @@ export default function DevOpsPage() {
                             </Button>
                         </Box>
 
-                        {/* --- CODE MOCKUP (Reused for visual balance) --- */}
                         <Box>
-                            <CodeWindow />
+                            <DevOpsVisual />
                         </Box>
                     </Box>
                 </Container>
