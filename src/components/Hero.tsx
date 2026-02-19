@@ -147,16 +147,15 @@ export default function Hero() {
 
             {/* Full Width Video Section */}
             <Box sx={{
-                width: '100vw',
+                width: '100%',
                 position: 'relative',
-                left: '50%',
-                right: '50%',
-                marginLeft: '-50vw',
-                marginRight: '-50vw',
                 height: { xs: '350px', md: '600px', lg: '700px' },
                 overflow: 'hidden',
                 animation: 'fadeInUp 1.2s ease-out 0.6s backwards',
-                mt: 4
+                mt: 4,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
             }}>
                 <video
                     autoPlay
@@ -167,11 +166,13 @@ export default function Hero() {
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
-                        opacity: 0.9
+                        opacity: 0.9,
+                        display: 'block'
                     }}
                 >
                     <source src="/Video_Elegante_para_Marca_Personal.mp4?v=2" type="video/mp4" />
                 </video>
+
                 {/* Gradient Overlays for smooth blending */}
                 <Box sx={{
                     position: 'absolute',
