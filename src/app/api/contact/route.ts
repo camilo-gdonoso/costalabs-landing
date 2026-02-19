@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-// Inicializar Resend con la API Key de las variables de entorno
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Inicializar Resend - Usar un placeholder si no hay API Key para que no falle el build
+const resend = new Resend(process.env.RESEND_API_KEY || 're_placeholder');
 
 export async function POST(request: Request) {
   try {
