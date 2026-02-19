@@ -3,7 +3,7 @@ import { Box, Container, Typography, Button, Paper } from '@mui/material';
 import Navbar from '@/components/Navbar';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import ContactForm from '@/components/ContactForm';
-import CodeWindow from '@/components/CodeWindow';
+import AIChileVisual from '@/components/AIChileVisual'; // Visual generated
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 import PsychologyIcon from '@mui/icons-material/Psychology';
@@ -65,9 +65,9 @@ export default function IAPage() {
                             </Button>
                         </Box>
 
-                        {/* --- CODE OR VISUAL MOCKUP --- */}
+                        {/* --- VISUAL CAMPAIGN MOCKUP --- */}
                         <Box>
-                            <CodeWindow />
+                            <AIChileVisual />
                         </Box>
                     </Box>
                 </Container>
