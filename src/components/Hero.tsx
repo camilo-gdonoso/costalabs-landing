@@ -87,65 +87,109 @@ export default function Hero() {
                     Expertos en desarrollo de software a medida y estrategias digitales impulsadas por IA. Transformamos tus desafíos en ventajas competitivas con soluciones seguras, rápidas y eficientes, diseñadas para empresas que buscan salir de lo tradicional y liderar el futuro.
                 </Typography>
 
-
-                {/* Warp-like Terminal/Interface Visual */}
+                {/* Buttons CTA */}
                 <Box sx={{
-                    position: 'relative',
-                    width: '100%',
-                    maxWidth: '1000px',
-                    mx: 'auto',
-                    animation: 'fadeInUp 1.2s ease-out 0.6s backwards',
+                    display: 'flex',
+                    gap: 3,
+                    justifyContent: 'center',
+                    flexDirection: { xs: 'column', sm: 'row' },
+                    alignItems: 'center',
+                    mb: 10,
+                    animation: 'fadeInUp 1s ease-out 0.5s backwards'
                 }}>
-                    <Box sx={{
-                        background: '#0f1115',
-                        border: '1px solid rgba(255,255,255,0.1)',
-                        borderRadius: '16px',
-                        boxShadow: '0 0 0 1px rgba(255,255,255,0.05), 0 20px 50px -10px rgba(0,0,0,0.5)',
-                        overflow: 'hidden',
-                        position: 'relative'
-                    }}>
-                        {/* Fake Window Header */}
-                        <Box sx={{ height: 40, background: 'rgba(255,255,255,0.03)', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', px: 2, gap: 1 }}>
-                            <Box sx={{ width: 10, height: 10, borderRadius: '50%', background: '#ff5f56' }} />
-                            <Box sx={{ width: 10, height: 10, borderRadius: '50%', background: '#ffbd2e' }} />
-                            <Box sx={{ width: 10, height: 10, borderRadius: '50%', background: '#27c93f' }} />
-                        </Box>
-
-                        {/* Content Area */}
-
-                        <Box sx={{ position: 'relative', height: { xs: '300px', md: '500px' } }}>
-                            <video
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                style={{
-                                    width: '100%',
-                                    height: '100%',
-                                    objectFit: 'cover',
-                                    opacity: 0.9
-                                }}
-                            >
-                                <source src="/Video_Elegante_para_Marca_Personal.mp4?v=2" type="video/mp4" />
-                            </video>
-                            {/* Gradient Overlay */}
-                            <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,10,11,1) 0%, transparent 50%)' }} />
-                        </Box>
-                    </Box>
-
-                    {/* Decorative Glow behind the window */}
-                    <Box sx={{
-                        position: 'absolute',
-                        top: '50%', left: '50%',
-                        transform: 'translate(-50%, -50%)',
-                        width: '90%', height: '90%',
-                        background: 'radial-gradient(circle, rgba(43, 210, 255, 0.15) 0%, transparent 70%)',
-                        filter: 'blur(80px)',
-                        zIndex: -1
-                    }} />
+                    <Button
+                        variant="contained"
+                        href="/agendar"
+                        sx={{
+                            bgcolor: '#00d4ff',
+                            color: 'black',
+                            fontSize: '1rem',
+                            fontWeight: 700,
+                            py: 1.5,
+                            px: 4,
+                            borderRadius: '50px',
+                            textTransform: 'none',
+                            '&:hover': { bgcolor: '#80e9ff' }
+                        }}
+                    >
+                        Agendar Reunión
+                    </Button>
+                    <Button
+                        variant="outlined"
+                        href="/Dossier_CostaLabs_2026_FINAL.pdf"
+                        download
+                        sx={{
+                            color: 'white',
+                            borderColor: 'rgba(255,255,255,0.2)',
+                            fontSize: '1rem',
+                            fontWeight: 600,
+                            py: 1.5,
+                            px: 4,
+                            borderRadius: '50px',
+                            textTransform: 'none',
+                            backdropFilter: 'blur(10px)',
+                            background: 'rgba(255,255,255,0.03)',
+                            '&:hover': {
+                                borderColor: 'white',
+                                background: 'rgba(255,255,255,0.08)'
+                            }
+                        }}
+                    >
+                        Descargar Dossier 2026
+                    </Button>
                 </Box>
 
+
+
+
+
             </Container>
+
+            {/* Full Width Video Section */}
+            <Box sx={{
+                width: '100vw',
+                position: 'relative',
+                left: '50%',
+                right: '50%',
+                marginLeft: '-50vw',
+                marginRight: '-50vw',
+                height: { xs: '350px', md: '600px', lg: '700px' },
+                overflow: 'hidden',
+                animation: 'fadeInUp 1.2s ease-out 0.6s backwards',
+                mt: 4
+            }}>
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        opacity: 0.9
+                    }}
+                >
+                    <source src="/Video_Elegante_para_Marca_Personal.mp4?v=2" type="video/mp4" />
+                </video>
+                {/* Gradient Overlays for smooth blending */}
+                <Box sx={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    height: '150px',
+                    background: 'linear-gradient(to bottom, var(--background) 0%, transparent 100%)'
+                }} />
+                <Box sx={{
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    height: '150px',
+                    background: 'linear-gradient(to top, var(--background) 0%, transparent 100%)'
+                }} />
+            </Box>
         </Box>
     );
 }

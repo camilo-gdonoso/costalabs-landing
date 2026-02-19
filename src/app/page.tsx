@@ -71,23 +71,50 @@ export default function Home() {
           <Typography sx={{ color: '#94a3b8', fontSize: '1.25rem', mb: 6 }}>
             Tu próximo gran proyecto comienza con una conversación. Hablemos de cómo la tecnología puede escalar tu negocio.
           </Typography>
-          <Button
-            variant="contained"
-            size="large"
-            href="/agendar"
-            sx={{
-              bgcolor: '#00d4ff',
-              color: 'black',
-              fontSize: '1.2rem',
-              fontWeight: 700,
-              py: 2,
-              px: 6,
-              borderRadius: '50px',
-              '&:hover': { bgcolor: '#80e9ff' }
-            }}
-          >
-            Agendar una Reunión
-          </Button>
+          <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexDirection: { xs: 'column', sm: 'row' }, alignItems: 'center' }}>
+            <Button
+              variant="contained"
+              size="large"
+              href="/agendar"
+              sx={{
+                bgcolor: '#00d4ff',
+                color: 'black',
+                fontSize: '1.2rem',
+                fontWeight: 700,
+                py: 2,
+                px: 6,
+                borderRadius: '50px',
+                textTransform: 'none',
+                '&:hover': { bgcolor: '#80e9ff' }
+              }}
+            >
+              Agendar una Reunión
+            </Button>
+            <Button
+              variant="outlined"
+              size="large"
+              href="/Dossier_CostaLabs_2026_FINAL.pdf"
+              download
+              sx={{
+                color: 'white',
+                borderColor: 'rgba(255,255,255,0.2)',
+                fontSize: '1.2rem',
+                fontWeight: 600,
+                py: 2,
+                px: 6,
+                borderRadius: '50px',
+                textTransform: 'none',
+                backdropFilter: 'blur(10px)',
+                '&:hover': {
+                  borderColor: 'white',
+                  background: 'rgba(255,255,255,0.05)'
+                }
+              }}
+            >
+              Descargar Dossier
+            </Button>
+          </Box>
+
         </Container>
       </Box>
 
