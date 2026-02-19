@@ -96,6 +96,65 @@ export default function EcommercePage() {
                 </Container>
             </Box>
 
+            {/* --- SEO & ESTRATEGIA --- */}
+            <Box sx={{ py: 15 }}>
+                <Container maxWidth="lg">
+                    <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 8, alignItems: 'center' }}>
+                        <Box>
+                            <Typography variant="overline" sx={{ color: '#10b981', letterSpacing: 2 }}>ESTRATEGIA 360°</Typography>
+                            <Typography variant="h2" sx={{ color: 'white', fontWeight: 800, mt: 1, mb: 4 }}>
+                                No basta con existir, <br />
+                                <span className="text-gradient">tienen que encontrarte.</span>
+                            </Typography>
+                            <Typography sx={{ color: '#94a3b8', fontSize: '1.1rem', mb: 4 }}>
+                                Todos nuestros desarrollos incluyen una base sólida de <strong>SEO Técnico</strong> desde el día uno. Optimizamos cada línea de código para que Google ame tu sitio tanto como tus clientes.
+                            </Typography>
+
+                            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                                <Box sx={{ display: 'flex', gap: 2 }}>
+                                    <CheckCircleIcon sx={{ color: '#10b981' }} />
+                                    <Box>
+                                        <Typography variant="subtitle1" sx={{ color: 'white', fontWeight: 700 }}>SEO Técnico Avanzado</Typography>
+                                        <Typography sx={{ color: '#a1a1aa', fontSize: '0.9rem' }}>Estructura de datos Schema.org, sitemaps XML, meta etiquetas dinámicas y optimización de Core Web Vitals.</Typography>
+                                    </Box>
+                                </Box>
+                                <Box sx={{ display: 'flex', gap: 2 }}>
+                                    <CheckCircleIcon sx={{ color: '#10b981' }} />
+                                    <Box>
+                                        <Typography variant="subtitle1" sx={{ color: 'white', fontWeight: 700 }}>Google Business Profile</Typography>
+                                        <Typography sx={{ color: '#a1a1aa', fontSize: '0.9rem' }}>Configuración y optimización de tu ficha de negocio para dominar las búsquedas locales y aparecer en Google Maps.</Typography>
+                                    </Box>
+                                </Box>
+                                <Box sx={{ display: 'flex', gap: 2 }}>
+                                    <CheckCircleIcon sx={{ color: '#10b981' }} />
+                                    <Box>
+                                        <Typography variant="subtitle1" sx={{ color: 'white', fontWeight: 700 }}>Estrategia de Contenidos a Medida</Typography>
+                                        <Typography sx={{ color: '#a1a1aa', fontSize: '0.9rem' }}>Tal como lo hacemos en <strong>CostaLabs</strong> y <strong>Tierra Producciones</strong>, creamos una hoja de ruta para posicionar tus palabras clave.</Typography>
+                                    </Box>
+                                </Box>
+                            </Box>
+                        </Box>
+                        <Box sx={{
+                            height: '100%',
+                            minHeight: '400px',
+                            background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(6, 78, 59, 0.1) 100%)',
+                            borderRadius: 4,
+                            border: '1px solid rgba(16, 185, 129, 0.2)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            p: 4
+                        }}>
+                            {/* Placeholder visual para SEO - Podría ser un gráfico de barras subiendo o una lupa */}
+                            <Box sx={{ textAlign: 'center' }}>
+                                <Typography variant="h1" sx={{ fontSize: '5rem', fontWeight: 900, color: 'rgba(16, 185, 129, 0.2)' }}>SEO</Typography>
+                                <Typography sx={{ color: '#10b981', fontWeight: 600, mt: 2 }}>RANKING #1</Typography>
+                            </Box>
+                        </Box>
+                    </Box>
+                </Container>
+            </Box>
+
             <ContactForm />
             <WhatsAppButton />
         </main>
