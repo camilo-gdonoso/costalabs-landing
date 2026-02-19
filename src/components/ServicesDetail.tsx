@@ -59,6 +59,7 @@ const detailedServices = [
         title: 'Integración de Inteligencia Artificial',
         description: 'Implementamos soluciones de IA para automatizar procesos, mejorar la experiencia del usuario y optimizar decisiones de negocio. Desde chatbots inteligentes hasta análisis predictivo.',
         cta: 'Implementa IA en tu negocio',
+        link: '/servicios/ia',
         color: '#ec4899',
     },
     {

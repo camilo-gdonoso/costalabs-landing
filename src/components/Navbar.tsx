@@ -54,7 +54,7 @@ export default function Navbar() {
 
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
                         {[
-                            { name: 'Servicios', id: 'servicios' },
+                            { name: 'Servicios', id: 'servicios-detalle' },
                             { name: 'Stack', id: 'stack' },
                             { name: 'Sectores', id: 'sectores' }, // Replacing 'Proyectos' with 'Sectores' as per dossier
                             { name: 'ADN', id: 'adn' } // Replacing 'Nosotros' with 'ADN'
