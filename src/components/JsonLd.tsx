@@ -148,7 +148,7 @@ export default function JsonLd() {
         sameAs: [
             'https://www.linkedin.com/company/costalabs',
             'https://twitter.com/costalabs',
-            'https://www.instagram.com/costalabs'
+            'https://instagram.com/costa.labs'
         ],
         hasOfferCatalog: {
             '@type': 'OfferCatalog',
