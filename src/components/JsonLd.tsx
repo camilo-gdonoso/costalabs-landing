@@ -147,7 +147,7 @@ export default function JsonLd() {
         ],
         sameAs: [
             'https://instagram.com/costa.labs',
-            'https://facebook.com/costa.labs'
+            'https://www.facebook.com/share/1C3HUSGCGU/?mibextid=wwXIfr'
         ],
         hasOfferCatalog: {
             '@type': 'OfferCatalog',

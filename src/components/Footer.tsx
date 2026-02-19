@@ -51,7 +51,7 @@ export default function Footer() {
                             </IconButton>
                             <IconButton
                                 component="a"
-                                href="https://facebook.com/costa.labs"
+                                href="https://www.facebook.com/share/1C3HUSGCGU/?mibextid=wwXIfr"
                                 target="_blank"
                                 aria-label="Facebook"
                                 sx={{ color: '#a1a1aa', '&:hover': { color: '#1877F2', transform: 'translateY(-2px)' }, transition: 'all 0.2s' }}
