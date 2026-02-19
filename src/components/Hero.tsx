@@ -62,7 +62,7 @@ export default function Hero() {
                     mb: 4,
                     animation: 'fadeInUp 1s ease-out 0.2s backwards'
                 }}>
-                    El Futuro Digital <br />
+                    Transformamos tus ideas <br />
                     <Box component="span" sx={{
                         background: 'linear-gradient(to right, #94a3b8, #ffffff, #94a3b8)',
                         backgroundSize: '200% auto',
@@ -70,7 +70,7 @@ export default function Hero() {
                         WebkitTextFillColor: 'transparent',
                         animation: 'textShine 5s linear infinite'
                     }}>
-                        Reimaginado.
+                        en realidad.
                     </Box>
                 </Typography>
 
