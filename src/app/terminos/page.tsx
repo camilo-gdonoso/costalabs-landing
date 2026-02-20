@@ -34,7 +34,7 @@ export default function TermsPage() {
                                 1. Aceptación de los Términos
                             </Typography>
                             <Typography sx={{ color: '#ccc', lineHeight: 1.8 }}>
-                                Al acceder y utilizar los sitios web de CostaLabs (en adelante, "nuestros Sitios"), incluyendo www.costalabs.cl y cualquier subdominio asociado, usted acepta estar legalmente obligado por estos Términos y Condiciones. Si no está de acuerdo con alguna parte de estos términos, le rogamos que no utilice nuestros Sitios.
+                                Al acceder y utilizar los sitios web de CostaLabs (en adelante, &quot;nuestros Sitios&quot;), incluyendo www.costalabs.cl y cualquier subdominio asociado, usted acepta estar legalmente obligado por estos Términos y Condiciones. Si no está de acuerdo con alguna parte de estos términos, le rogamos que no utilice nuestros Sitios.
                             </Typography>
                         </Box>
 

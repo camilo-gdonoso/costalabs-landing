@@ -9,7 +9,24 @@ export default function PartnersSection({ disablepy }: { disablepy?: boolean }) 
         { name: 'Raptor Systems', url: 'https://raptorsystems.cl' },
     ];
 
-    const Content = () => (
+    if (disablepy) {
+        return <PartnersContent partners={partners} />; // Sin título, sin container, sin padding
+    }
+
+    return (
+        <Box sx={{ py: 10, borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+            <Container maxWidth="lg">
+                <Typography variant="overline" sx={{ display: 'block', textAlign: 'center', color: '#64748b', mb: 6, letterSpacing: 3, fontWeight: 600 }}>
+                    PARTNERS Y ALIANZAS
+                </Typography>
+                <PartnersContent partners={partners} />
+            </Container>
+        </Box>
+    );
+}
+
+function PartnersContent({ partners }: { partners: { name: string, url: string }[] }) {
+    return (
         <Box sx={{
             display: 'grid',
             gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' },
@@ -56,17 +73,13 @@ export default function PartnersSection({ disablepy }: { disablepy?: boolean }) 
         </Box>
     );
 
-    if (disablepy) {
-        return <Content />; // Sin título, sin container, sin padding
-    }
-
     return (
         <Box sx={{ py: 10, borderTop: '1px solid rgba(255,255,255,0.05)' }}>
             <Container maxWidth="lg">
                 <Typography variant="overline" sx={{ display: 'block', textAlign: 'center', color: '#64748b', mb: 6, letterSpacing: 3, fontWeight: 600 }}>
                     PARTNERS Y ALIANZAS
                 </Typography>
-                <Content />
+                <PartnersContent partners={partners} />
             </Container>
         </Box>
     );

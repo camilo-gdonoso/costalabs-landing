@@ -1,12 +1,13 @@
-const { PDFDocument, rgb } = require('pdf-lib');
-const fs = require('fs');
-const path = require('path');
+import { PDFDocument, rgb } from 'pdf-lib';
+import fs from 'fs';
+import puppeteer from 'puppeteer';
+import path from 'path';
 
 async function createPdf() {
   const doc = await PDFDocument.create();
   const dossierDir = path.join(__dirname, '../public/dossier');
   const outputDir = path.join(__dirname, '../public');
-  
+
   // List of pages in order
   const pages = [
     'page1.png', // Portada
@@ -40,15 +41,15 @@ async function createPdf() {
         console.error(`Error embedding ${pageName}: ${e.message}`);
         // Try embedding as JPG if PNG fails, just in case
         try {
-             console.log(`Attempting to embed ${pageName} as JPEG...`);
-             const image = await doc.embedJpg(imageBytes);
-             const { width, height } = image.scale(1);
-             const page = doc.addPage([width, height]);
-             page.drawImage(image, { x: 0, y: 0, width, height });
-             console.log(`Added ${pageName} as JPEG`);
+          console.log(`Attempting to embed ${pageName} as JPEG...`);
+          const image = await doc.embedJpg(imageBytes);
+          const { width, height } = image.scale(1);
+          const page = doc.addPage([width, height]);
+          page.drawImage(image, { x: 0, y: 0, width, height });
+          console.log(`Added ${pageName} as JPEG`);
         } catch (e2) {
-             console.error(`Failed to embed ${pageName} as PNG or JPEG: ${e2.message}`);
-             throw e;
+          console.error(`Failed to embed ${pageName} as PNG or JPEG: ${e2.message}`);
+          throw e;
         }
       }
     } else {
@@ -59,7 +60,7 @@ async function createPdf() {
   const pdfBytes = await doc.save();
   const outputPath = path.join(outputDir, 'CostaLabs_Dossier_2026.pdf');
   fs.writeFileSync(outputPath, pdfBytes);
-  
+
   console.log(`Success! PDF saved to: ${outputPath}`);
 }
 

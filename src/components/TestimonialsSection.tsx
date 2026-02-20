@@ -58,7 +58,7 @@ export default function TestimonialsSection() {
                             minHeight: { md: '120px' } // Altura mínima para evitar saltos
                         }}
                     >
-                        "{testimonials[currentIndex].text}"
+                        &quot;{testimonials[currentIndex].text}&quot;
                     </Typography>
 
                     {/* Autor */}

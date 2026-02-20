@@ -34,7 +34,7 @@ export default function PrivacyPage() {
                                 1. Sobre esta Política de Privacidad
                             </Typography>
                             <Typography sx={{ color: '#ccc', lineHeight: 1.8 }}>
-                                Su privacidad es importante para nosotros. Esta Política de Privacidad establece la base sobre la cual nosotros, CostaLabs SpA, y nuestras filiales (colectivamente 'Costalabs', 'nosotros' o 'nos'), cuidamos de su privacidad. Esta Política de Privacidad explica cómo recopilamos, utilizamos, procesamos, compartimos, divulgamos y almacenamos su Información Personal, recopilada a través de sus interacciones con nosotros; incluyendo a través de nuestro sitio web (el 'Sitio'), proceso de ventas, actividades de marketing y otros medios.
+                                Su privacidad es importante para nosotros. Esta Política de Privacidad establece la base sobre la cual nosotros, CostaLabs SpA, y nuestras filiales (colectivamente &apos;Costalabs&apos;, &apos;nosotros&apos; o &apos;nos&apos;), cuidamos de su privacidad. Esta Política de Privacidad explica cómo recopilamos, utilizamos, procesamos, compartimos, divulgamos y almacenamos su Información Personal, recopilada a través de sus interacciones con nosotros; incluyendo a través de nuestro sitio web (el &apos;Sitio&apos;), proceso de ventas, actividades de marketing y otros medios.
                             </Typography>
                         </Box>
 

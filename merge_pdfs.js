@@ -1,5 +1,5 @@
-const fs = require('fs');
-const { PDFDocument } = require('pdf-lib');
+import fs from 'fs';
+import { PDFDocument } from 'pdf-lib';
 
 async function createMasterPDF() {
     console.log('Generando PDF Maestro en Alta Definición...');

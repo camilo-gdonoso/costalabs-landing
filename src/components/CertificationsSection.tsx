@@ -3,8 +3,26 @@ import { Box, Container, Typography } from '@mui/material';
 
 export default function CertificationsSection({ disablepy }: { disablepy?: boolean }) {
 
-    // Contenido interno reutilizable
-    const Content = () => (
+    if (disablepy) {
+        return <CertificationsContent />;
+    }
+
+    return (
+        <Box sx={{ py: 6, borderTop: '1px solid rgba(255,255,255,0.05)', background: 'rgba(0,0,0,0.3)' }}>
+            <Container maxWidth="lg">
+                <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', gap: 4 }}>
+                    <Typography variant="body2" sx={{ color: '#64748b', textTransform: 'uppercase', letterSpacing: 1, fontWeight: 600, minWidth: '200px' }}>
+                        Liderado por ingenieros certificados en:
+                    </Typography>
+                    <CertificationsContent />
+                </Box>
+            </Container>
+        </Box>
+    );
+}
+
+function CertificationsContent() {
+    return (
         <Box sx={{
             display: 'grid',
             gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, // Grid de 2 columnas para layout compacto
@@ -42,23 +60,6 @@ export default function CertificationsSection({ disablepy }: { disablepy?: boole
                 subtitle="DevOps"
                 color="#eab308"
             />
-        </Box>
-    );
-
-    if (disablepy) {
-        return <Content />;
-    }
-
-    return (
-        <Box sx={{ py: 6, borderTop: '1px solid rgba(255,255,255,0.05)', background: 'rgba(0,0,0,0.3)' }}>
-            <Container maxWidth="lg">
-                <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', gap: 4 }}>
-                    <Typography variant="body2" sx={{ color: '#64748b', textTransform: 'uppercase', letterSpacing: 1, fontWeight: 600, minWidth: '200px' }}>
-                        Liderado por ingenieros certificados en:
-                    </Typography>
-                    <Content />
-                </Box>
-            </Container>
         </Box>
     );
 }

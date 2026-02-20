@@ -116,7 +116,7 @@ export default function SoftwareAMedidaPage() {
                             </Typography>
                             <Box sx={{ borderLeft: '3px solid #00d4ff', pl: 3, mt: 4 }}>
                                 <Typography sx={{ color: 'white', fontStyle: 'italic', fontSize: '1.2rem' }}>
-                                    "Las empresas que adoptan tecnología personalizada y metodologías ágiles tienen 2.5 veces más probabilidades de ser líderes en su industria"
+                                    &quot;Las empresas que adoptan tecnología personalizada y metodologías ágiles tienen 2.5 veces más probabilidades de ser líderes en su industria&quot;
                                 </Typography>
                                 <Typography sx={{ color: '#64748b', mt: 1, fontSize: '0.9rem' }}>— MIT Sloan Management Review</Typography>
                             </Box>
