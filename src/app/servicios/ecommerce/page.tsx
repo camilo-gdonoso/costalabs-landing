@@ -86,7 +86,7 @@ export default function EcommercePage() {
                         <Box sx={{ p: 4, border: '1px solid rgba(255,255,255,0.05)', borderRadius: 4, background: 'linear-gradient(180deg, rgba(255,255,255,0.03) 0%, transparent 100%)' }}>
                             <ShoppingCartIcon sx={{ fontSize: 40, color: '#3b82f6', mb: 2 }} />
                             <Typography variant="h5" sx={{ color: 'white', fontWeight: 700, mb: 1.5 }}>Plataformas Escalables</Typography>
-                            <Typography sx={{ color: '#a1a1aa' }}>Desarrollamos sobre Shopify, WooCommerce o soluciones a medida con Next.js preparadas para crecer.</Typography>
+                            <Typography sx={{ color: '#a1a1aa' }}>Desarrollamos sobre arquitecturas modernas como Headless Shopify o soluciones a medida con Next.js preparadas para crecer.</Typography>
                         </Box>
                         <Box sx={{ p: 4, border: '1px solid rgba(255,255,255,0.05)', borderRadius: 4, background: 'linear-gradient(180deg, rgba(255,255,255,0.03) 0%, transparent 100%)' }}>
                             <LocalShippingIcon sx={{ fontSize: 40, color: '#f59e0b', mb: 2 }} />
