@@ -319,7 +319,41 @@ export default function WhatsAppButton() {
                 </Paper>
             )}
 
-            <Tooltip title={isOpen ? "Cerrar chat" : "Chatear con nuestro Asistente"} placement="left" arrow>
+            {!isOpen && (
+                <Box
+                    sx={{
+                        position: 'fixed',
+                        bottom: { xs: 32, md: 40 },
+                        right: { xs: 85, md: 105 },
+                        bgcolor: 'white',
+                        color: '#03101c',
+                        py: 1,
+                        px: 2,
+                        borderRadius: '20px 20px 0 20px',
+                        boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+                        zIndex: 9998,
+                        display: { xs: 'none', sm: 'block' },
+                        animation: 'fadeInRight 0.5s ease-out',
+                        '&::after': {
+                            content: '""',
+                            position: 'absolute',
+                            bottom: 0,
+                            right: -8,
+                            width: 0,
+                            height: 0,
+                            borderStyle: 'solid',
+                            borderWidth: '8px 0 0 8px',
+                            borderColor: 'transparent transparent transparent white',
+                        }
+                    }}
+                >
+                    <Typography sx={{ fontWeight: 700, fontSize: '0.85rem', whiteSpace: 'nowrap' }}>
+                        ¿Dudas? Pregúntale a <span style={{ color: '#00d4ff' }}>CostaBot</span>
+                    </Typography>
+                </Box>
+            )}
+
+            <Tooltip title={isOpen ? "Cerrar chat" : "Chatear con CostaBot AI"} placement="left" arrow>
                 <Fab
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Contactar por WhatsApp"
@@ -344,9 +378,35 @@ export default function WhatsAppButton() {
                             '0%, 100%': { boxShadow: '0 8px 24px rgba(37, 211, 102, 0.4)' },
                             '50%': { boxShadow: '0 8px 32px rgba(37, 211, 102, 0.7)' },
                         },
+                        '@keyframes fadeInRight': {
+                            from: { opacity: 0, transform: 'translateX(20px)' },
+                            to: { opacity: 1, transform: 'translateX(0)' }
+                        }
                     }}
                 >
-                    {isOpen ? <CloseIcon sx={{ fontSize: { xs: 24, md: 28 } }} /> : <WhatsAppIcon sx={{ fontSize: { xs: 28, md: 32 } }} />}
+                    {isOpen ? (
+                        <CloseIcon sx={{ fontSize: { xs: 24, md: 28 } }} />
+                    ) : (
+                        <Box sx={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <WhatsAppIcon sx={{ fontSize: { xs: 28, md: 32 } }} />
+                            <Box sx={{
+                                position: 'absolute',
+                                top: -12,
+                                right: -12,
+                                bgcolor: '#00d4ff',
+                                color: '#03101c',
+                                borderRadius: '8px',
+                                px: 0.6,
+                                py: 0.2,
+                                fontSize: '0.65rem',
+                                fontWeight: 900,
+                                border: '2px solid #25D366',
+                                boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+                            }}>
+                                AI
+                            </Box>
+                        </Box>
+                    )}
                 </Fab>
             </Tooltip>
         </>
