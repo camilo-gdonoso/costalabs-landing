@@ -58,6 +58,7 @@ const detailedServices = [
         link: '/servicios/bi',
         color: '#8b5cf6',
     },
+    /*
     {
         icon: <StorefrontIcon sx={{ fontSize: 40 }} />,
         title: 'Desarrollo WooCommerce Personalizado',
@@ -66,6 +67,7 @@ const detailedServices = [
         link: '/servicios/woocommerce',
         color: '#f59e0b',
     },
+    */
     {
         icon: <WebIcon sx={{ fontSize: 40 }} />,
         title: 'Soluciones WordPress Empresariales',
