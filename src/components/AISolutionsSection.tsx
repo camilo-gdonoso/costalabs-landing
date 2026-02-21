@@ -11,7 +11,7 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 interface PricingTier {
     name: string;
     details: string;
-    maintenance: string;
+    maintenance?: string;
     idealFor?: string;
 }
 
