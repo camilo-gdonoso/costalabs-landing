@@ -16,21 +16,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "CostaLabs | Desarrollo de Software en el Norte de Chile - IA, DevOps & E-commerce",
+    default: "CostaLabs | Desarrollo de Software en Chile - IA, DevOps & E-commerce",
     template: "%s | CostaLabs"
   },
-  description: "Empresa de desarrollo de software en Chile. Servicios de IA, DevOps, FinOps, e-commerce y marketing digital. Presencia en Arica, Iquique, Antofagasta, Calama, La Serena y Santiago. Transformación digital para empresas chilenas.",
+  description: "Empresa líder en desarrollo de software en todo Chile. Especialistas en IA, Agentes de IA, DevOps y E-commerce de alto rendimiento. Transformación digital con presencia nacional.",
   metadataBase: new URL('https://www.costalabs.cl'),
   keywords: [
     // Keywords regionales del norte de Chile
-    "empresa software norte de chile",
+    "empresa de software chile",
     "desarrollo software Arica",
     "desarrollo software Iquique",
     "desarrollo software Antofagasta",
     "desarrollo software Calama",
     "desarrollo software La Serena",
     "desarrollo software Santiago",
-    "empresa tecnología norte chile",
+    "empresa tecnología chile",
     "software a medida chile",
 
     // Keywords técnicas y servicios principales
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     "finops chile",
     "cloud computing chile",
     "marketing digital chile",
-    "marketing digital norte",
+    "marketing digital chile",
     "e-commerce chile",
     "tienda online chile",
     "desarrollo e-commerce",
