@@ -147,36 +147,74 @@ export default function WhatsAppButton() {
                                     color: '#e9edef',
                                     boxShadow: '0 1px 2px rgba(0,0,0,0.3)',
                                 }}>
-                                    <Typography variant="body2" sx={{ whiteSpace: 'pre-line', lineHeight: 1.4 }}>
-                                        {m.text.split(/(https?:\/\/wa\.me\/\S+|https?:\/\/api\.whatsapp\.com\/\S+)/g).map((part, index) => {
-                                            if (part.match(/https?:\/\/wa\.me\/\S+|https?:\/\/api\.whatsapp\.com\/\S+/)) {
-                                                return (
-                                                    <Button
-                                                        key={index}
-                                                        variant="contained"
-                                                        startIcon={<WhatsAppIcon />}
-                                                        href={part}
-                                                        target="_blank"
-                                                        fullWidth
-                                                        sx={{
-                                                            mt: 1.5,
-                                                            mb: 0.5,
-                                                            bgcolor: '#00d4ff',
-                                                            color: '#03101c',
-                                                            fontWeight: 800,
-                                                            textTransform: 'none',
-                                                            borderRadius: 2,
-                                                            '&:hover': {
-                                                                bgcolor: '#00b8e6',
-                                                            }
-                                                        }}
-                                                    >
-                                                        Hablar por WhatsApp
-                                                    </Button>
-                                                );
+                                    <Typography variant="body2" component="div" sx={{ lineHeight: 1.4 }}>
+                                        {m.text.split(/(https?:\/\/\S+)/g).map((part, index) => {
+                                            if (part.startsWith('http')) {
+                                                const isWhatsApp = part.includes('wa.me') || part.includes('whatsapp.com');
+                                                const isCalendly = part.includes('calendly.com');
+
+                                                if (isWhatsApp || isCalendly) {
+                                                    return (
+                                                        <Button
+                                                            key={index}
+                                                            variant="contained"
+                                                            startIcon={isWhatsApp ? <WhatsAppIcon /> : null}
+                                                            href={part}
+                                                            target="_blank"
+                                                            fullWidth
+                                                            sx={{
+                                                                mt: 1.5,
+                                                                mb: 0.5,
+                                                                bgcolor: '#00d4ff', // CostaLabs Cyan as requested
+                                                                color: '#03101c',
+                                                                fontWeight: 800,
+                                                                textTransform: 'none',
+                                                                borderRadius: 2,
+                                                                boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+                                                                '&:hover': {
+                                                                    bgcolor: '#00b8e6',
+                                                                    transform: 'translateY(-2px)',
+                                                                    boxShadow: '0 6px 16px rgba(0,0,0,0.3)',
+                                                                },
+                                                                transition: 'all 0.2s'
+                                                            }}
+                                                        >
+                                                            {isWhatsApp ? 'Hablar con un Ejecutivo' : 'Agendar Cita en Calendly'}
+                                                        </Button>
+                                                    );
+                                                }
+                                                return <a key={index} href={part} target="_blank" style={{ color: '#00d4ff', textDecoration: 'underline' }}>{part}</a>;
                                             }
-                                            return part;
+                                            return <span key={index} style={{ whiteSpace: 'pre-line' }}>{part}</span>;
                                         })}
+                                        {/* Force WhatsApp button if Calendly is present but WA is not */}
+                                        {m.role === 'assistant' && m.text.includes('calendly.com') && !m.text.includes('wa.me') && !m.text.includes('whatsapp.com') && (
+                                            <Button
+                                                variant="contained"
+                                                startIcon={<WhatsAppIcon />}
+                                                href="https://wa.me/56993424453"
+                                                target="_blank"
+                                                fullWidth
+                                                sx={{
+                                                    mt: 1.5,
+                                                    mb: 0.5,
+                                                    bgcolor: '#00d4ff',
+                                                    color: '#03101c',
+                                                    fontWeight: 800,
+                                                    textTransform: 'none',
+                                                    borderRadius: 2,
+                                                    boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+                                                    '&:hover': {
+                                                        bgcolor: '#00b8e6',
+                                                        transform: 'translateY(-2px)',
+                                                        boxShadow: '0 6px 16px rgba(0,0,0,0.3)',
+                                                    },
+                                                    transition: 'all 0.2s'
+                                                }}
+                                            >
+                                                Hablar con un Ejecutivo
+                                            </Button>
+                                        )}
                                     </Typography>
                                     <Typography variant="caption" sx={{
                                         display: 'block',
