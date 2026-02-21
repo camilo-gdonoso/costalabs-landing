@@ -84,8 +84,7 @@ export default function Hero() {
                     mb: 8,
                     animation: 'fadeInUp 1s ease-out 0.4s backwards'
                 }}>
-                    Pioneros en la integración de Inteligencia Artificial aplicada a procesos de software y automatización.
-                    Construimos soluciones robustas y escalables para empresas que buscan liderar el futuro digital en todo Chile.
+                    Somos parte de la nueva generación de empresas chilenas que lideran la integración de IA avanzada en el sector productivo y la automatización inteligente a escala nacional.
                 </Typography>
 
                 {/* Buttons CTA */}

@@ -4,7 +4,7 @@ export default function JsonLd() {
         '@type': 'LocalBusiness',
         '@id': 'https://costalabs.cl',
         name: 'CostaLabs',
-        description: 'Empresa líder de desarrollo de software en todo Chile. Especialistas en IA, Agentes de IA, DevOps y E-commerce con alcance nacional desde el norte de Chile.',
+        description: 'Somos parte de la nueva generación de empresas chilenas que lideran la integración de IA avanzada en el sector productivo y la automatización inteligente a escala nacional.',
         url: 'https://costalabs.cl',
         logo: 'https://costalabs.cl/logo.svg',
         image: 'https://costalabs.cl/hero-dashboard-v2.png',
