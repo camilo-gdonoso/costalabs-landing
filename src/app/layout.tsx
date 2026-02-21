@@ -125,6 +125,7 @@ export const metadata: Metadata = {
 };
 
 import Footer from "@/components/Footer";
+import SmoothScroll from "@/components/SmoothScroll";
 
 // ... (existing imports)
 
@@ -139,6 +140,7 @@ export default function RootLayout({
         <meta name="google-site-verification" content="lsOxxn9Ilo9ieizN320EFVcIZOZoFVRQA7aYDR4n2EY" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
+        <SmoothScroll />
         <Providers>
           <JsonLd />
           {children}
