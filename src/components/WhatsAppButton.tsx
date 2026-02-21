@@ -99,11 +99,12 @@ export default function WhatsAppButton() {
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                             <Box sx={{
                                 width: 40, height: 40, borderRadius: '50%',
-                                bgcolor: '#005c4b', display: 'flex',
+                                bgcolor: 'rgba(255,255,255,0.05)', display: 'flex',
+                                border: '1px solid rgba(255,255,255,0.1)',
                                 alignItems: 'center', justifyContent: 'center',
-                                color: 'white', fontWeight: 'bold'
+                                color: 'white'
                             }}>
-                                CL
+                                <img src="/logo.svg" alt="CostaBot" style={{ width: '100%', height: 'auto', padding: '6px' }} />
                             </Box>
                             <Box>
                                 <Typography variant="subtitle1" sx={{ color: 'white', fontWeight: 600, lineHeight: 1.2 }}>
@@ -159,7 +160,7 @@ export default function WhatsAppButton() {
                                                             key={index}
                                                             variant="contained"
                                                             startIcon={isWhatsApp ? <WhatsAppIcon /> : null}
-                                                            href={part}
+                                                            href={isCalendly ? 'https://calendly.com/contacto-costalabs/30min' : part}
                                                             target="_blank"
                                                             fullWidth
                                                             sx={{
