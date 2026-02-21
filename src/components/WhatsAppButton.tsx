@@ -40,8 +40,18 @@ export default function WhatsAppButton() {
                 body: JSON.stringify({ message: currentInput, session_id: 'web_user' })
             });
             const data = await resp.json();
-            setMessages(prev => [...prev, { role: 'assistant', text: data.response }]);
+
+            // Asegurarnos de que el texto sea un string (por si el backend envía un objeto/array)
+            let botText = data.response;
+            if (Array.isArray(botText)) {
+                botText = botText.map((p: any) => typeof p === 'string' ? p : (p.text || '')).join('');
+            } else if (typeof botText === 'object' && botText !== null) {
+                botText = botText.text || JSON.stringify(botText);
+            }
+
+            setMessages(prev => [...prev, { role: 'assistant', text: botText }]);
         } catch (err) {
+            console.error("Chat Error:", err);
             setMessages(prev => [...prev, { role: 'assistant', text: 'Lo siento, ha ocurrido un error al conectar con nuestro asesor virtual. Por favor intenta más tarde o contáctanos directamente.' }]);
         } finally {
             setLoading(false);
