@@ -130,7 +130,7 @@ export default function AISolutionsSection() {
                 {/* Content Area */}
                 <Box sx={{ mb: 15 }}>
                     <Grid container spacing={4}>
-                        <Grid item xs={12} lg={4}>
+                        <Grid size={{ xs: 12, lg: 4 }}>
                             <Paper sx={{
                                 p: 4,
                                 height: '100%',
@@ -166,10 +166,10 @@ export default function AISolutionsSection() {
                             </Paper>
                         </Grid>
 
-                        <Grid item xs={12} lg={8}>
+                        <Grid size={{ xs: 12, lg: 8 }}>
                             <Grid container spacing={2}>
                                 {(tabValue === 0 ? modelA : modelB).map((tier, idx) => (
-                                    <Grid item xs={12} md={6} key={idx}>
+                                    <Grid size={{ xs: 12, md: 6 }} key={idx}>
                                         <Paper sx={{
                                             p: 3,
                                             height: '100%',
@@ -223,7 +223,7 @@ export default function AISolutionsSection() {
                                 desc: 'Nuestra meta es implementar la potencia digital que tu proyecto necesita para transformar cada interacción en negocio real.'
                             }
                         ].map((diff, i) => (
-                            <Grid item xs={12} md={4} key={i}>
+                            <Grid size={{ xs: 12, md: 4 }} key={i}>
                                 <Box sx={{ textAlign: 'center', p: 4 }}>
                                     <Box sx={{
                                         width: 80,
