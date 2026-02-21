@@ -48,7 +48,7 @@ export default function Hero() {
                 }}>
                     <Box sx={{ width: 8, height: 8, borderRadius: '50%', background: '#2bd2ff', mr: 1.5, boxShadow: '0 0 10px #2bd2ff' }} />
                     <Typography variant="caption" sx={{ color: '#e2e8f0', fontWeight: 500, letterSpacing: 0.5 }}>
-                        v2.0 IS NOW LIVE
+                        PIONEROS EN IA NATIVA
                     </Typography>
                 </Box>
 
@@ -62,15 +62,15 @@ export default function Hero() {
                     mb: 4,
                     animation: 'fadeInUp 1s ease-out 0.2s backwards'
                 }}>
-                    Transformamos tus ideas <br />
+                    Software a Medida <br />
                     <Box component="span" sx={{
-                        background: 'linear-gradient(to right, #94a3b8, #ffffff, #94a3b8)',
+                        background: 'linear-gradient(to right, #00d4ff, #ffffff, #00d4ff)',
                         backgroundSize: '200% auto',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         animation: 'textShine 5s linear infinite'
                     }}>
-                        en realidad.
+                        con IA Nativa.
                     </Box>
                 </Typography>
 
@@ -78,13 +78,14 @@ export default function Hero() {
                 <Typography variant="h5" sx={{
                     color: '#94a3b8',
                     fontSize: { xs: '1.1rem', md: '1.4rem' },
-                    maxWidth: '680px',
+                    maxWidth: '850px',
                     mx: 'auto',
                     lineHeight: 1.6,
                     mb: 8,
                     animation: 'fadeInUp 1s ease-out 0.4s backwards'
                 }}>
-                    Expertos en desarrollo de software a medida y estrategias digitales impulsadas por IA. Transformamos tus desafíos en ventajas competitivas con soluciones seguras, rápidas y eficientes, diseñadas para empresas que buscan salir de lo tradicional y liderar el futuro.
+                    Pioneros en la integración de Inteligencia Artificial aplicada a procesos de software y automatización.
+                    Construimos soluciones robustas y escalables para empresas que buscan liderar el futuro digital en todo Chile.
                 </Typography>
 
                 {/* Buttons CTA */}

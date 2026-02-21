@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "CostaLabs | Desarrollo de Software en Chile - IA, DevOps & E-commerce",
+    default: "CostaLabs | Software a Medida con IA Nativa & Automatización en Chile",
     template: "%s | CostaLabs"
   },
   description: "Empresa líder en desarrollo de software en todo Chile. Especialistas en IA, Agentes de IA, DevOps y E-commerce de alto rendimiento. Transformación digital con presencia nacional.",
