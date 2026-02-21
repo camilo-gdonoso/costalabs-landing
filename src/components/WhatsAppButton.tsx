@@ -24,12 +24,13 @@ export default function WhatsAppButton() {
         }
     }, [messages, isOpen]);
 
-    const handleSend = async () => {
-        if (!input.trim()) return;
+    const handleSend = async (manualValue?: string) => {
+        const valueToSend = manualValue || input;
+        if (!valueToSend.trim()) return;
 
-        const userMsg = { role: 'user', text: input };
+        const userMsg = { role: 'user', text: valueToSend };
         setMessages(prev => [...prev, userMsg]);
-        const currentInput = input;
+        const currentInput = valueToSend;
         setInput('');
         setLoading(true);
 
@@ -161,6 +162,43 @@ export default function WhatsAppButton() {
                                 </Box>
                             </Box>
                         ))}
+
+                        {/* Botones de Respuesta Rápida (Solo se muestran si es el mensaje inicial) */}
+                        {!loading && messages.length === 1 && (
+                            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mt: 1 }}>
+                                {[
+                                    { id: '1', label: '1. Estamos explorando' },
+                                    { id: '2', label: '2. Queremos algo a medida' },
+                                    { id: '3', label: '3. Automatizar procesos' }
+                                ].map((btn) => (
+                                    <Box
+                                        key={btn.id}
+                                        onClick={() => {
+                                            setInput(btn.id);
+                                            setTimeout(() => handleSend(btn.id), 10);
+                                        }}
+                                        sx={{
+                                            bgcolor: 'rgba(37, 211, 102, 0.1)',
+                                            border: '1px solid #25D366',
+                                            color: '#25D366',
+                                            px: 1.5,
+                                            py: 0.8,
+                                            borderRadius: 4,
+                                            fontSize: '0.85rem',
+                                            cursor: 'pointer',
+                                            transition: 'all 0.2s',
+                                            '&:hover': {
+                                                bgcolor: '#25D366',
+                                                color: 'white'
+                                            }
+                                        }}
+                                    >
+                                        {btn.label}
+                                    </Box>
+                                ))}
+                            </Box>
+                        )}
+
                         {loading && (
                             <Box sx={{ display: 'flex', justifyContent: 'flex-start' }}>
                                 <Box sx={{ bgcolor: '#202c33', p: 1.5, borderRadius: 2, borderTopLeftRadius: 0, display: 'flex', gap: 0.5 }}>
