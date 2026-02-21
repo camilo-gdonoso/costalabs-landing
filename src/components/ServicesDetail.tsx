@@ -68,6 +68,7 @@ const detailedServices = [
         color: '#f59e0b',
     },
     */
+    /*
     {
         icon: <WebIcon sx={{ fontSize: 40 }} />,
         title: 'Soluciones WordPress Empresariales',
@@ -76,6 +77,7 @@ const detailedServices = [
         link: '/servicios/wordpress',
         color: '#3b82f6',
     },
+    */
 ];
 
 export default function ServicesDetail() {
