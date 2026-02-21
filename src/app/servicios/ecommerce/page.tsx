@@ -3,7 +3,8 @@ import { Box, Container, Typography, Button, Paper } from '@mui/material';
 import Navbar from '@/components/Navbar';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import ContactForm from '@/components/ContactForm';
-import CodeWindow from '@/components/CodeWindow';
+import PaymentGatewayVisual from '@/components/PaymentGatewayVisual';
+import SeoVisualizer from '@/components/SeoVisualizer';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import StorefrontIcon from '@mui/icons-material/Storefront';
@@ -63,7 +64,7 @@ export default function EcommercePage() {
                             </Button>
                         </Box>
                         <Box>
-                            <CodeWindow />
+                            <PaymentGatewayVisual />
                         </Box>
                     </Box>
                 </Container>
@@ -137,19 +138,11 @@ export default function EcommercePage() {
                         <Box sx={{
                             height: '100%',
                             minHeight: '400px',
-                            background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(6, 78, 59, 0.1) 100%)',
-                            borderRadius: 4,
-                            border: '1px solid rgba(16, 185, 129, 0.2)',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            p: 4
                         }}>
-                            {/* Placeholder visual para SEO - Podría ser un gráfico de barras subiendo o una lupa */}
-                            <Box sx={{ textAlign: 'center' }}>
-                                <Typography variant="h1" sx={{ fontSize: '5rem', fontWeight: 900, color: 'rgba(16, 185, 129, 0.2)' }}>SEO</Typography>
-                                <Typography sx={{ color: '#10b981', fontWeight: 600, mt: 2 }}>RANKING #1</Typography>
-                            </Box>
+                            <SeoVisualizer />
                         </Box>
                     </Box>
                 </Container>
