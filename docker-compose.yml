@@ -8,3 +8,5 @@ services:
     environment:
       - NODE_ENV=production
       - RESEND_API_KEY=${RESEND_API_KEY}
+    volumes:
+      - ./logs:/app/logs
