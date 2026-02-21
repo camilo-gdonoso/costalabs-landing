@@ -34,7 +34,7 @@ export default function WhatsAppButton() {
         setLoading(true);
 
         try {
-            const resp = await fetch('http://localhost:8000/chat', {
+            const resp = await fetch('http://165.227.68.38:8000/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message: currentInput, session_id: 'web_user' })

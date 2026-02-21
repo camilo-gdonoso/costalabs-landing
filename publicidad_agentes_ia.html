@@ -4,87 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publicidad Agentes IA - CostaLabs</title>
+    <title>Publicidad Agentes IA - Vende 24/7</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
         body {
-            font-family: 'Inter', sans-serif;
+            /* Usamos Plus Jakarta Sans para un look más tech y moderno */
+            font-family: 'Plus Jakarta Sans', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #111;
-            /* Dark background to see the ad bounds clearly */
+            background-color: #050505;
             margin: 0;
             padding: 2rem;
         }
 
+        /* Contenedor principal de 1080x1080 */
         .ad-container {
             width: 1080px;
             height: 1080px;
-            /* CostaLabs dark tech theme with teal accent */
-            background: radial-gradient(circle at 80% 20%, #0f4c47 0%, #020c0b 60%, #000000 100%);
+            min-width: 1080px;
+            min-height: 1080px;
+            /* Fondo oscuro con acentos azul/púrpura */
+            background: radial-gradient(circle at 80% 20%, #0f172a 0%, #020617 60%, #000000 100%);
             position: relative;
             overflow: hidden;
             color: white;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+            /* Escala para previsualización en monitores pequeños */
             transform-origin: center;
         }
 
-        /* Grid background pattern */
-        .grid-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: linear-gradient(rgba(20, 184, 166, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(20, 184, 166, 0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
-            z-index: 1;
+        /* Escalar dinámicamente si la pantalla es menor a 1100px (Solo para vista previa) */
+        @media (max-width: 1150px) {
+            body {
+                padding: 0;
+                overflow: hidden;
+            }
+
+            .ad-container {
+                transform: scale(0.85);
+            }
         }
 
+        @media (max-width: 950px) {
+            .ad-container {
+                transform: scale(0.65);
+            }
+        }
+
+        /* Patrón de cuadrícula de fondo */
+        .grid-bg {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 1;
+            opacity: 0.6;
+        }
+
+        /* Efecto Cristal (Glassmorphism) */
         .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(20, 184, 166, 0.2);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .glass-bubble {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .text-gradient {
-            background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%);
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* Floating animations for the robot/chat elements */
+        /* Animaciones flotantes */
         @keyframes float {
-            0% {
+
+            0%,
+            100% {
                 transform: translateY(0px);
             }
 
             50% {
                 transform: translateY(-20px);
             }
-
-            100% {
-                transform: translateY(0px);
-            }
         }
 
         @keyframes float-delayed {
-            0% {
-                transform: translateY(0px);
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
             }
 
             50% {
-                transform: translateY(-15px);
-            }
-
-            100% {
-                transform: translateY(0px);
+                transform: translateY(-15px) rotate(2deg);
             }
         }
 
@@ -97,176 +121,246 @@
             animation-delay: 2s;
         }
 
-        /* Decorative glowing orbs */
+        /* Orbes decorativos */
         .glow-orb {
             position: absolute;
             border-radius: 50%;
-            filter: blur(80px);
+            filter: blur(100px);
             z-index: 0;
         }
 
         .orb-1 {
             top: -100px;
             right: -100px;
-            width: 400px;
-            height: 400px;
-            background: rgba(20, 184, 166, 0.4);
+            width: 500px;
+            height: 500px;
+            background: rgba(56, 189, 248, 0.15);
+            /* Cyan */
         }
 
         .orb-2 {
             bottom: -150px;
-            left: -100px;
-            width: 500px;
-            height: 500px;
-            background: rgba(13, 148, 136, 0.3);
+            left: -150px;
+            width: 600px;
+            height: 600px;
+            background: rgba(139, 92, 246, 0.15);
+            /* Púrpura */
         }
 
         .z-content {
             z-index: 10;
             position: relative;
         }
+
+        /* Botón de llamado a la acción */
+        .btn-glow {
+            position: relative;
+        }
+
+        .btn-glow::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #38bdf8, #818cf8, #c084fc);
+            z-index: -1;
+            border-radius: 9999px;
+            filter: blur(15px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn-glow:hover::before {
+            opacity: 0.7;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- 1080x1080 Ad Container (Instagram / Square format) -->
-    <div class="ad-container rounded-3xl flex flex-col justify-between p-16">
+    <!-- Contenedor 1080x1080 -->
+    <div class="ad-container rounded-3xl flex flex-col p-16">
 
-        <!-- Background Elements -->
+        <!-- Elementos de Fondo -->
         <div class="grid-bg"></div>
         <div class="glow-orb orb-1"></div>
         <div class="glow-orb orb-2"></div>
 
-        <!-- Header Section -->
-        <div class="z-content flex justify-between items-start">
-            <div>
-                <img src="./public/logo_kallpatech.png"
-                    onerror="this.src='https://via.placeholder.com/200x60/1a1a1a/14b8a6?text=CostaLabs+Logo';"
-                    alt="CostaLabs Logo" class="h-12 object-contain mb-8">
+        <!-- Cabecera -->
+        <div class="z-content flex justify-between items-start w-full">
+            <div class="flex flex-col gap-6">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <img src="https://costalabs.cl/logo.svg" alt="CostaLabs Logo" class="h-12 object-contain">
+                    <span class="text-3xl font-extrabold tracking-tight text-white">Costa<span
+                            class="text-cyan-400">Labs</span></span>
+                </div>
 
-                <div class="inline-flex flex-col gap-3">
-                    <!-- Tag / Badge -->
-                    <span
-                        class="px-5 py-2 rounded-full border border-teal-500/30 bg-teal-500/10 text-teal-300 font-semibold tracking-wide text-sm uppercase self-start">
-                        Tu nuevo asistente inteligente
-                    </span>
-
-                    <!-- Problem / Solution Badge -->
-                    <div class="mt-4 flex flex-col gap-2">
-                        <div class="flex items-center gap-3 opacity-60 line-through text-lg">
-                            <span class="text-red-400 font-bold">✕</span>
-                            <span>Pierdo mucho tiempo en tareas repetitivas.</span>
-                        </div>
-                        <div class="flex items-center gap-3 text-xl font-semibold text-teal-300">
-                            <span class="text-teal-400 font-bold">✓</span>
-                            <span>Agentes de IA de CostaLabs.</span>
-                        </div>
+                <!-- Etiquetas de Problema/Solución -->
+                <div class="flex flex-col gap-3 mt-4">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-700 bg-slate-800/50 text-slate-300 w-max">
+                        <span class="text-red-400 font-bold">✕</span>
+                        <span class="text-sm font-medium">Pierdes ventas por demorar en responder</span>
+                    </div>
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 w-max shadow-[0_0_15px_rgba(56,189,248,0.1)]">
+                        <span class="text-cyan-400 font-bold">✓</span>
+                        <span class="text-sm font-medium">Respuestas instantáneas 24/7 con IA</span>
                     </div>
                 </div>
             </div>
+
+            <!-- Badge Superior Derecha -->
+            <div
+                class="px-5 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 font-bold tracking-wide text-sm uppercase flex items-center gap-2">
+                <span class="relative flex h-3 w-3">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-purple-500"></span>
+                </span>
+                Ventas en Automático
+            </div>
         </div>
 
-        <!-- Main Content Area: Split Layout -->
-        <div class="z-content grid grid-cols-12 gap-12 mt-8 flex-1">
+        <!-- Contenido Principal: 2 Columnas -->
+        <div class="z-content flex-1 grid grid-cols-12 gap-12 items-center mt-4">
 
-            <!-- Left Text Column -->
-            <div class="col-span-7 flex flex-col justify-center">
-                <h1 class="text-[4rem] font-extrabold leading-[1.1] mb-6 text-white tracking-tight">
-                    Deja que la <br />
-                    <span class="text-gradient">Inteligencia Artificial</span> <br />
-                    responda por ti.
+            <!-- Columna Izquierda: Textos y CTA -->
+            <div class="col-span-7 flex flex-col justify-center pr-8">
+                <h1 class="text-[4.5rem] font-extrabold leading-[1.05] mb-6 text-white tracking-tight">
+                    Tu negocio <br />
+                    no duerme, <br />
+                    <span class="text-gradient">tu asistente tampoco.</span>
                 </h1>
 
-                <p class="text-2xl text-gray-300 leading-relaxed font-light mb-10 max-w-xl">
-                    ¿Cansado de responder las mismas 5 preguntas por WhatsApp o Messenger? <br /><br />
-                    <strong class="text-white font-medium">Creamos agentes inteligentes que atienden a tus clientes al
-                        instante, agendan citas y resuelven dudas por ti.</strong>
+                <p class="text-2xl text-slate-300 leading-relaxed font-light mb-12 max-w-xl">
+                    Implementamos Agentes de Inteligencia Artificial que
+                    <strong class="text-white font-semibold">atienden prospectos, agendan citas y cierran
+                        ventas</strong>
+                    por WhatsApp de forma automática y humana.
                 </p>
 
-                <!-- CTA Button -->
-                <div>
+                <!-- Botón CTA -->
+                <div class="flex flex-col gap-4">
                     <button
-                        class="bg-gradient-to-r from-teal-500 to-teal-700 hover:from-teal-400 hover:to-teal-600 text-white font-bold text-xl py-5 px-10 rounded-full shadow-[0_0_30px_rgba(20,184,166,0.3)] transition-all flex items-center gap-3">
-                        Escríbenos y te asesoramos
+                        class="btn-glow relative bg-white text-slate-900 font-extrabold text-xl py-5 px-10 rounded-full transition-all flex items-center justify-center gap-3 w-max hover:scale-105 duration-300">
+                        Quiero automatizar mis ventas
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                 d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                     </button>
-                    <p class="text-gray-400 text-sm mt-4 ml-4">Aquí es donde aterrizamos la IA para alguien que no sabe
-                        de código.</p>
+                    <div class="flex items-center gap-3 ml-4 mt-2">
+                        <div class="flex -space-x-2">
+                            <img class="w-8 h-8 rounded-full border-2 border-slate-900"
+                                src="https://i.pravatar.cc/100?img=1" alt="User">
+                            <img class="w-8 h-8 rounded-full border-2 border-slate-900"
+                                src="https://i.pravatar.cc/100?img=2" alt="User">
+                            <img class="w-8 h-8 rounded-full border-2 border-slate-900"
+                                src="https://i.pravatar.cc/100?img=3" alt="User">
+                        </div>
+                        <p class="text-slate-400 text-sm font-medium">+50 empresas ya escalaron con nosotros</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Right Visual Column (Robot/Chat UI) -->
-            <div class="col-span-5 relative flex items-center justify-center">
+            <!-- Columna Derecha: UI de Chat y Gráficos -->
+            <div class="col-span-5 relative flex items-center justify-center h-full">
 
-                <!-- Chat Window Abstract UI -->
-                <div class="glass-panel w-full rounded-3xl p-6 floating shadow-2xl relative z-20">
+                <!-- Gráfico de fondo abstracto (Cerebro/Nodos) -->
+                <div
+                    class="absolute inset-0 flex items-center justify-center z-10 floating-delayed opacity-40 scale-[1.3] translate-x-10">
+                    <svg width="400" height="400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                            stroke="url(#paint0_linear)" stroke-width="0.5" stroke-dasharray="2 2" />
+                        <circle cx="12" cy="12" r="6" stroke="url(#paint1_linear)" stroke-width="1" />
+                        <circle cx="12" cy="12" r="3" fill="#38BDF8" class="animate-pulse" />
+                        <path
+                            d="M12 6V9M12 15V18M6 12H9M15 12H18M7.5 7.5L9.5 9.5M14.5 14.5L16.5 16.5M7.5 16.5L9.5 14.5M14.5 7.5L16.5 9.5"
+                            stroke="#818CF8" stroke-width="1" stroke-linecap="round" />
+                        <defs>
+                            <linearGradient id="paint0_linear" x1="2" y1="2" x2="22" y2="22"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#38BDF8" />
+                                <stop offset="1" stop-color="#C084FC" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear" x1="6" y1="6" x2="18" y2="18"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#38BDF8" />
+                                <stop offset="1" stop-color="#C084FC" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
 
-                    <!-- Chat Header -->
-                    <div class="flex items-center gap-4 mb-6 border-b border-white/10 pb-4">
-                        <div
-                            class="w-12 h-12 rounded-full bg-teal-500 flex items-center justify-center shadow-[0_0_15px_rgba(20,184,166,0.5)]">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                            </svg>
+                <!-- Ventana de Chat UI -->
+                <div
+                    class="glass-panel w-full rounded-[2rem] p-6 floating shadow-2xl relative z-20 transform translate-y-4">
+
+                    <!-- Header del Chat -->
+                    <div class="flex items-center gap-4 mb-6 pb-4 border-b border-white/10">
+                        <div class="relative">
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-600 p-[2px]">
+                                <div class="w-full h-full bg-slate-900 rounded-full flex items-center justify-center">
+                                    <span class="text-2xl">🤖</span>
+                                </div>
+                            </div>
+                            <div
+                                class="absolute bottom-0 right-0 w-4 h-4 bg-green-500 border-2 border-slate-900 rounded-full">
+                            </div>
                         </div>
                         <div>
-                            <h3 class="font-bold text-white text-lg">Asistente IA CostaLabs</h3>
-                            <p class="text-teal-400 text-sm flex items-center gap-1">
-                                <span class="w-2 h-2 rounded-full bg-teal-400"></span> En línea (Respuestas al instante)
+                            <h3 class="font-bold text-white text-xl tracking-tight">KallpaBot IA</h3>
+                            <p class="text-cyan-400 text-sm font-medium flex items-center gap-1 mt-1">
+                                En línea • Responde al instante
                             </p>
                         </div>
                     </div>
 
-                    <!-- Chat Bubbles -->
-                    <div class="flex flex-col gap-4">
-                        <!-- User message -->
+                    <!-- Burbujas de Mensaje -->
+                    <div class="flex flex-col gap-5">
+                        <!-- Mensaje Cliente -->
                         <div
-                            class="self-end bg-white/10 text-white p-4 rounded-2xl rounded-tr-sm max-w-[85%] text-[15px]">
-                            Hola, ¿tienen disponibilidad para mañana a las 10am?
+                            class="self-end glass-bubble text-white p-4 px-5 rounded-2xl rounded-tr-sm max-w-[85%] text-lg shadow-sm">
+                            Hola, ¿qué precio tiene el servicio y tienen disponibilidad hoy?
                         </div>
 
-                        <!-- AI message -->
+                        <!-- Mensaje IA -->
                         <div
-                            class="self-start glass-panel border border-teal-500/30 text-white p-4 rounded-2xl rounded-tl-sm max-w-[90%] text-[15px] relative">
-                            <!-- Typing indicator -->
-                            <div class="absolute -top-3 -left-2 bg-teal-500/20 p-1.5 rounded-full flex gap-1">
-                                <span class="w-1.5 h-1.5 bg-teal-400 rounded-full animate-pulse"></span>
-                                <span class="w-1.5 h-1.5 bg-teal-400 rounded-full animate-pulse"
+                            class="self-start bg-gradient-to-br from-cyan-900/40 to-blue-900/40 border border-cyan-500/30 text-white p-5 rounded-2xl rounded-tl-sm max-w-[95%] text-lg relative shadow-[0_4px_20px_rgba(56,189,248,0.15)]">
+                            <!-- Indicador de "Escribiendo" abstracto -->
+                            <div
+                                class="absolute -top-4 -left-2 bg-slate-800 border border-cyan-500/30 px-3 py-1.5 rounded-full flex gap-1.5 shadow-lg">
+                                <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"></span>
+                                <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"
                                     style="animation-delay: 0.2s"></span>
-                                <span class="w-1.5 h-1.5 bg-teal-400 rounded-full animate-pulse"
+                                <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"
                                     style="animation-delay: 0.4s"></span>
                             </div>
-                            ¡Hola! Sí, claro. Acabo de revisar nuestro calendario y te he reservado un espacio a las
-                            10:00 AM para la consultoría. ¿Te confirmo por correo? 📅✨
+
+                            ¡Hola! 👋 El servicio premium cuesta $99/mes. <br><br>
+                            Tengo un espacio libre hoy a las <strong>4:00 PM</strong>. ¿Te gustaría agendar una reunión
+                            rápida por Zoom para mostrarte cómo funciona? ⚡
+
+                            <!-- Simulación de botones interactivos de IA -->
+                            <div class="flex gap-2 mt-4">
+                                <span
+                                    class="text-xs bg-cyan-500/20 text-cyan-300 px-3 py-1.5 rounded-lg border border-cyan-500/20 cursor-pointer hover:bg-cyan-500/40 transition-colors">Sí,
+                                    agendar a las 4pm</span>
+                                <span
+                                    class="text-xs bg-white/5 text-slate-300 px-3 py-1.5 rounded-lg border border-white/10 cursor-pointer hover:bg-white/10 transition-colors">Ver
+                                    otro horario</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Abstract Robot Graphic behind the chat -->
-                <div
-                    class="absolute inset-0 flex items-center justify-center z-10 floating-delayed opacity-50 scale-125 translate-x-12 translate-y-12">
-                    <svg width="400" height="400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 2C8.13401 2 5 5.13401 5 9V14C5 17.866 8.13401 21 12 21C15.866 21 19 17.866 19 14V9C19 5.13401 15.866 2 12 2ZM12 4C14.7614 4 17 6.23858 17 9V11H7V9C7 6.23858 9.23858 4 12 4ZM7 13H17V14C17 16.7614 14.7614 19 12 19C9.23858 19 7 16.7614 7 14V13Z"
-                            fill="#14B8A6" />
-                        <circle cx="10" cy="8" r="1.5" fill="#2DD4BF" class="animate-pulse" />
-                        <circle cx="14" cy="8" r="1.5" fill="#2DD4BF" class="animate-pulse" />
-                        <path d="M10 16H14" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" />
-                        <path d="M3 10C3 10 2 10 2 12C2 14 3 14 3 14" stroke="#14B8A6" stroke-width="2"
-                            stroke-linecap="round" />
-                        <path d="M21 10C21 10 22 10 22 12C22 14 21 14 21 14" stroke="#14B8A6" stroke-width="2"
-                            stroke-linecap="round" />
-                    </svg>
-                </div>
             </div>
-
         </div>
 
     </div>
