@@ -1,6 +1,6 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
-import { Fab, Tooltip, Box, Typography, TextField, IconButton, Paper, CircularProgress } from '@mui/material';
+import { Fab, Tooltip, Box, Typography, TextField, IconButton, Paper, CircularProgress, Button } from '@mui/material';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import CloseIcon from '@mui/icons-material/Close';
 import SendIcon from '@mui/icons-material/Send';
@@ -8,7 +8,7 @@ import SendIcon from '@mui/icons-material/Send';
 export default function WhatsAppButton() {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
-        { role: 'assistant', text: '¡Hola! Soy el Asistente Ventas de CostaLabs. Ayudamos a empresas a escalar mediante soluciones de Inteligencia Artificial. ¿En qué etapa se encuentra tu empresa respecto al uso de IA?\n1. Apenas estamos explorando.\n2. Ya usamos algunas herramientas, pero queremos algo a medida.\n3. Buscamos automatizar procesos específicos.' }
+        { role: 'assistant', text: '¡Hola! Soy CostaBot, el Asistente de Ventas de CostaLabs. Ayudamos a empresas a escalar mediante soluciones de Inteligencia Artificial. ¿En qué etapa se encuentra tu empresa respecto al uso de IA?\n1. Apenas estamos explorando.\n2. Ya usamos algunas herramientas, pero queremos algo a medida.\n3. Buscamos automatizar procesos específicos.' }
     ]);
     const [input, setInput] = useState('');
     const [loading, setLoading] = useState(false);
@@ -107,7 +107,7 @@ export default function WhatsAppButton() {
                             </Box>
                             <Box>
                                 <Typography variant="subtitle1" sx={{ color: 'white', fontWeight: 600, lineHeight: 1.2 }}>
-                                    Asistente CostaLabs
+                                    CostaBot
                                 </Typography>
                                 <Typography variant="caption" sx={{ color: '#25D366' }}>
                                     en línea
@@ -148,7 +148,35 @@ export default function WhatsAppButton() {
                                     boxShadow: '0 1px 2px rgba(0,0,0,0.3)',
                                 }}>
                                     <Typography variant="body2" sx={{ whiteSpace: 'pre-line', lineHeight: 1.4 }}>
-                                        {m.text}
+                                        {m.text.split(/(https?:\/\/wa\.me\/\S+|https?:\/\/api\.whatsapp\.com\/\S+)/g).map((part, index) => {
+                                            if (part.match(/https?:\/\/wa\.me\/\S+|https?:\/\/api\.whatsapp\.com\/\S+/)) {
+                                                return (
+                                                    <Button
+                                                        key={index}
+                                                        variant="contained"
+                                                        startIcon={<WhatsAppIcon />}
+                                                        href={part}
+                                                        target="_blank"
+                                                        fullWidth
+                                                        sx={{
+                                                            mt: 1.5,
+                                                            mb: 0.5,
+                                                            bgcolor: '#00d4ff',
+                                                            color: '#03101c',
+                                                            fontWeight: 800,
+                                                            textTransform: 'none',
+                                                            borderRadius: 2,
+                                                            '&:hover': {
+                                                                bgcolor: '#00b8e6',
+                                                            }
+                                                        }}
+                                                    >
+                                                        Hablar por WhatsApp
+                                                    </Button>
+                                                );
+                                            }
+                                            return part;
+                                        })}
                                     </Typography>
                                     <Typography variant="caption" sx={{
                                         display: 'block',
