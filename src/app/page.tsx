@@ -6,6 +6,7 @@ import CertificationsSection from '@/components/CertificationsSection';
 import PartnersSection from '@/components/PartnersSection';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import MethodologyHero from '@/components/MethodologyHero';
+import AISolutionsSection from '@/components/AISolutionsSection';
 import { DNASection, SectorsSection } from '@/components/DossierSections';
 import { Box, Container, Typography, Button } from '@mui/material'; // Import para el CTA inline
 
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <TechCarousel />
       <DNASection />
+      <AISolutionsSection />
       <ServicesDetail />
 
       {/* Sección Full Width Destacada */}
