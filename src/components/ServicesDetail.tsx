@@ -58,16 +58,14 @@ const detailedServices = [
         link: '/servicios/bi',
         color: '#8b5cf6',
     },
-    /*
     {
         icon: <StorefrontIcon sx={{ fontSize: 40 }} />,
-        title: 'Desarrollo WooCommerce Personalizado',
-        description: 'Maximiza tu tienda online con soluciones WooCommerce personalizadas. Desarrollamos plugins a medida, temas personalizados y optimizamos la experiencia de compra para aumentar tus ventas.',
-        cta: 'Potencia tu tienda con WooCommerce',
-        link: '/servicios/woocommerce',
-        color: '#f59e0b',
+        title: 'Headless E-commerce (Shopify + Next.js)',
+        description: 'Desarrollamos tiendas online de velocidad extrema separando el frontend a medida (Next.js) del backend transaccional (Shopify). Mayor rendimiento, mejor SEO y experiencias premium sin límites.',
+        cta: 'Lleva tu tienda al siguiente nivel',
+        link: '/servicios/ecommerce',
+        color: '#96bf48', // Shopify-esque premium green
     },
-    */
     /*
     {
         icon: <WebIcon sx={{ fontSize: 40 }} />,
