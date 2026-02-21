@@ -84,7 +84,7 @@ export default function Hero() {
                     mb: 8,
                     animation: 'fadeInUp 1s ease-out 0.4s backwards'
                 }}>
-                    Somos parte de la nueva generación de empresas chilenas que lideran la integración de IA avanzada en el sector productivo y la automatización inteligente a escala nacional.
+                    Somos pioneros en la transición de chatbots tradicionales a agentes de IA autónomos que optimizan procesos de negocio en todo Chile.
                 </Typography>
 
                 {/* Buttons CTA */}

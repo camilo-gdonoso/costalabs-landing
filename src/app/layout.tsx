@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     default: "CostaLabs | Software a Medida con IA Nativa & Automatización en Chile",
     template: "%s | CostaLabs"
   },
-  description: "Somos parte de la nueva generación de empresas chilenas que lideran la integración de IA avanzada en el sector productivo y la automatización inteligente. Soluciones de software a medida con presencia nacional.",
+  description: "Somos pioneros en la transición de chatbots tradicionales a agentes de IA autónomos que optimizan procesos de negocio en todo Chile. Soluciones de software a medida con IA activa.",
   metadataBase: new URL('https://www.costalabs.cl'),
   keywords: [
     // Keywords regionales del norte de Chile
