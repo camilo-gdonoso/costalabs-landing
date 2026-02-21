@@ -35,6 +35,22 @@ const detailedServices = [
         color: '#10b981',
     },
     {
+        icon: <SmartToyIcon sx={{ fontSize: 40 }} />,
+        title: 'Integración de Inteligencia Artificial',
+        description: 'Implementamos soluciones de IA para automatizar procesos, mejorar la experiencia del usuario y optimizar decisiones de negocio. Desde chatbots inteligentes hasta análisis predictivo.',
+        cta: 'Implementa IA en tu negocio',
+        link: '/servicios/ia',
+        color: '#ec4899',
+    },
+    {
+        icon: <AutoFixHighIcon sx={{ fontSize: 40 }} />,
+        title: 'Automatización con Agentes de IA',
+        description: 'Optimizamos tus flujos de trabajo mediante la automatización con agentes de IA y n8n. Desarrollamos soluciones personalizadas que integran múltiples sistemas para mejorar la eficiencia operativa.',
+        cta: 'Automatiza tus procesos',
+        link: '/servicios/agentes-ia',
+        color: '#14b8a6',
+    },
+    {
         icon: <BarChartIcon sx={{ fontSize: 40 }} />,
         title: 'Inteligencia de Negocios y Visualización de Datos',
         description: 'Transformamos datos en insights accionables con nuestros servicios de desarrollo de software para inteligencia de negocios. Creamos dashboards personalizados y soluciones de visualización de datos a medida.',
@@ -57,22 +73,6 @@ const detailedServices = [
         cta: 'Descubre nuestras soluciones WordPress',
         link: '/servicios/wordpress',
         color: '#3b82f6',
-    },
-    {
-        icon: <SmartToyIcon sx={{ fontSize: 40 }} />,
-        title: 'Integración de Inteligencia Artificial',
-        description: 'Implementamos soluciones de IA para automatizar procesos, mejorar la experiencia del usuario y optimizar decisiones de negocio. Desde chatbots inteligentes hasta análisis predictivo.',
-        cta: 'Implementa IA en tu negocio',
-        link: '/servicios/ia',
-        color: '#ec4899',
-    },
-    {
-        icon: <AutoFixHighIcon sx={{ fontSize: 40 }} />,
-        title: 'Automatización con Agentes de IA',
-        description: 'Optimizamos tus flujos de trabajo mediante la automatización con agentes de IA y n8n. Desarrollamos soluciones personalizadas que integran múltiples sistemas para mejorar la eficiencia operativa.',
-        cta: 'Automatiza tus procesos',
-        link: '/servicios/agentes-ia',
-        color: '#14b8a6',
     },
 ];
 
