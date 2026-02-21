@@ -39,6 +39,10 @@ export default function WhatsAppButton() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message: currentInput, session_id: 'web_user' })
             });
+            if (!resp.ok) {
+                throw new Error(`Proxy error: ${resp.status}`);
+            }
+
             const data = await resp.json();
 
             // Asegurarnos de que el texto sea un string (por si el backend envía un objeto/array)
@@ -47,6 +51,10 @@ export default function WhatsAppButton() {
                 botText = botText.map((p: any) => typeof p === 'string' ? p : (p.text || '')).join('');
             } else if (typeof botText === 'object' && botText !== null) {
                 botText = botText.text || JSON.stringify(botText);
+            }
+
+            if (!botText) {
+                throw new Error("No response text received");
             }
 
             setMessages(prev => [...prev, { role: 'assistant', text: botText }]);
