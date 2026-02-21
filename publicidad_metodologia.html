@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicidad Desarrollo Ágil - CostaLabs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #020202;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .ad-container {
+            width: 1080px;
+            height: 1080px;
+            min-width: 1080px;
+            min-height: 1080px;
+            background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #020617 70%, #000000 100%);
+            position: relative;
+            overflow: hidden;
+            color: white;
+            box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 1);
+            transform-origin: center;
+        }
+
+        /* Escala para previsualización */
+        @media (max-width: 1150px) {
+            body {
+                padding: 0;
+                overflow: hidden;
+            }
+
+            .ad-container {
+                transform: scale(0.7);
+            }
+        }
+
+        .grid-bg {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(167, 139, 250, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 1;
+        }
+
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #a78bfa 0%, #818cf8 50%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: 0;
+            opacity: 0.3;
+        }
+
+        /* Animación Kanban mejorada */
+        @keyframes move-card-pro {
+            0% {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+
+            25% {
+                transform: translate(15px, -10px) rotate(2deg);
+            }
+
+            75% {
+                transform: translate(210px, 10px) rotate(-2deg);
+            }
+
+            100% {
+                transform: translate(220px, 20px);
+                opacity: 1;
+            }
+        }
+
+        .animated-card-pro {
+            animation: move-card-pro 5s ease-in-out infinite alternate;
+        }
+
+        .btn-shine {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-shine::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transform: skewX(-20deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            100% {
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ad-container rounded-[3rem] flex flex-col py-10 px-16">
+        <div class="grid-bg"></div>
+        <div class="glow-orb" style="top: -100px; right: -50px; width: 600px; height: 600px; background: #818cf8;">
+        </div>
+        <div class="glow-orb" style="bottom: -150px; left: -100px; width: 700px; height: 700px; background: #c084fc;">
+        </div>
+
+        <!-- Header -->
+        <div class="relative z-10 flex justify-between items-center mb-6">
+            <div class="flex items-center gap-4">
+                <div
+                    class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-lg shadow-purple-500/20">
+                    <img src="https://costalabs.cl/logo.svg" alt="CostaLabs" class="h-10 w-10">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-3xl font-black tracking-tighter text-white">Costa<span
+                            class="text-purple-400">Labs</span></span>
+                    <span class="text-xs font-bold tracking-[0.2em] text-purple-500/80 uppercase">Agile Software
+                        House</span>
+                </div>
+            </div>
+
+            <div
+                class="px-6 py-2.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 font-bold tracking-wide text-sm flex items-center gap-2">
+                <span class="relative flex h-3 w-3">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-indigo-500"></span>
+                </span>
+                METODOLOGÍA TRANSPARENTE
+            </div>
+        </div>
+
+        <!-- Contenido Principal -->
+        <div class="relative z-10 flex-1 grid grid-cols-12 gap-10 mt-4">
+
+            <!-- Izquierda: Propuesta de Valor -->
+            <div class="col-span-7 flex flex-col justify-center">
+                <div class="mb-6 flex flex-col gap-2">
+                    <div class="text-purple-400 font-bold tracking-widest text-lg uppercase">Adiós a la incertidumbre
+                    </div>
+                    <h1 class="text-[4.8rem] font-black leading-[0.95] tracking-tight text-white">
+                        Software <br />
+                        sin <span class="text-gradient underline decoration-white/10">cajas negras.</span>
+                    </h1>
+                </div>
+
+                <div class="flex flex-col gap-6 mb-12 mt-4">
+                    <div class="flex items-start gap-5">
+                        <div class="bg-indigo-500/20 p-3 rounded-xl border border-indigo-500/30 text-2xl">📊</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Avance Real 24/7</h3>
+                            <p class="text-slate-300 text-lg leading-snug">Acceso total a nuestro Trello/Jira. Mira en
+                                qué estamos trabajando hoy, sin pedir reuniones.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-5">
+                        <div class="bg-purple-500/20 p-3 rounded-xl border border-purple-500/30 text-2xl">🚀</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">MVP en tiempo récord</h3>
+                            <p class="text-slate-300 text-lg leading-snug">Lanzamos una versión operativa rápido. Valida
+                                tu idea con usuarios reales, no con promesas.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-5">
+                        <div class="bg-fuchsia-500/20 p-3 rounded-xl border border-fuchsia-500/30 text-2xl">🛡️</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white italic">Modelo Seguro: 30 / 30 / 40</h3>
+                            <p class="text-slate-400 text-lg">Pagas contra avances validados y paso a producción. Sin
+                                sorpresas, sin riesgos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="flex flex-col gap-8">
+                    <button
+                        class="btn-shine bg-white text-slate-900 font-black text-2xl py-6 px-10 rounded-2xl transition-all flex items-center justify-center gap-4 w-max hover:scale-105 shadow-xl">
+                        COTIZAR MI PROYECTO
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </button>
+                    <div class="flex items-center gap-4 opacity-80">
+                        <div class="flex -space-x-3">
+                            <img class="w-10 h-10 rounded-full border-2 border-slate-900"
+                                src="https://i.pravatar.cc/100?u=11">
+                            <img class="w-10 h-10 rounded-full border-2 border-slate-900"
+                                src="https://i.pravatar.cc/100?u=12">
+                            <img class="w-10 h-10 rounded-full border-2 border-slate-900"
+                                src="https://i.pravatar.cc/100?u=13">
+                        </div>
+                        <p class="text-slate-300 font-bold text-lg">+50 proyectos entregados con éxito</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Derecha: Kanban Abstracto Visual -->
+            <div class="col-span-5 relative flex items-center">
+                <div
+                    class="glass-panel w-full h-[540px] rounded-[3rem] p-8 shadow-2xl relative z-10 overflow-hidden scale-105">
+
+                    <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-indigo-600 flex items-center justify-center font-bold text-white shadow-lg">
+                                K</div>
+                            <h3 class="font-black text-white text-xl uppercase tracking-tighter">Sprint Dashboard</h3>
+                        </div>
+                        <div
+                            class="w-8 h-8 rounded-full bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-[10px] font-bold text-purple-400">
+                            DEV</div>
+                    </div>
+
+                    <div class="flex gap-4 h-full">
+                        <!-- Columnas con más contraste -->
+                        <div class="flex-1 bg-white/5 rounded-2xl p-4 flex flex-col gap-4">
+                            <span class="text-[10px] font-black text-slate-500 uppercase tracking-widest">Backlog</span>
+                            <!-- Card estática -->
+                            <div class="bg-slate-800/80 p-4 rounded-xl border border-white/5 opacity-40">
+                                <div class="h-3 w-3/4 bg-slate-600 rounded-full mb-2"></div>
+                                <div class="h-3 w-1/2 bg-slate-600 rounded-full"></div>
+                            </div>
+                            <!-- Card animada (más gruesa) -->
+                            <div
+                                class="bg-slate-800 p-5 rounded-xl border-2 border-purple-500/50 shadow-[0_10px_30px_rgba(168,85,247,0.2)] animated-card-pro">
+                                <div class="w-10 h-2 bg-purple-400 rounded-full mb-3"></div>
+                                <div class="h-4 w-full bg-white/90 rounded-md mb-2"></div>
+                                <div class="h-4 w-2/3 bg-white/50 rounded-md"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex-1 bg-white/5 rounded-2xl p-4">
+                            <span class="text-[10px] font-black text-purple-500 uppercase tracking-widest">In
+                                Progress</span>
+                        </div>
+
+                        <div class="flex-1 bg-white/5 rounded-2xl p-4 flex flex-col gap-4">
+                            <span class="text-[10px] font-black text-fuchsia-500 uppercase tracking-widest">Done</span>
+                            <div
+                                class="bg-fuchsia-500/10 p-4 rounded-xl border border-fuchsia-500/30 flex flex-col gap-2">
+                                <div class="flex justify-between">
+                                    <div class="w-8 h-2 bg-fuchsia-500 rounded-full"></div>
+                                    <span class="text-[10px]">✅</span>
+                                </div>
+                                <div class="h-3 w-full bg-slate-500/20 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Overlay Sello Garantía -->
+                    <div class="absolute bottom-8 left-0 right-0 flex justify-center">
+                        <div
+                            class="bg-white text-slate-950 px-6 py-3 rounded-2xl font-black text-sm shadow-2xl rotate-3">
+                            ENTREGA GARANTIZADA
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="relative z-10 mt-auto flex justify-between items-center border-t border-white/5 pt-6 pb-2">
+            <div class="flex gap-10">
+                <div class="flex flex-col">
+                    <span class="text-xs font-bold text-slate-500 uppercase">Tecnología</span>
+                    <span class="text-white font-bold">Node • React • AWS</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xs font-bold text-slate-500 uppercase">Soporte</span>
+                    <span class="text-white font-bold">24/7 Dedicado</span>
+                </div>
+            </div>
+            <div class="text-right">
+                <p class="text-white font-black text-2xl tracking-tighter">costalabs.cl</p>
+                <p class="text-purple-400 font-bold text-sm">Desarrollo a Medida</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

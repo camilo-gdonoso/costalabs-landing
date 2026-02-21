@@ -5,6 +5,7 @@ import TechCarousel from '@/components/TechCarousel';
 import CertificationsSection from '@/components/CertificationsSection';
 import PartnersSection from '@/components/PartnersSection';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import MethodologyHero from '@/components/MethodologyHero';
 import { DNASection, SectorsSection } from '@/components/DossierSections';
 import { Box, Container, Typography, Button } from '@mui/material'; // Import para el CTA inline
 
@@ -25,6 +26,9 @@ export default function Home() {
 
       {/* Testimonios */}
       <TestimonialsSection />
+
+      {/* --- NUEVA METODOLOGÍA HERO --- */}
+      <MethodologyHero />
 
       {/* ProcessSection movido a /agendar */}
       <SectorsSection />
