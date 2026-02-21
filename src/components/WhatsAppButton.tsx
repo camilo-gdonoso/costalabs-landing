@@ -24,6 +24,22 @@ export default function WhatsAppButton() {
         }
     }, [messages, isOpen]);
 
+    const getWhatsAppWithSummary = (originalUrl: string) => {
+        // Extraer el número base (ej: 56936306371)
+        const phoneMatch = originalUrl.match(/wa\.me\/(\d+)/);
+        const phone = phoneMatch ? phoneMatch[1] : '56936306371';
+
+        // Construir el resumen de la conversación
+        const chatLog = messages
+            .filter(m => m.text.length < 500) // Evitar textos gigantes
+            .map(m => `${m.role === 'assistant' ? 'Bot' : 'Cliente'}: ${m.text}`)
+            .join('\n');
+
+        const fullMessage = `Hola CostaLabs, me gustaría hablar con un ejecutivo. Vengo del chat de la web.\n\n📌 *Resumen de la consulta:*\n${chatLog}`;
+
+        return `https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)}`;
+    };
+
     const handleSend = async (manualValue?: string) => {
         const valueToSend = manualValue || input;
         if (!valueToSend.trim()) return;
@@ -160,7 +176,7 @@ export default function WhatsAppButton() {
                                                             key={index}
                                                             variant="contained"
                                                             startIcon={isWhatsApp ? <WhatsAppIcon /> : null}
-                                                            href={isCalendly ? 'https://calendly.com/contacto-costalabs/30min' : part}
+                                                            href={isCalendly ? 'https://calendly.com/contacto-costalabs/30min' : getWhatsAppWithSummary(part)}
                                                             target="_blank"
                                                             fullWidth
                                                             sx={{
@@ -193,7 +209,7 @@ export default function WhatsAppButton() {
                                             <Button
                                                 variant="contained"
                                                 startIcon={<WhatsAppIcon />}
-                                                href="https://wa.me/56993424453"
+                                                href={getWhatsAppWithSummary('https://wa.me/56993424453')}
                                                 target="_blank"
                                                 fullWidth
                                                 sx={{
