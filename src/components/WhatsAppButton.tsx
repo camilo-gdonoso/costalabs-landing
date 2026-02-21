@@ -235,7 +235,7 @@ export default function WhatsAppButton() {
                             }}
                         />
                         <IconButton
-                            onClick={handleSend}
+                            onClick={() => handleSend()}
                             disabled={!input.trim()}
                             sx={{
                                 bgcolor: '#005c4b',
