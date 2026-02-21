@@ -14,7 +14,7 @@ export default function Hero() {
             pb: 10,
             position: 'relative',
             overflow: 'hidden',
-            background: 'radial-gradient(ellipse at top, #1B2735 0%, var(--background) 100%)', // Subtle top glow
+            background: 'transparent',
         }}>
             {/* Top Light Beam Effect */}
             <Box sx={{

@@ -15,7 +15,7 @@ import GroupsIcon from '@mui/icons-material/Groups';
 
 export default function SoftwareAMedidaPage() {
     return (
-        <main className="bg-stars" style={{ minHeight: '100vh', background: 'var(--background)' }}>
+        <main className="bg-stars" style={{ minHeight: '100vh', background: 'transparent', width: '100vw', overflowX: 'hidden' }}>
             <Navbar />
 
             {/* --- HERO SECTION --- */}
@@ -72,7 +72,7 @@ export default function SoftwareAMedidaPage() {
             </Box>
 
             {/* --- POR QUÉ ELEGIRNOS --- */}
-            <Box sx={{ py: 10, background: 'rgba(255,255,255,0.02)' }}>
+            <Box sx={{ py: 10, background: 'transparent' }}>
                 <Container maxWidth="lg">
                     <Box sx={{
                         display: 'grid',
@@ -156,22 +156,22 @@ export default function SoftwareAMedidaPage() {
                         gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' },
                         gap: 4
                     }}>
-                        <Box sx={{ p: 3, height: '100%', background: 'rgba(255,255,255,0.02)', borderRadius: 4 }}>
+                        <Box sx={{ p: 3, height: '100%', background: 'transparent', borderRadius: 4 }}>
                             <Typography variant="h4" sx={{ color: 'white', fontWeight: 700 }}>+50</Typography>
                             <Typography sx={{ color: '#00d4ff', fontWeight: 600, mb: 2 }}>Proyectos Exitosos</Typography>
                             <Typography sx={{ color: '#a1a1aa', fontSize: '0.9rem' }}>Contamos con años de experiencia entregando soluciones probadas y eficaces.</Typography>
                         </Box>
-                        <Box sx={{ p: 3, height: '100%', background: 'rgba(255,255,255,0.02)', borderRadius: 4 }}>
+                        <Box sx={{ p: 3, height: '100%', background: 'transparent', borderRadius: 4 }}>
                             <GroupsIcon sx={{ color: 'white', fontSize: 40, mb: 2 }} />
                             <Typography sx={{ color: '#00d4ff', fontWeight: 600, mb: 2 }}>Equipo de Expertos</Typography>
                             <Typography sx={{ color: '#a1a1aa', fontSize: '0.9rem' }}>Especialistas en React, Next.js, Python, Typescript, AWS y arquitectura Cloud.</Typography>
                         </Box>
-                        <Box sx={{ p: 3, height: '100%', background: 'rgba(255,255,255,0.02)', borderRadius: 4 }}>
+                        <Box sx={{ p: 3, height: '100%', background: 'transparent', borderRadius: 4 }}>
                             <SpeedIcon sx={{ color: 'white', fontSize: 40, mb: 2 }} />
                             <Typography sx={{ color: '#00d4ff', fontWeight: 600, mb: 2 }}>Metodología Ágil</Typography>
                             <Typography sx={{ color: '#a1a1aa', fontSize: '0.9rem' }}>Sprints semanales con entregables tangibles para adaptarnos rápidamente a los cambios.</Typography>
                         </Box>
-                        <Box sx={{ p: 3, height: '100%', background: 'rgba(255,255,255,0.02)', borderRadius: 4 }}>
+                        <Box sx={{ p: 3, height: '100%', background: 'transparent', borderRadius: 4 }}>
                             <CheckCircleOutlineIcon sx={{ color: 'white', fontSize: 40, mb: 2 }} />
                             <Typography sx={{ color: '#00d4ff', fontWeight: 600, mb: 2 }}>Soporte Continuo</Typography>
                             <Typography sx={{ color: '#a1a1aa', fontSize: '0.9rem' }}>Plan de mantenimiento adaptado para asegurar la evolución de tu software.</Typography>

@@ -107,7 +107,7 @@ export function ContactSection() {
             <ContactForm />
 
             {/* Dossier Link Small Below Form */}
-            <Box sx={{ textAlign: 'center', pb: 10, background: 'rgba(10, 10, 11, 0.5)' }}>
+            <Box sx={{ textAlign: 'center', pb: 10, background: 'transparent' }}>
                 <Container>
                     <Button
                         startIcon={<Download />}

@@ -11,7 +11,7 @@ import StorageIcon from '@mui/icons-material/Storage';
 
 export default function BIPage() {
     return (
-        <main className="bg-stars" style={{ minHeight: '100vh', background: 'var(--background)' }}>
+        <main className="bg-stars" style={{ minHeight: '100vh', background: 'transparent', width: '100vw', overflowX: 'hidden' }}>
             <Navbar />
 
             {/* --- HERO SECTION --- */}
@@ -69,7 +69,7 @@ export default function BIPage() {
             </Box>
 
             {/* --- FEATURES --- */}
-            <Box sx={{ py: 10, background: 'rgba(255,255,255,0.02)' }}>
+            <Box sx={{ py: 10, background: 'transparent' }}>
                 <Container maxWidth="lg">
                     <Box sx={{
                         display: 'grid',

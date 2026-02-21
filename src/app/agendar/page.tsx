@@ -7,7 +7,7 @@ import ContactForm from '@/components/ContactForm';
 
 export default function AgendarPage() {
     return (
-        <main className="bg-stars" style={{ minHeight: '100vh', background: 'var(--background)' }}>
+        <main className="bg-stars" style={{ minHeight: '100vh', background: 'transparent', width: '100vw', overflowX: 'hidden' }}>
             <Navbar />
 
             <Box sx={{ pt: 20, pb: 10 }}>

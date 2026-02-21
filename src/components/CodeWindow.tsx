@@ -79,7 +79,7 @@ export default function CodeWindow() {
             transition: 'all 0.3s ease'
         }}>
             {/* Window Graphic Header */}
-            <Box sx={{ display: 'flex', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', px: 2, py: 1.5, background: 'rgba(255,255,255,0.02)' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', px: 2, py: 1.5, background: 'transparent' }}>
                 <Box sx={{ display: 'flex', gap: 1, mr: 3 }}>
                     <Box sx={{ width: 10, height: 10, borderRadius: '50%', bgcolor: '#ff5f56' }} />
                     <Box sx={{ width: 10, height: 10, borderRadius: '50%', bgcolor: '#ffbd2e' }} />

@@ -50,7 +50,7 @@ export default function ContactForm() {
     };
 
     return (
-        <Box id="contacto" sx={{ py: 15, background: 'rgba(10, 10, 11, 0.5)' }}>
+        <Box id="contacto" sx={{ py: 15, background: 'transparent' }}>
             <Box sx={{ maxWidth: '900px', mx: 'auto', px: 2 }}>
                 <Box sx={{ textAlign: 'center', mb: 8 }}>
                     <Typography variant="h4" sx={{ color: '#00d4ff', fontWeight: 700, mb: 2 }}>

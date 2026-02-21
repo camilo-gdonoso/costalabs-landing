@@ -13,7 +13,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 export default function EcommercePage() {
     return (
-        <main className="bg-stars" style={{ minHeight: '100vh', background: 'var(--background)' }}>
+        <main className="bg-stars" style={{ minHeight: '100vh', background: 'transparent', width: '100vw', overflowX: 'hidden' }}>
             <Navbar />
 
             {/* --- HERO SECTION --- */}
@@ -71,7 +71,7 @@ export default function EcommercePage() {
             </Box>
 
             {/* --- FEATURES --- */}
-            <Box sx={{ py: 10, background: 'rgba(255,255,255,0.02)' }}>
+            <Box sx={{ py: 10, background: 'transparent' }}>
                 <Container maxWidth="lg">
                     <Box sx={{
                         display: 'grid',

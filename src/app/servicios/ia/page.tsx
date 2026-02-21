@@ -14,7 +14,7 @@ import ScienceIcon from '@mui/icons-material/Science';
 
 export default function IAPage() {
     return (
-        <main className="bg-stars" style={{ minHeight: '100vh', background: 'var(--background)' }}>
+        <main className="bg-stars" style={{ minHeight: '100vh', background: 'transparent', width: '100vw', overflowX: 'hidden' }}>
             <Navbar />
 
             {/* --- HERO SECTION --- */}
@@ -74,7 +74,7 @@ export default function IAPage() {
             </Box>
 
             {/* --- ENFOQUE RAG & CHATBOTS --- */}
-            <Box sx={{ py: 10, background: 'rgba(255,255,255,0.02)' }}>
+            <Box sx={{ py: 10, background: 'transparent' }}>
                 <Container maxWidth="lg">
                     <Box sx={{ textAlign: 'center', mb: 8 }}>
                         <Typography variant="overline" sx={{ color: '#ec4899', letterSpacing: 2 }}>CASOS DE USO</Typography>

@@ -14,7 +14,7 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 
 export default function Home() {
   return (
-    <main className="bg-stars" style={{ minHeight: '100vh', background: 'var(--background)' }}>
+    <main className="bg-stars" style={{ minHeight: '100vh', background: 'transparent', width: '100vw', overflowX: 'hidden' }}>
       <Navbar />
       <Hero />
       <TechCarousel />
