@@ -43,9 +43,11 @@ export default function Navbar() {
                                 fontSize: '28px',
                                 letterSpacing: '-0.03rem',
                                 lineHeight: 1,
-                                ml: -0.7 // Acercar texto a la C (menos agresivo)
+                                ml: -0.5,
+                                alignItems: 'baseline'
                             }}
                         >
+                            <Box component="span" sx={{ fontSize: '38px', mr: 0.1 }}>C</Box>
                             ostaLabs
                         </Typography>
                     </Box>
