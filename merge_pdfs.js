@@ -23,8 +23,8 @@ async function createMasterPDF() {
     }
 
     const pdfBytes = await pdfDoc.save();
-    fs.writeFileSync('./public/Dossier_CostaLabs_2026_FINAL.pdf', pdfBytes);
-    console.log('\n✅ ¡PDF MAESTRO creado con éxito!: ./public/Dossier_CostaLabs_2026_FINAL.pdf');
+    fs.writeFileSync('./public/Dossier_2402.pdf', pdfBytes);
+    console.log('\n✅ ¡PDF MAESTRO creado con éxito!: ./public/Dossier_2402.pdf');
 }
 
 createMasterPDF().catch(console.error);

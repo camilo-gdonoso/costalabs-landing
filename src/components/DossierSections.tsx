@@ -111,7 +111,7 @@ export function ContactSection() {
                 <Container>
                     <Button
                         startIcon={<Download />}
-                        href="/CostaLabs_Dossier_2026_new.pdf"
+                        href="/Dossier_2402.pdf"
                         target="_blank"
                         sx={{ color: '#64748b', textTransform: 'none' }}
                     >

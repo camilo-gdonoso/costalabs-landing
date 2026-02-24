@@ -116,7 +116,7 @@ export default function Hero() {
                     </Button>
                     <Button
                         variant="outlined"
-                        href="/Dossier_CostaLabs_2026_FINAL.pdf"
+                        href="/Dossier_2402.pdf"
                         download
                         sx={{
                             color: 'white',
@@ -135,7 +135,7 @@ export default function Hero() {
                             }
                         }}
                     >
-                        Descargar Dossier 2026
+                        Descargar Dossier
                     </Button>
                 </Box>
 
