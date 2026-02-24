@@ -9,7 +9,8 @@ export default function ContactForm() {
         telefono: '',
         email: '',
         empresa: '',
-        descripcion: ''
+        descripcion: '',
+        website: '' // Honeypot field
     });
 
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -24,6 +25,17 @@ export default function ContactForm() {
         e.preventDefault();
         setStatus('loading');
         setErrorMessage('');
+
+        // Client-side Honeypot Check
+        if (formData.website) {
+            console.log("Bot detected (Honeypot filled)");
+            // Simulate success so the bot thinks it succeeded, but we don't do anything
+            setTimeout(() => {
+                setStatus('success');
+                setFormData({ nombre: '', apellido: '', telefono: '', email: '', empresa: '', descripcion: '', website: '' });
+            }, 1000);
+            return;
+        }
 
         try {
             const response = await fetch('/api/contact', {
@@ -41,7 +53,7 @@ export default function ContactForm() {
             }
 
             setStatus('success');
-            setFormData({ nombre: '', apellido: '', telefono: '', email: '', empresa: '', descripcion: '' }); // Limpiar forulario
+            setFormData({ nombre: '', apellido: '', telefono: '', email: '', empresa: '', descripcion: '', website: '' }); // Limpiar formulario
         } catch (error) {
             console.error(error);
             setStatus('error');
@@ -111,6 +123,17 @@ export default function ContactForm() {
                         fullWidth
                         value={formData.descripcion} onChange={handleChange}
                     />
+
+                    {/* Honeypot Field - Hidden for humans, trap for bots */}
+                    <Box sx={{ display: 'none' }} aria-hidden="true">
+                        <TextField
+                            tabIndex={-1}
+                            autoComplete="off"
+                            name="website"
+                            value={formData.website}
+                            onChange={handleChange}
+                        />
+                    </Box>
 
                     {status === 'error' && (
                         <Alert severity="error" sx={{ mb: 3 }}>{errorMessage}</Alert>

@@ -6,7 +6,13 @@ const resend = new Resend(process.env.RESEND_API_KEY || 're_placeholder');
 
 export async function POST(request: Request) {
   try {
-    const { nombre, apellido, telefono, email, empresa, descripcion } = await request.json();
+    const { nombre, apellido, telefono, email, empresa, descripcion, website } = await request.json();
+
+    // Honeypot check (security)
+    if (website) {
+      console.warn('Spam detected via Honeypot');
+      return NextResponse.json({ success: true, message: 'Message filtered' }, { status: 200 });
+    }
 
     // Validar datos básicos
     if (!nombre || !email || !descripcion) {
