@@ -8,14 +8,14 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 const testimonials = [
     {
         id: 1,
-        text: "Trabajar con CostaLabs ha sido una experiencia transformadora para Tierra Producciones. Su capacidad para entender nuestra visión y plasmarla en soluciones tecnológicas robustas nos ha permitido escalar nuestro negocio de manera eficiente.",
+        text: "Trabajar con ostaLabs ha sido una experiencia transformadora para Tierra Producciones. Su capacidad para entender nuestra visión y plasmarla en soluciones tecnológicas robustas nos ha permitido escalar nuestro negocio de manera eficiente.",
         author: "Marcela Donoso",
         role: "CEO & Founder at Tierraproducciones",
         image: "/testimonials/marce.jpeg"
     },
     {
         id: 2,
-        text: "La experiencia de CostaLabs en arquitectura cloud y automatización es sobresaliente. Han sido un socio clave en el desarrollo de nuestra infraestructura tecnológica, permitiéndonos enfocarnos en la innovación de nuestro producto principal con total confianza.",
+        text: "La experiencia de ostaLabs en arquitectura cloud y automatización es sobresaliente. Han sido un socio clave en el desarrollo de nuestra infraestructura tecnológica, permitiéndonos enfocarnos en la innovación de nuestro producto principal con total confianza.",
         author: "Sebastian Aranguiz",
         role: "CTO & CoFounder at Raptorsystems.cl",
         image: "/testimonials/sebaperfil.jpeg"

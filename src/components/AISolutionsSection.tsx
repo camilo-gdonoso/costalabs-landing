@@ -97,7 +97,7 @@ export default function AISolutionsSection() {
                         mb: 3,
                         lineHeight: 1
                     }}>
-                        CostaLabs <span style={{ color: '#00d4ff' }}>AI Solutions</span>
+                        ostaLabs <span style={{ color: '#00d4ff' }}>AI Solutions</span>
                     </Typography>
                     <Typography sx={{ color: '#94a3b8', fontSize: '1.2rem', maxWidth: '800px', mx: 'auto' }}>
                         No instalamos chats, construimos ingeniería inteligente para transformar cada interacción en una oportunidad de negocio real.
@@ -268,7 +268,7 @@ export default function AISolutionsSection() {
                             '&:hover': { bgcolor: '#80e9ff' }
                         }}
                     >
-                        Quiero automatizar mis ventas con CostaBot
+                        Quiero automatizar mis ventas con ostaBot
                     </Button>
                 </Box>
             </Container>

@@ -35,7 +35,7 @@ const files = [
             { text: '', indent: 0 },
             { text: '  return (', color: '#c792ea', indent: 20 },
             { text: '    <div className="app">', color: '#89ddff', indent: 40 },
-            { text: '      <h1>CostaLabs</h1>', color: '#89ddff', indent: 60 },
+            { text: '      <h1>ostaLabs</h1>', color: '#89ddff', indent: 60 },
             { text: '      <Button onClick={handleClick} />', color: '#ffcb6b', indent: 60 },
             { text: '    </div>', color: '#89ddff', indent: 40 },
             { text: '  );', color: '#c792ea', indent: 20 },

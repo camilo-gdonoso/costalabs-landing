@@ -8,7 +8,7 @@ import SendIcon from '@mui/icons-material/Send';
 export default function WhatsAppButton() {
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
-        { role: 'assistant', text: '¡Hola! Soy CostaBot, el Asistente de Ventas de CostaLabs. Ayudamos a empresas a escalar mediante soluciones de Inteligencia Artificial. ¿En qué etapa se encuentra tu empresa respecto al uso de IA?\n1. Apenas estamos explorando.\n2. Ya usamos algunas herramientas, pero queremos algo a medida.\n3. Buscamos automatizar procesos específicos.' }
+        { role: 'assistant', text: '¡Hola! Soy ostaBot, el Asistente de Ventas de ostaLabs. Ayudamos a empresas a escalar mediante soluciones de Inteligencia Artificial. ¿En qué etapa se encuentra tu empresa respecto al uso de IA?\n1. Apenas estamos explorando.\n2. Ya usamos algunas herramientas, pero queremos algo a medida.\n3. Buscamos automatizar procesos específicos.' }
     ]);
     const [input, setInput] = useState('');
     const [loading, setLoading] = useState(false);
@@ -35,7 +35,7 @@ export default function WhatsAppButton() {
             .map(m => `${m.role === 'assistant' ? 'Bot' : 'Cliente'}: ${m.text}`)
             .join('\n');
 
-        const fullMessage = `Hola CostaLabs, me gustaría hablar con un ejecutivo. Vengo del chat de la web.\n\n📌 *Resumen de la consulta:*\n${chatLog}`;
+        const fullMessage = `Hola ostaLabs, me gustaría hablar con un ejecutivo. Vengo del chat de la web.\n\n📌 *Resumen de la consulta:*\n${chatLog}`;
 
         return `https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)}`;
     };
@@ -120,11 +120,11 @@ export default function WhatsAppButton() {
                                 alignItems: 'center', justifyContent: 'center',
                                 color: 'white'
                             }}>
-                                <img src="/logo.svg" alt="CostaBot" style={{ width: '100%', height: 'auto', padding: '6px' }} />
+                                <img src="/logo.svg" alt="ostaBot" style={{ width: '100%', height: 'auto', padding: '6px' }} />
                             </Box>
                             <Box>
                                 <Typography variant="subtitle1" sx={{ color: 'white', fontWeight: 600, lineHeight: 1.2 }}>
-                                    CostaBot
+                                    ostaBot
                                 </Typography>
                                 <Typography variant="caption" sx={{ color: '#25D366' }}>
                                     en línea
@@ -182,7 +182,7 @@ export default function WhatsAppButton() {
                                                             sx={{
                                                                 mt: 1.5,
                                                                 mb: 0.5,
-                                                                bgcolor: '#00d4ff', // CostaLabs Cyan as requested
+                                                                bgcolor: '#00d4ff', // ostaLabs Cyan as requested
                                                                 color: '#03101c',
                                                                 fontWeight: 800,
                                                                 textTransform: 'none',
@@ -364,12 +364,12 @@ export default function WhatsAppButton() {
                     }}
                 >
                     <Typography sx={{ fontWeight: 700, fontSize: '0.85rem', whiteSpace: 'nowrap' }}>
-                        ¿Dudas? Pregúntale a <span style={{ color: '#00d4ff' }}>CostaBot</span>
+                        ¿Dudas? Pregúntale a <span style={{ color: '#00d4ff' }}>ostaBot</span>
                     </Typography>
                 </Box>
             )}
 
-            <Tooltip title={isOpen ? "Cerrar chat" : "Chatear con CostaBot AI"} placement="left" arrow>
+            <Tooltip title={isOpen ? "Cerrar chat" : "Chatear con ostaBot AI"} placement="left" arrow>
                 <Fab
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Contactar por WhatsApp"

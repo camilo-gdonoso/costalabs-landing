@@ -130,7 +130,7 @@ export default function EcommercePage() {
                                     <CheckCircleIcon sx={{ color: '#10b981' }} />
                                     <Box>
                                         <Typography variant="subtitle1" sx={{ color: 'white', fontWeight: 700 }}>Estrategia de Contenidos a Medida</Typography>
-                                        <Typography sx={{ color: '#a1a1aa', fontSize: '0.9rem' }}>Tal como lo hacemos en <strong>CostaLabs</strong> y <strong>Tierra Producciones</strong>, creamos una hoja de ruta para posicionar tus palabras clave.</Typography>
+                                        <Typography sx={{ color: '#a1a1aa', fontSize: '0.9rem' }}>Crearemos una hoja de ruta para posicionar tus palabras clave, tal como lo hacemos en <strong>ostaLabs</strong> y <strong>Tierra Producciones</strong>.</Typography>
                                     </Box>
                                 </Box>
                             </Box>

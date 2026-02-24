@@ -3,7 +3,7 @@ export default function JsonLd() {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
         '@id': 'https://costalabs.cl',
-        name: 'CostaLabs',
+        name: 'ostaLabs',
         description: 'Somos pioneros en la transición de chatbots tradicionales a agentes de IA autónomos que optimizan procesos de negocio en todo Chile.',
         url: 'https://costalabs.cl',
         logo: 'https://costalabs.cl/logo.svg',

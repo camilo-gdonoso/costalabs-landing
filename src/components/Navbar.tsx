@@ -24,12 +24,12 @@ export default function Navbar() {
                     >
                         {/* Mobile Logo */}
                         <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
-                            <img src="/logo.svg" alt="CostaLabs" style={{ height: 32, width: 'auto' }} />
+                            <img src="/logo.svg" alt="ostaLabs" style={{ height: 32, width: 'auto' }} />
                         </Box>
 
                         {/* Desktop Logo */}
                         <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}>
-                            <img src="/logo.svg" alt="CostaLabs" style={{ height: 40, width: 'auto' }} />
+                            <img src="/logo.svg" alt="ostaLabs" style={{ height: 40, width: 'auto' }} />
                         </Box>
 
                         <Typography
@@ -43,7 +43,7 @@ export default function Navbar() {
                                 fontSize: '28px',
                                 letterSpacing: '-0.03rem',
                                 lineHeight: 1,
-                                ml: -1.2,
+                                ml: -0.5,
                                 alignItems: 'baseline'
                             }}
                         >

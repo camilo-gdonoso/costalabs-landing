@@ -18,7 +18,7 @@ export function DNASection() {
 
                 <Box sx={{ maxWidth: '800px', mx: 'auto', mb: 8, textAlign: 'center' }}>
                     <Typography sx={{ color: '#ccc', fontSize: '1.2rem', lineHeight: 1.8, mb: 2 }}>
-                        La historia de CostaLabs es la historia de dos amigos de la infancia que decidieron unir sus mundos.
+                        La historia de ostaLabs es la historia de dos amigos de la infancia que decidieron unir sus mundos.
                     </Typography>
                     <Typography sx={{ color: '#94a3b8', fontSize: '1.1rem', lineHeight: 1.8 }}>
                         Mientras uno recorrió el camino comercial aprendiendo a entender las necesidades de los negocios, el otro se sumergió en las profundidades de la ingeniería y el código. Hoy, unimos esa visión estratégica con la excelencia técnica para ofrecer algo único: tecnología de vanguardia, pero con un trato cercano y humano.
