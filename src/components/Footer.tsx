@@ -22,10 +22,10 @@ export default function Footer() {
                     {/* Izquierda: Logo y Copyright */}
                     <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
                         <Typography variant="h6" sx={{ color: 'white', fontWeight: 700, mb: 1 }}>
-                            ostaLabs
+                            CostaLabs
                         </Typography>
                         <Typography variant="body2" sx={{ color: '#71717a' }}>
-                            © 2026 ostaLabs. Todos los derechos reservados.
+                            © 2026 CostaLabs. Todos los derechos reservados.
                         </Typography>
                         <Typography variant="body2" sx={{ color: '#71717a', mt: 1, fontSize: '0.85rem' }}>
                             Arturo Fernández 2032 depto 801, Iquique, Chile

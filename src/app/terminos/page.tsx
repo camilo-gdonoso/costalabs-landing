@@ -34,7 +34,7 @@ export default function TermsPage() {
                                 1. Aceptación de los Términos
                             </Typography>
                             <Typography sx={{ color: '#ccc', lineHeight: 1.8 }}>
-                                Al acceder y utilizar los sitios web de ostaLabs (en adelante, &quot;nuestros Sitios&quot;), incluyendo www.costalabs.cl y cualquier subdominio asociado, usted acepta estar legalmente obligado por estos Términos y Condiciones. Si no está de acuerdo con alguna parte de estos términos, le rogamos que no utilice nuestros Sitios.
+                                Al acceder y utilizar los sitios web de CostaLabs (en adelante, &quot;nuestros Sitios&quot;), incluyendo www.costalabs.cl y cualquier subdominio asociado, usted acepta estar legalmente obligado por estos Términos y Condiciones. Si no está de acuerdo con alguna parte de estos términos, le rogamos que no utilice nuestros Sitios.
                             </Typography>
                         </Box>
 
@@ -43,7 +43,7 @@ export default function TermsPage() {
                                 2. Propiedad Intelectual
                             </Typography>
                             <Typography sx={{ color: '#ccc', lineHeight: 1.8 }}>
-                                Todo el contenido presente en nuestros Sitios, incluyendo pero no limitado a textos, gráficos, logotipos, iconos, imágenes, clips de audio, descargas digitales y compilaciones de datos, es propiedad de ostaLabs o de sus proveedores de contenido y está protegido por las leyes chilenas e internacionales de propiedad intelectual.
+                                Todo el contenido presente en nuestros Sitios, incluyendo pero no limitado a textos, gráficos, logotipos, iconos, imágenes, clips de audio, descargas digitales y compilaciones de datos, es propiedad de CostaLabs o de sus proveedores de contenido y está protegido por las leyes chilenas e internacionales de propiedad intelectual.
                             </Typography>
                         </Box>
 
@@ -61,7 +61,7 @@ export default function TermsPage() {
                                 4. Precisión de la Información
                             </Typography>
                             <Typography sx={{ color: '#ccc', lineHeight: 1.8 }}>
-                                ostaLabs se esfuerza por proporcionar información precisa y actualizada en nuestros Sitios. Sin embargo, no garantizamos que toda la información sea exacta, completa o actual. Nos reservamos el derecho de corregir cualquier error, inexactitud u omisión, y de cambiar o actualizar la información en cualquier momento sin previo aviso.
+                                CostaLabs se esfuerza por proporcionar información precisa y actualizada en nuestros Sitios. Sin embargo, no garantizamos que toda la información sea exacta, completa o actual. Nos reservamos el derecho de corregir cualquier error, inexactitud u omisión, y de cambiar o actualizar la información en cualquier momento sin previo aviso.
                             </Typography>
                         </Box>
 
@@ -70,7 +70,7 @@ export default function TermsPage() {
                                 5. Enlaces a Terceros
                             </Typography>
                             <Typography sx={{ color: '#ccc', lineHeight: 1.8 }}>
-                                Nuestros Sitios pueden contener enlaces a sitios web de terceros. Estos enlaces se proporcionan únicamente para su conveniencia. ostaLabs no tiene control sobre el contenido de estos sitios y no asume responsabilidad por el contenido de, o las prácticas de privacidad empleadas por, otros sitios.
+                                Nuestros Sitios pueden contener enlaces a sitios web de terceros. Estos enlaces se proporcionan únicamente para su conveniencia. CostaLabs no tiene control sobre el contenido de estos sitios y no asume responsabilidad por el contenido de, o las prácticas de privacidad empleadas por, otros sitios.
                             </Typography>
                         </Box>
 
@@ -79,7 +79,7 @@ export default function TermsPage() {
                                 6. Limitación de Responsabilidad
                             </Typography>
                             <Typography sx={{ color: '#ccc', lineHeight: 1.8 }}>
-                                En la medida máxima permitida por la ley, ostaLabs no será responsable por daños directos, indirectos, incidentales, consecuentes o punitivos resultantes de su acceso o uso de nuestros Sitios.
+                                En la medida máxima permitida por la ley, CostaLabs no será responsable por daños directos, indirectos, incidentales, consecuentes o punitivos resultantes de su acceso o uso de nuestros Sitios.
                             </Typography>
                         </Box>
 

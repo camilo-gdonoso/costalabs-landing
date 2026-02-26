@@ -156,7 +156,7 @@ export default function SeoVisualizer() {
                             <LanguageIcon sx={{ color: '#10b981', fontSize: 18 }} />
                             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                                 <Typography sx={{ color: '#f8fafc', fontSize: '0.75rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                                    ostaLabs E-commerce <VerifiedIcon sx={{ fontSize: 14, color: '#3b82f6' }} />
+                                    CostaLabs E-commerce <VerifiedIcon sx={{ fontSize: 14, color: '#3b82f6' }} />
                                 </Typography>
                                 <Typography sx={{ color: '#10b981', fontSize: '0.65rem' }}>https://costalabs.cl/ecommerce</Typography>
                             </Box>

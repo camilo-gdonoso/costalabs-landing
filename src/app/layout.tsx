@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "ostaLabs | Software a Medida con IA Nativa & Automatización en Chile",
-    template: "%s | ostaLabs"
+    default: "CostaLabs | Software a Medida con IA Nativa & Automatización en Chile",
+    template: "%s | CostaLabs"
   },
   description: "Somos pioneros en la transición de chatbots tradicionales a agentes de IA autónomos que optimizan procesos de negocio en todo Chile. Soluciones de software a medida con IA activa.",
   metadataBase: new URL('https://www.costalabs.cl'),
@@ -80,20 +80,20 @@ export const metadata: Metadata = {
     "desarrollo web Antofagasta",
     "transformación digital norte grande"
   ],
-  authors: [{ name: "ostaLabs Team" }],
-  creator: "ostaLabs",
-  publisher: "ostaLabs",
+  authors: [{ name: "CostaLabs Team" }],
+  creator: "CostaLabs",
+  publisher: "CostaLabs",
   openGraph: {
-    title: "ostaLabs | Software, IA, DevOps & E-commerce en el Norte de Chile",
+    title: "CostaLabs | Software, IA, DevOps & E-commerce en el Norte de Chile",
     description: "Desarrollo de software, IA, DevOps, FinOps y marketing digital en Chile. Presencia en Arica, Iquique, Antofagasta, Calama, La Serena y Santiago. Transformación digital para empresas chilenas.",
     url: 'https://www.costalabs.cl',
-    siteName: 'ostaLabs',
+    siteName: 'CostaLabs',
     images: [
       {
         url: '/hero-dashboard-v2.png',
         width: 1200,
         height: 630,
-        alt: 'ostaLabs - Desarrollo de Software en el Norte de Chile',
+        alt: 'CostaLabs - Desarrollo de Software en el Norte de Chile',
       },
     ],
     locale: 'es_CL',
@@ -101,7 +101,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "ostaLabs | IA, DevOps & E-commerce en Chile",
+    title: "CostaLabs | IA, DevOps & E-commerce en Chile",
     description: "Desarrollo de software, IA, DevOps, FinOps y marketing digital en el norte de Chile.",
     images: ['/hero-dashboard-v2.png'],
   },

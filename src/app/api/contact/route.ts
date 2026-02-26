@@ -28,7 +28,7 @@ export async function POST(request: Request) {
 
     // Enviar correo vía Resend
     const { data, error } = await resend.emails.send({
-      from: 'ostaLabs <web@costalabs.cl>', // Usando el dominio verificado
+      from: 'CostaLabs <web@costalabs.cl>', // Usando el dominio verificado
       to: ['contacto@costalabs.cl'],
       subject: `Nueva consulta de: ${nombre} ${apellido}`,
       replyTo: email,

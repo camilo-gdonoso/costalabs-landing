@@ -34,7 +34,7 @@ export default function PrivacyPage() {
                                 1. Sobre esta Política de Privacidad
                             </Typography>
                             <Typography sx={{ color: '#ccc', lineHeight: 1.8 }}>
-                                Su privacidad es importante para nosotros. Esta Política de Privacidad establece la base sobre la cual nosotros, ostaLabs SpA, y nuestras filiales (colectivamente &apos;Costalabs&apos;, &apos;nosotros&apos; o &apos;nos&apos;), cuidamos de su privacidad. Esta Política de Privacidad explica cómo recopilamos, utilizamos, procesamos, compartimos, divulgamos y almacenamos su Información Personal, recopilada a través de sus interacciones con nosotros; incluyendo a través de nuestro sitio web (el &apos;Sitio&apos;), proceso de ventas, actividades de marketing y otros medios.
+                                Su privacidad es importante para nosotros. Esta Política de Privacidad establece la base sobre la cual nosotros, CostaLabs SpA, y nuestras filiales (colectivamente &apos;CostaLabs&apos;, &apos;nosotros&apos; o &apos;nos&apos;), cuidamos de su privacidad. Esta Política de Privacidad explica cómo recopilamos, utilizamos, procesamos, compartimos, divulgamos y almacenamos su Información Personal, recopilada a través de sus interacciones con nosotros; incluyendo a través de nuestro sitio web (el &apos;Sitio&apos;), proceso de ventas, actividades de marketing y otros medios.
                             </Typography>
                         </Box>
 
@@ -43,7 +43,7 @@ export default function PrivacyPage() {
                                 2. Sobre nosotros
                             </Typography>
                             <Typography sx={{ color: '#ccc', lineHeight: 1.8 }}>
-                                Costalabs SpA es una Sociedad por Acciones con sede en Iquique, Chile. Para los fines de esta Política de Privacidad, somos el controlador de datos de su Información Personal como se describe en este documento, a menos que se especifique expresamente lo contrario.
+                                CostaLabs SpA es una Sociedad por Acciones con sede en Iquique, Chile. Para los fines de esta Política de Privacidad, somos el controlador de datos de su Información Personal como se describe en este documento, a menos que se especifique expresamente lo contrario.
                             </Typography>
                         </Box>
 
