@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Hero() {
     return (
-        <Box className="bg-stars" sx={{
+        <Box id="hero" className="bg-stars" sx={{
             minHeight: '100vh',
             display: 'flex',
             flexDirection: 'column',

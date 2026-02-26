@@ -12,6 +12,7 @@ import { Box, Container, Typography, Button } from '@mui/material'; // Import pa
 
 import FeatureSection from '@/components/FeatureSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import FloatingNav from '@/components/FloatingNav';
 
 export default function Home() {
   return (
@@ -125,6 +126,7 @@ export default function Home() {
       </Box>
 
       <WhatsAppButton />
+      <FloatingNav />
     </main>
   );
 }
