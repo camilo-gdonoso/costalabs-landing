@@ -47,7 +47,7 @@ export default function Navbar() {
                                 alignItems: 'baseline'
                             }}
                         >
-                            CostaLabs
+                            ostaLabs
                         </Typography>
                     </Box>
 
