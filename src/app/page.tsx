@@ -4,7 +4,7 @@ import ServicesDetail from '@/components/ServicesDetail';
 import TechCarousel from '@/components/TechCarousel';
 import CertificationsSection from '@/components/CertificationsSection';
 import PartnersSection from '@/components/PartnersSection';
-import WhatsAppButton from '@/components/WhatsAppButton';
+
 import MethodologyHero from '@/components/MethodologyHero';
 import AISolutionsSection from '@/components/AISolutionsSection';
 import { DNASection, SectorsSection } from '@/components/DossierSections';
@@ -125,7 +125,7 @@ export default function Home() {
         </Container>
       </Box>
 
-      <WhatsAppButton />
+
       <FloatingNav />
     </main>
   );

@@ -1,7 +1,7 @@
 'use client';
 import { Box, Container, Typography, Button, Paper } from '@mui/material';
 import Navbar from '@/components/Navbar';
-import WhatsAppButton from '@/components/WhatsAppButton';
+
 import ContactForm from '@/components/ContactForm';
 import DevOpsVisual from '@/components/DevOpsVisual'; // Updated import
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -253,7 +253,7 @@ export default function DevOpsPage() {
             {/* --- CONTACT FORM SECTION (Reused Component) --- */}
             <ContactForm />
 
-            <WhatsAppButton />
+
         </main>
     );
 }

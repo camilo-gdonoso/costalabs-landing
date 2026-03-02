@@ -2,7 +2,7 @@
 import { Box, Container, Typography, Button, Paper } from '@mui/material';
 import Navbar from '@/components/Navbar';
 import CaseStudyCustomTrip from '@/components/CaseStudyCustomTrip';
-import WhatsAppButton from '@/components/WhatsAppButton';
+
 import ContactForm from '@/components/ContactForm';
 import CodeWindow from '@/components/CodeWindow';
 import MethodologyHero from '@/components/MethodologyHero';
@@ -189,7 +189,7 @@ export default function SoftwareAMedidaPage() {
             {/* --- CONTACT FORM SECTION (Reused Component) --- */}
             <ContactForm />
 
-            <WhatsAppButton />
+
         </main>
     );
 }

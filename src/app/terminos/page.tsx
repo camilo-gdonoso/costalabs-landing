@@ -1,7 +1,7 @@
 'use client';
 import { Box, Container, Typography, Paper } from '@mui/material';
 import Navbar from '@/components/Navbar';
-import WhatsAppButton from '@/components/WhatsAppButton';
+
 
 export default function TermsPage() {
     return (
@@ -104,7 +104,7 @@ export default function TermsPage() {
                 </Container>
             </Box>
 
-            <WhatsAppButton />
+
         </main>
     );
 }

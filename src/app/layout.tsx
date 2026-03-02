@@ -128,6 +128,7 @@ import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 
 // ... (existing imports)
+import Script from "next/script";
 
 export default function RootLayout({
   children,
@@ -146,6 +147,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </Providers>
+        <Script src="https://bot.costalabs.cl/api/v1/widget/costalabs/bot.js" strategy="afterInteractive" />
       </body>
     </html>
   );

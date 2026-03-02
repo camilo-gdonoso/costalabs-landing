@@ -1,7 +1,7 @@
 'use client';
 import { Box, Container, Typography, Paper } from '@mui/material';
 import Navbar from '@/components/Navbar';
-import WhatsAppButton from '@/components/WhatsAppButton';
+
 
 export default function PrivacyPage() {
     return (
@@ -149,7 +149,7 @@ export default function PrivacyPage() {
                 </Container>
             </Box>
 
-            <WhatsAppButton />
+
         </main>
     );
 }

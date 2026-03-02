@@ -1,7 +1,7 @@
 'use client';
 import { Box, Container, Typography, Button, Paper } from '@mui/material';
 import Navbar from '@/components/Navbar';
-import WhatsAppButton from '@/components/WhatsAppButton';
+
 import ContactForm from '@/components/ContactForm';
 import CodeWindow from '@/components/CodeWindow';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -96,7 +96,7 @@ export default function WooCommercePage() {
             </Box>
 
             <ContactForm />
-            <WhatsAppButton />
+
         </main>
     );
 }

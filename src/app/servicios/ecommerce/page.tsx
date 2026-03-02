@@ -1,7 +1,7 @@
 'use client';
 import { Box, Container, Typography, Button, Paper } from '@mui/material';
 import Navbar from '@/components/Navbar';
-import WhatsAppButton from '@/components/WhatsAppButton';
+
 import ContactForm from '@/components/ContactForm';
 import PaymentGatewayVisual from '@/components/PaymentGatewayVisual';
 import SeoVisualizer from '@/components/SeoVisualizer';
@@ -149,7 +149,7 @@ export default function EcommercePage() {
             </Box>
 
             <ContactForm />
-            <WhatsAppButton />
+
         </main>
     );
 }
